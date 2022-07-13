@@ -68,29 +68,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'diploman.wsgi.application'
 
-
-# Database
-# https://docs.djangoproject.com/en/4.0/ref/settings/#databases
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'diplomandb',
-        'USER': 'postgres',
-        'PASSWORD': 'Moammer24862486?',
-        'HOST': 'localhost'
-    }
-}
-
-# email addition
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = 587
-EMAIL_HOST_USER = 'hello@diploman.co'
-EMAIL_HOST_PASSWORD = 'tppxcpvxvwbexjgz'
-EMAIL_USE_TLS = True
-MAIL_FROM_ADDRESS='hello@diploman.co'
-
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
 
@@ -200,3 +177,8 @@ DJOSER = {
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 AUTH_USER_MODEL = 'accounts.UserAccount'
+
+try:
+    from .local_settings import *
+except ImportError:
+    pass
