@@ -1,0 +1,36 @@
+.request__admission__home {
+    background-color: rgb(247, 244, 244);
+}
+.request__admission__body {
+    display: flex;
+    justify-content: space-around !important;
+}
+
+.request__admission__icon {
+    color: white;
+    margin-right: 8px;
+}
+.request__admission__icon2 {
+    color: white;
+}
+
+/****Large Devices****/
+@media (min-width: 1200px) {
+    .ad__re__process {
+        display: none;
+    }
+}
+/****Medium Devices****/
+@media (max-width: 1200px) {
+    .request__admission__left__sectinon, .request__admission__home__3rdbx {
+        display: none !important;
+    }
+}
+/****Small Devices****/
+@media (min-width: 481px) and (max-width: 768px) {
+
+}
+/****Mobile Devices****/
+@media (max-width: 480px) {
+
+}

@@ -1,0 +1,86 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	list-style: none;
+}
+.schoolCards {
+	color: #fdfeff;
+	margin: auto;
+	margin-bottom: 4rem;
+	height: 100%;
+}
+.schoolCard {
+	background-color: #233329;
+	width: 265px ;
+    min-height: 380px !important;
+	box-shadow: 0px 5px 17px rgb(168, 167, 167) !important;
+	margin: 5px 5px 5px 5px;
+}
+.schoolCard__subheading {
+	font-size: 2.2rem;
+	margin-bottom: 4rem;
+	text-align: center;
+	font-weight: 600;
+	letter-spacing: 1px;
+	color: #233329;
+}
+.schoolCard__display {
+	width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+}
+.schoolCard__info > ul > li {
+    font-size: 12px;
+}
+.school__display__image {
+	height: 20vh;
+    
+}
+.school__language__center {
+	font-size: 1.8rem;
+	margin-bottom: 1rem;
+	padding: 10px 0px 10px 0px;
+	text-align: center;
+	background: linear-gradient(58deg, #233329,#7b68ee);
+	letter-spacing: 0.7px;
+
+}
+.schoolCard__ul {
+    margin-top: 10px;
+	height: 12vh;
+}
+.schoolCard__icon {
+    font-size: 15px !important;
+    margin-bottom: 4px;
+}
+.school__course {
+	font-size: 0.9rem;
+	font-weight: 500;
+	margin-bottom: 0.5rem;
+	padding: 0 15px 0 15px;
+	letter-spacing: 0.5px;
+}
+.schoolCard__info {
+	position: relative;
+}
+.school__country {
+	font-size: 0.9rem;
+	font-weight: 500;
+	margin-bottom: 0.5rem;
+	padding: 0 15px 0 15px;
+	letter-spacing: 0.5px;
+	position: absolute;
+	right: 0%;
+}
+.school__about {
+	margin-top: 5px;
+	font-size: 12px;
+	padding: 10px 10px 0 15px;
+	font-weight: 300;
+}
+.schools__hr {
+	width: 80%;
+	margin: auto;
+}

@@ -1,0 +1,34 @@
+.activation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 35px;
+}
+.activation {
+    color: rgb(94, 159, 202);
+    margin-top: 2rem;
+}
+.activation__title {
+    color: rgb(94, 159, 202);
+    margin-top: 2rem;
+    margin-bottom: -1rem;
+}
+.activation__lead {
+    font-size: 2rem;
+    background-image: linear-gradient(135deg, #505fc9, #d97ffd);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.activation__button__primary {
+    width: 100%;
+    cursor: pointer;
+    text-transform: none !important;
+    font-size: 30px !important;
+    font-weight: 600 !important;
+    font-family: 'Roboto', sans-serif !important;
+}

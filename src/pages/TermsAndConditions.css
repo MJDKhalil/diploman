@@ -1,0 +1,10 @@
+.termsAndConditions {
+    padding: 20px;
+}
+.termsAndConditions__title {
+    text-align: center;
+    padding: 30px;
+}
+.termsAndConditions > div > ul > li  {
+    margin: 20px;
+}

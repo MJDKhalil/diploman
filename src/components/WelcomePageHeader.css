@@ -1,0 +1,28 @@
+.welcomePageHeader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.go__down {
+    color: #6ccae4;
+    font-size: 4rem !important;
+}
+
+.welcome__title, .welcome__color__text {
+    color: #fdfeff;
+    font-size: 4rem;
+}
+.welcome__second__title {
+    color: #6ccae4;
+}
+.welcome__box {
+    text-align: center;
+}
+/****Mobile Devices****/
+@media (max-width: 480px) {
+    .welcome__title, .welcome__color__text {
+        font-size: 3rem;
+    }
+}

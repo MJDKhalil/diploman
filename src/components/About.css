@@ -1,0 +1,63 @@
+.about {
+    width: 100%;
+    background-color: #F6F6F6;
+    color: #282d32;
+    padding: 20px;
+    margin: 40px 0px 40px 0px;
+    min-height: 60vh;
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+}
+.about__image {
+    height: 200px;
+    width: 200px;
+}
+.about__title {
+    font-weight: 900;
+    padding: 10px 20px 10px 20px;
+    letter-spacing: 0.5px;
+    font-size: 2.2rem;
+}
+.about__frame {
+    width: 600px;
+    /* height: 180px;
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
+    min-height: 25vh; */
+}
+.about__frame ul {
+    padding: 0px 32px 0px 32px;
+}
+.about__presentation {
+    font-size: 0.9rem;
+    width: 100%;
+    padding: 10px 20px 10px 20px;
+    font-weight: 600;
+    letter-spacing: 0.5;
+}
+.about__li {
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.5;
+}
+.about__icon {
+    font-size: 14px !important;
+    margin-bottom: 4px;
+}
+/****small Devices****/
+@media (max-width: 615px) {
+    .about__title {
+        font-size: 1.5rem;
+    }
+    .about__frame {
+        width: 400px;
+    }
+    .about__image {
+        display: none;
+    }
+}
+@media (max-width: 1241px) {
+    .about {
+        margin-top: 140px;
+    }
+}
