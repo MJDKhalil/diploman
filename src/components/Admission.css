@@ -16,7 +16,7 @@
 .request__admission__form {
 	padding: 25px;
 	border-radius: 5px;
-	width: 400px;
+	width: 350px;
     margin-top: 10px;
     margin-bottom: 10px;
 	background-color: white;
@@ -49,8 +49,8 @@
 	border: 1px solid #9597a6;
 	padding: 8px;
 	outline: none;
-	width: 170px;
-	font-size: 13px;
+	width: 145px;
+	font-size: 0.8rem;
 	display: flex;
 	justify-content: space-between !important;
 }
@@ -63,6 +63,7 @@
 	outline: none;
 	margin-bottom: 10px;
 	margin-top: 10px;
+	font-size: 0.8rem;
 }
 
 .request__admission__form__button {
@@ -88,7 +89,7 @@
 	margin-top: 0;
 }
 .request__admission__selectBx {
-	width: 170px;
+	width: 145px;
 }
 .request__admission__selected {
 	background: linear-gradient(58deg, #233329,#6ccae4);
@@ -101,7 +102,7 @@
 	font-weight: 500;
 	color: #F6F6F6;
 	letter-spacing: 1px;
-	
+	/* width: ; */
 
 	order: 0;
 }
@@ -150,4 +151,19 @@
 .request__admission__option:hover {
 	background: linear-gradient(58deg, #233329,#6ccae4);
 	color: #F6F6F6;
+}
+@media (min-width: 1200px) {
+    .request__admission__form  {
+		width: 400px;
+	}
+	.request__admission__form__input {
+		width: 170px;
+		font-size: 1rem;
+	}
+	.request__admission__form__textarea {
+		font-size: 1rem;
+	}
+	.request__admission__selectBx {
+		width: 170px;
+	}
 }

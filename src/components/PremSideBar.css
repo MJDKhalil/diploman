@@ -3,7 +3,7 @@
     background: linear-gradient(58deg, #233329,#7b68ee);
     display: inline-block;
     justify-content: space-around;
-    width: 400px;
+    width: 350px;
     color: #fdfeff;
     margin-top: 10px;
     padding: 10px 10px 80px 10px;
@@ -22,12 +22,13 @@
     padding: 10px;
     letter-spacing: 1px;
     font-size: 0.6rem;
+    text-align: initial;
 }
 .premSideBar ul {
     letter-spacing: 0.6px;
     font-size: 1rem;
     font-weight: 600;
-    text-align: inherit;
+    text-align: initial;
 }
 .premSideBar__pr {
     margin-bottom: 10px;
@@ -36,6 +37,7 @@
     font-weight: 600;
     width: 100%;
     padding: 10px;
+    text-align: initial;
 }
 .premSideBar__ul li {
     text-align: inherit;
@@ -61,6 +63,7 @@
     width: 100%;
     color: #fdfeff;
     text-align: center;
+    text-align: initial;
 }
 .premuimSupport__icon {
 	color: #fdfeff;

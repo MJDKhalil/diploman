@@ -24,7 +24,7 @@ function RequestAdmission() {
           </div>
           <div className='request__admission__middle'>
             <div className='ad__re__process'> <AdmissionProcess /></div>
-            <Admission/>
+              <Admission/>
           </div>
           <div className='request__admission__home__3rdbx'>
             <Widgets/>

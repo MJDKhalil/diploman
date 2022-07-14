@@ -14,7 +14,7 @@
 .a2zSupport__form {
 	padding: 25px;
 	border-radius: 5px;
-	width: 400px;
+	width: 350px;
     margin-top: 10px;
     margin-bottom: 10px;
 	background-color: white;
@@ -48,6 +48,7 @@
 	border: 1px solid #9597a6;
 	padding: 10px;
 	outline: none;
+	font-size: 0.8rem;
 }
 .a2zSupport__form__textarea, .input__for__one {
 	width: 100% ;
@@ -56,10 +57,11 @@
 	padding: 10px;
 	outline: none;
     margin-bottom: 20px;
+	font-size: 0.8rem;
 }
 
 .input__for__two {
-	width: 170px;
+	width: 145px;
 }
 
 .a2zSupport__form__button {
@@ -77,4 +79,16 @@
 .a2zSupport__form__button:hover {
     background: linear-gradient(58deg, #233329,#6ccae4);
     color: white;
+}
+@media (min-width: 1200px) {
+    .a2zSupport__form {
+		width: 400px;
+	}
+	.input__for__two {
+		width: 170px;
+		font-size: 1rem;
+	}
+	.a2zSupport__form__textarea, .input__for__one  {
+		font-size: 1rem;
+	}
 }

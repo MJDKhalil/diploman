@@ -4,17 +4,18 @@
 	box-sizing: border-box;
 	list-style: none;
 }
+
 .contact__bx {
-    min-height: 100vh;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	background-color: rgb(247, 244, 244);
+	margin: 0;
 }
 .contact__form {
 	padding: 25px;
 	border-radius: 5px;
-	width: 400px;
+	width: 350px;
     margin-top: 10px;
     margin-bottom: 10px;
 	background-color: white;
@@ -48,7 +49,8 @@
 	border: 1px solid #9597a6;
 	padding: 10px;
 	outline: none;
-	width: 170px;
+	width: 145px;
+	font-size: 0.8rem;
 }
 .contact__form__textarea, .subject__type{
 	width: 100% !important;
@@ -57,6 +59,7 @@
 	padding: 10px;
 	outline: none;
 	margin-bottom: 20px;
+	font-size: 0.8rem;
 }
 
 .contact__form__button {
@@ -75,4 +78,13 @@
 .contact__form__button:hover {
     background: #5AFF3D;
     color: white;
+}
+@media (min-width: 1200px) {
+    .contact__form {
+		width: 400px;
+	}
+	.contact__form__input {
+		width: 170px;
+		font-size: 15px;
+	}
 }

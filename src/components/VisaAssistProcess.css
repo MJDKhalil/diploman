@@ -3,7 +3,7 @@
     background: linear-gradient(58deg, #233329,#c35cdd);
     display: inline-block;
     justify-content: space-around;
-    width: 400px;
+    width: 350px;
     color: #F6F6F6;
     margin-top: 10px;
     padding: 10px 10px 30px 10px;
@@ -32,6 +32,7 @@
 .visaAssistProcess__note {
     letter-spacing: 1px;
     font-size: 0.6rem;
+    text-align: initial;
 }
 .visaAssistProcess ul {
     letter-spacing: 1px;
@@ -45,6 +46,7 @@
     letter-spacing: 0.7px;
     font-size: 0.8rem;
     font-weight: 600;
+    text-align: initial;
 }
 .visaAssistProcess__ul li {
     text-align: initial;

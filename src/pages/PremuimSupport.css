@@ -11,6 +11,7 @@
 .premuimSupport__container {
     display: flex;
 	justify-content: space-around !important;
+    text-align: center;
 }
 .premuimSupport__icon2 {
 	color: #fdfeff;

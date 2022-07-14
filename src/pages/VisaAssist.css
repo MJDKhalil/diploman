@@ -28,3 +28,7 @@
         display: none !important;
     }
 }
+.visaAssistProcess__top__centerBox {
+    justify-content: center;
+    text-align: center;
+}

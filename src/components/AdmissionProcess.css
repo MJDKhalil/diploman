@@ -3,7 +3,7 @@
     background: linear-gradient(58deg, #233329,#6ccae4);
     display: inline-block;
     justify-content: space-around;
-    width: 400px;
+    width: 350px;
     color: white;
     margin-top: 10px;
     padding: 10px 10px 80px 10px;
@@ -37,12 +37,14 @@
     letter-spacing: 1px;
     font-size: 0.6rem;
     margin-bottom: 5px;
+    text-align: initial;
 }
 .admissionProcess ul {
     letter-spacing: 0.7px;
     font-size: 14px;
     font-weight: 600;
     padding: 0;
+    text-align: initial;
 }
 
 .admissionProcess__1st__li {

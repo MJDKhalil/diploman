@@ -4,9 +4,9 @@
 	box-sizing: border-box;
 	list-style: none;
 }
-.requestVisaAssist {
-	flex: 6;
-}
+/* .requestVisaAssist {
+	width: 420;
+} */
 .requestVisaAssist__bx {
 	display: flex;
 	justify-content: center;
@@ -16,7 +16,7 @@
 .requestVisaAssist__form {
 	padding: 25px;
 	border-radius: 5px;
-	width: 400px;
+	width: 350px;
     margin-top: 10px;
     margin-bottom: 10px;
 	background-color: white;
@@ -49,8 +49,8 @@
 	border: 1px solid #9597a6;
 	padding: 8px;
 	outline: none;
-	width: 170px;
-	font-size: 15px;
+	width: 145px;
+	font-size: 0.8rem;
 }
 
 .requestVisaAssist__form__textarea, .subject__type{
@@ -61,6 +61,7 @@
 	outline: none;
 	margin-bottom: 10px;
 	margin-top: 10px;
+	font-size: 0.8rem;
 }
 
 .requestVisaAssist__form__button {
@@ -85,4 +86,15 @@
 	font-weight: 500;
 	margin-top: 0;
 }
-
+@media (min-width: 1200px) {
+    .requestVisaAssist__form {
+		width: 400px;
+	}
+	.requestVisaAssist__form__input {
+		width: 170px;
+		font-size: 1rem;
+	}
+	.requestVisaAssist__form__textarea {
+		font-size: 1rem;
+	}
+}
