@@ -10,9 +10,7 @@ import { useTranslation } from "react-i18next";
 function A2zSupport({ setAlert }) {
 
   const { t } = useTranslation();
-
   const navigate=useNavigate();
-
   const [formData, setFormData] = useState({
     name: '',
     email: '',
