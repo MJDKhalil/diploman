@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.7302980f.css",
-    "main.js": "/static/js/main.e954f811.js",
+    "main.js": "/static/js/main.cd73fd0b.js",
     "static/media/bg.jpg": "/static/media/bg.432fce27c80372efe83c.jpg",
     "static/media/uk.jpg": "/static/media/uk.56f509c2ee19244494b4.jpg",
     "static/media/malta.jpg": "/static/media/malta.b72f301389f06e4f47b5.jpg",
@@ -12,10 +12,10 @@
     "index.html": "/index.html",
     "static/media/getFetch.cjs": "/static/media/getFetch.c780682470504fffbd04.cjs",
     "main.7302980f.css.map": "/static/css/main.7302980f.css.map",
-    "main.e954f811.js.map": "/static/js/main.e954f811.js.map"
+    "main.cd73fd0b.js.map": "/static/js/main.cd73fd0b.js.map"
   },
   "entrypoints": [
     "static/css/main.7302980f.css",
-    "static/js/main.e954f811.js"
+    "static/js/main.cd73fd0b.js"
   ]
 }
