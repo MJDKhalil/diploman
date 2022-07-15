@@ -4,7 +4,7 @@
     background: linear-gradient(to right, #233329,#ce5cdd);
     display: inline-block;
     justify-content: space-around;
-    width: 430px;
+    width: 390px;
     color: #F6F6F6;
     padding: 0px 10px 20px 10px;
     min-height: 80vh;
@@ -85,5 +85,9 @@
     font-size: 15px !important;
     margin: 0 5px 1px 0;
 }
-
+@media (min-width: 1200px) {
+    .visaGuidProcess {
+        width: 420px;
+    }
+}
 
