@@ -41,7 +41,6 @@ function A2zSupport({ setAlert }) {
   return (
     <div className='a2zSupport'>
       <div className='a2zSupport__bx'>
-        
         <div  className='a2zSupport__form'>
           <h1 className='a2zSupport__title'>{t('premform_title')}</h1>
           <hr className='a2zSupport__hr'/>
