@@ -7,7 +7,7 @@
     
     "services_visaAssist": "Assistance Visa",
     "services_addmissionOffers": "Offre d'admission",
-    "services_forms": "Remplir des formulaires",
+    "services_forms": "Formulaires de visa",
     "services_premium": "Service Premium",
 
     "header_dropdown_prem": "Demandez Premium",
@@ -65,7 +65,7 @@
 
     "assist_card": "Assistance Visa",
     "assist_subtitle": "Services :",
-    "assist_li1": " Exemen des documents",
+    "assist_li1": " Examen des documents",
     "assist_li2": " Remplir des formulaires",
     "assist_li3": " Prise de rendez-vous",
     "assist_li4": " Recommandations",
@@ -111,15 +111,39 @@
     "aceCard_course": "Anglais",
     "aceCard_Mainlocation": "Malte",
     "aceCard_li1": "Cours : Débutant à avancé",
-    "aceCard_li2": "Préparation IELTS/TOEFL ",
-    "aceCard_li3": "Pays : Malte",
+    "aceCard_li2": "Préparation IELTS/TOEFL",
+    "aceCard_li3": "Date de début flexible",
+    "aceCard_li4": "Pays : Malte",
+
+    "gseCard_title": "GSE",
+    "gseCard_course": "Anglais",
+    "gseCard_Mainlocation": "Malte",
+    "gseCard_li1": "Cours : Débutant à avancé",
+    "gseCard_li2": "Préparation IELTS/TOEFL",
+    "gseCard_li3": "Date de début flexible",
+    "gseCard_li4": "Pays : Malte",
+
+    "flCard_title": "France Langue",
+    "flCard_course": "Français",
+    "flCard_Mainlocation": "France",
+    "flCard_li1": "Cours : Débutant à avancé",
+    "flCard_li2": "Foundation Course",
+    "flCard_li3": "Préparation DELF/DALF",
+    "flCard_li4": "Pays : France",
 
     "californiCard_title": "California kl",
     "californiCard_course": "Anglais",
     "californiCard_Mainlocation": "Malaisie",
     "californiCard_li1": "Cours : Débutant à avancé",
-    "californiCard_li2": "Préparation IELTS/TOEFL ",
+    "californiCard_li2": "Préparation IELTS/TOEFL",
     "californiCard_li3": "Pays : Malaysia",
+
+    "elecCard_title": "Elec",
+    "elecCard_course": "Anglais",
+    "elecCard_Mainlocation": "Malaisie",
+    "elecCard_li1": "Cours : Débutant à avancé",
+    "elecCard_li2": "Préparation IELTS/TOEFL",
+    "elecCard_li3": "Pays : Malaysia",
 
     "footer_services": "Services",
     "footer_admission": "Offres d'admission",
@@ -293,6 +317,19 @@
     "terms_p9": "Veuillez noter que tous les logiciels, y compris, sans s'y limiter, tous les codes HTML et les contrôles Active X contenus sur ce site Web, appartiennent à Diploman et/ou à nos fournisseurs respectifs, et sont protégés par les lois sur le droit d'auteur et les dispositions des traités internationaux. Toute reproduction ou redistribution du Logiciel est expressément interdite et peut entraîner de graves sanctions civiles et pénales. Les contrevenants seront poursuivis dans toute la mesure du possible.",
     "terms_subTitle13": "Générale",
     "terms_p10": "Vous acceptez qu'aucune coentreprise, partenariat ou relation de travail n'existe entre vous et Diploman à la suite de cet accord ou de l'utilisation de ce site Web.",
-    "terms_p11": "Tous les droits non expressément accordés dans les présentes sont réservés."
+    "terms_p11": "Tous les droits non expressément accordés dans les présentes sont réservés.",
+
+    "alert_recquest_sent": "Demande Envoyée Avec Succès.",
+    "alert_request_err": "Erreur lors de l'envoi de la demande.",
+    "alert_login": "Authentification Réussie.",
+    "alert_loginFail": "Erreur d'authentification.",
+    "alert_signup": "Vérifiez votre e-mail pour activer votre compte.",
+    "alert_verify": "Le compte a bien été activé.",
+    "alert_pwReset": "Vérifiez votre e-mail pour réinitialiser le mot de passe.",
+    "alert_pwChanged": "Réinitialisation du mot de passe réussie.",
+    "alert_logout": "Déconnexion Réussie.",
+
+    "forms_us_application": "Formulaire États-Unis",
+    "forms_uk_application": "Formulaire Royaume-Uni"
 
 }

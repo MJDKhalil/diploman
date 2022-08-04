@@ -2,8 +2,8 @@ from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework import permissions
 from rest_framework.decorators import api_view, permission_classes
-from .models import ApplicationForm
-from .serializers import ApplicationFormSerializer
+from .models import ApplicationForm, UsaApplicationForm
+from .serializers import ApplicationFormSerializer, UsaApplicationFormSerializer
 
 # Create your views here.
 @api_view(['GET'])
@@ -46,6 +46,54 @@ def appFormUpdate (request, pk):
 @permission_classes((permissions.AllowAny, ))
 def appFormDelete (request, pk):
     application = ApplicationForm.objects.get(id=pk)
+    application.delete()
+    
+    
+    return Response('Item Successfully Deleted')
+
+# USA Application Form
+
+# Create your views here.
+@api_view(['GET'])
+@permission_classes((permissions.AllowAny, ))
+def usaAppFormList (request):
+    applications = UsaApplicationForm.objects.all()
+    serializer = UsaApplicationFormSerializer(applications, many=True)
+    return Response(serializer.data)
+
+#Detail view
+@api_view(['GET'])
+@permission_classes((permissions.AllowAny, ))
+def usaAppFormDetail (request, pk):
+    applications = UsaApplicationForm.objects.get(id=pk)
+    serializer = UsaApplicationFormSerializer(applications, many=False)
+    return Response(serializer.data)
+
+@api_view(['POST'])
+@permission_classes((permissions.AllowAny, ))
+def usaAppFormCreate (request):
+    serializer = UsaApplicationFormSerializer(data=request.data)
+    
+    if serializer.is_valid():
+        serializer.save()
+    
+    return Response(serializer.data)
+
+@api_view(['POST'])
+@permission_classes((permissions.AllowAny, ))
+def usaAppFormUpdate (request, pk):
+    application = UsaApplicationForm.objects.get(id=pk)
+    serializer = UsaApplicationFormSerializer(instance=application ,data=request.data)
+    
+    if serializer.is_valid():
+        serializer.save()
+    
+    return Response(serializer.data)
+
+@api_view(['DELETE'])
+@permission_classes((permissions.AllowAny, ))
+def usaAppFormDelete (request, pk):
+    application = UsaApplicationForm.objects.get(id=pk)
     application.delete()
     
     

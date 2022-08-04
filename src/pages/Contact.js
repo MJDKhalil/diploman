@@ -51,7 +51,7 @@ const Contact = ({ setAlert }) => {
                     <title>Diploman - Contact</title>
                     <meta
                         name='description'
-                        content='Contact us'
+                        content='Contact us page'
                     />
                 </Helmet>
                 <div  className='contact__form'>

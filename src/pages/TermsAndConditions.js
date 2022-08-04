@@ -35,7 +35,6 @@ function TermsAndConditions() {
             <ul>
                 <li>{t('terms_li4')}</li>
                 <li>{t('terms_li5')}</li>
-                <li>{t('terms_li6')}</li>
                 <li>{t('terms_li7')}</li>
                 <li>{t('terms_li8')}</li>
                 <li>{t('terms_li9')}</li>

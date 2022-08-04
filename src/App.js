@@ -14,13 +14,15 @@ import WelcomePage from './pages/WelcomePage';
 import NotFound from './components/NotFound';
 import PrivateOutlet from './components/PrivateOutlet';
 import RequestAdmission from './pages/RequestAdmission';
-import ApplicationForm from './components/ApplicationForm';
+import ApplicationForm from './pages/ApplicationForm';
 import Guid from './pages/Guid';
 import RequestService from './pages/RequestService';
 import VisaAssist from './pages/VisaAssist';
 import PremuimSupport from './pages/PremuimSupport';
 import ScrollToTop from './components/ScrollToTop';
 import TermsAndConditions from './pages/TermsAndConditions';
+import Forms from './pages/Forms';
+import UsaAppForm from './pages/UsaAppForm';
 
 function App() {
   
@@ -36,9 +38,12 @@ function App() {
             <Route path='/premuim-support' element={<PremuimSupport/>} />
             <Route path='/guid' element={<Guid/>} />
             <Route path='/request-service' element={<RequestService/>} />
+            <Route path='/forms' element={<Forms/>} />
+            <Route path='/uk-application-form' element={<ApplicationForm/>} />
+            <Route path='/usa-application-form' element={<UsaAppForm/>} />
 
             <Route element={<PrivateOutlet/>}>
-              <Route path='/application-form' element={<ApplicationForm/>} />
+              {/* <Route path='/application-form' element={<ApplicationForm/>} /> */}
             </Route>
 
             <Route path='/contact' element={<Contact/>} />

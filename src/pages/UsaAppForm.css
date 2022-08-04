@@ -1,0 +1,270 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	list-style: none;
+}
+.usaForm {
+    background-color: rgb(247, 244, 244);
+}
+.usaForm__wrapper {
+    min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 10px;
+}
+
+.usaForm__inner__wrapper {
+	background-color: white;
+	padding: 25px;
+	border-radius: 5px;
+	width: 500px;
+	box-shadow: 0px 5px 8px -6px rgba(0, 0, 0, 0.75);
+	margin-top: 15px;
+}
+.usaForm__title {
+    margin-top: 30px;
+	margin-bottom: 20px;
+    text-align: center;
+	font-size: 1.2rem;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: 700;
+	background-image: linear-gradient(135deg, #505fc9, #9b59b6);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.usaForm__hr {
+	color: grey;
+}
+.usaForm__form {
+	margin-top: 35px;
+}
+.usaForm__section__title {
+    text-align: center;
+	font-weight: 700;
+	color: rgb(117, 117, 117);
+	margin-bottom: 30px;
+	margin-top: 20px;
+}
+
+.usaForm__wrap, .usaForm__input_wrap:last-child{
+	margin-bottom: 0 ;
+}
+.usaForm__form__label, .usaForm__text {
+	display: block;
+	margin-bottom: 3px;
+	color: black;
+	font-weight: 500;
+}
+.usaForm__section__question {
+	margin-bottom: 3px;
+	color: black;
+	font-weight: 500;
+	margin-top: 35px;
+}
+.usaForm__expandIcon {
+	color: #5AFF3D;
+}
+.usaForm__condense {
+	color: rgb(226, 67, 67);
+}
+.usaForm__input_grp {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 10px;
+}
+.usaForm__input_wrap__bt {
+	margin-bottom: 10px;
+}
+
+.usaForm__input_grp  input[type="text, email, date"]{
+	width: 165px;
+}
+.usaForm__input__for__two {
+	width: 200px;
+}
+.usaForm__input__radio {
+	margin-top: 27px;
+}
+.usaForm__form__textarea, .usaForm__input__for__one {
+	width: 100% ;
+	border-radius: 3px;
+	border: 1px solid #9597a6;
+	padding: 10px;
+	outline: none;
+}
+.usaForm__input__radio__group {
+	width: 100%;
+}
+.usaForm__form__input {
+	border-radius: 3px;
+	border: 1px solid #9597a6;
+	padding: 10px;
+	outline: none;
+}
+.usaForm__ul {
+	padding: 8px 10px;
+	border-radius: 3px;
+	display: flex;
+	justify-content: center;
+	background-color: rgb(247, 244, 244);
+	box-shadow: 0px 5px 8px -8px rgba(0, 0, 0, 0.75);
+}
+.usaForm__il:first-child{
+	margin-right: 15px;
+}
+.usaForm__radio__wrap {
+	position: relative;
+	margin-bottom: 0;
+	cursor: pointer;
+}
+.usaForm__radio__wrap .usaForm__input__radio{
+	position: absolute;
+	top: 0;
+	right: 0;
+	opacity: 0;
+}
+.usaForm__radio__wrap span{
+	display: inline-block;
+	font-size: 0.8rem;
+	font-weight: 600;
+	padding: 3px 20px;
+	border-radius: 3px;
+	color: #716254;
+}
+.usaForm__input__radio:checked ~ span{
+	background-color: #ebd0ce;
+	box-shadow: 0px 5px 8px -8px rgba(0, 0, 0, 0.75);
+}
+.usaForm__import__passport input[type="file"] {
+	color: #9597a6;
+}
+.usaForm__button {
+    font-size: 1rem;
+    padding: 1rem 2rem;
+    width: 60%;
+    margin: 0% 20% 0% 20%;
+    background-image: linear-gradient(135deg, #6a7bff, #d97ffd);
+	font-weight: 800;
+    border: none;
+    cursor: pointer;
+    margin-top: 1rem;
+    outline: none;
+	box-shadow: 0px 5px 8px -6px rgba(0, 0, 0, 0.75);
+	color: white;
+}
+.usaForm__button:hover {
+    background: linear-gradient(135deg, #505fc9, #9b59b6);
+    color: white;
+}
+.usaForm__2ndSection__title {
+	width: 160px;
+	margin-left: auto;
+    margin-right: auto;
+	font-weight: 600;
+	align-items: center;
+	justify-content: center;
+	color: rgb(117, 117, 117);
+}
+.usaForm__select__container {
+	font-size: 1rem;
+	color:rgb(117, 117, 117);
+	font-weight: 500;
+}
+
+.usaForm__select__box {
+	display: flex;
+	width: 200px;
+	flex-direction: column;
+}
+.usaForm__select__box .usaForm__option__container {
+	width: 100%;
+	background-color: rgb(247, 244, 244);
+	box-shadow: 0px 5px 8px -8px rgba(0, 0, 0, 0.75);
+	transition: all 0.4s;
+  	border-radius: 8px;
+  	overflow: hidden;
+	padding: 0;
+	width: 200px;
+
+	order: 1;
+}
+.usaForm__option, .usaForm__selected {
+	padding: 12px 24px;
+	cursor: pointer;
+}
+.usaForm__input__radio:checked ~ span {
+	background-color: #ebd0ce;
+	box-shadow: 0px 5px 8px -8px rgba(0, 0, 0, 0.75);
+	font-weight: 600;
+	padding: 3px 20px;
+	border-radius: 3px;
+	cursor: pointer;
+}
+.usaForm__option:hover {
+	background-color: #ebd0ce;
+    cursor: default;
+}
+.usaForm__box__label {
+	cursor: pointer;
+}
+.usaForm__box__label .usaForm__input__radio  {
+	display: none;
+}
+.usaForm__selected {
+	background-color: rgb(247, 244, 244);
+	box-shadow: 0px 5px 8px -8px rgba(0, 0, 0, 0.75);	border-radius: 8px;
+	margin-bottom: 8px;
+	position: relative;
+
+	order: 0;
+}
+.usaForm__xpand__bt{
+	position: absolute;
+	height: 100%;
+	margin-left: 30%;
+	margin-right: 30%;
+	top: 12px;
+	color: #6ccae4;
+	font-size: 1.5rem !important;
+}
+@media (max-width: 530px) {
+	.usaForm__radio__wrap span {
+		font-size: 0.7rem;
+	}
+	.usaForm__section__question, .usaForm__form__label, .usaForm__select__container, .usaForm__input__for__one, .usaForm__input__for__two, .usaForm__selected, .usaForm__text {
+		font-size: 0.8rem;
+	}
+	.usaForm__select__box, .usaForm__select__box .usaForm__option__container {
+		width: 145px;
+	}
+    .usaForm__input__for__two {
+		width: 145px;
+	}
+}
+
+.usaForm__education {
+	text-align: center;
+	font-size: 1.2rem;
+	font-weight: 700;
+	background-image: linear-gradient(135deg, #505fc9, #9b59b6);
+	background-clip: text;
+    -webkit-text-fill-color: transparent;
+	margin-bottom: 20px;
+}
+.usaForm__education__text {
+	margin-bottom: 20px;
+}
+.usaForm__education__text1 {
+	text-align: center;
+}
+.usaForm__reference__person {
+	font-size: 1rem;
+	font-weight: 700;
+	background-image: linear-gradient(135deg, #505fc9, #9b59b6);
+	background-clip: text;
+    -webkit-text-fill-color: transparent;
+	margin-bottom: 20px;
+}

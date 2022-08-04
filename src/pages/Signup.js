@@ -52,7 +52,7 @@ function Signup({setAlert, signup, isAuthenticated }) {
           <title>Diploman - Sign Up</title>
           <meta 
             name='description'
-            content='sign up page'
+            content='sign-up page'
           />
         </Helmet>
         <h1 className='signup__title'>{t('signin_title')}</h1>

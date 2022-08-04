@@ -15,7 +15,7 @@ function RequestAdmission() {
         <title>Diploman - Request Addmission</title>
         <meta
           name='description'
-          content='Request Admission'
+          content='Request Admission Offer'
         />
       </Helmet>
       <div className='request__admission__body'>

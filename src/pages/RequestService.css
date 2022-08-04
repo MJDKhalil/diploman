@@ -5,7 +5,6 @@
 	list-style: none;
 }
 .request__service__bx {
-    min-height: 100vh;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -22,7 +21,7 @@
 }
 .request__service__title {
     text-align: center;
-	font-size: 20px;
+	font-size: 1.2rem;
 	text-transform: uppercase;
 	letter-spacing: 1px;
 	font-weight: 700;
@@ -84,6 +83,9 @@
 	}
 	.request__service__form__input {
 		width: 170px;
-		font-size: 15px;
+		font-size: 1rem;
+	}
+	.request__service__form__textarea {
+		font-size: 1rem;
 	}
 }

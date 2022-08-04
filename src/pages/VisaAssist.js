@@ -15,7 +15,7 @@ function VisaAssist() {
           <title>Diploman - Visa Assist</title>
           <meta
               name='description'
-              content='Visa Assist '
+              content='Visa Assist page'
           />
         </Helmet>
         <div className='visaAssist__left'>

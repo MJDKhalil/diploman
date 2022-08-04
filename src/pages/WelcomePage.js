@@ -17,10 +17,10 @@ function WelcomePage() {
     <div className='welcomePage'>
     <div  className='background__image'>
       <Helmet>
-            <title>Diploman - Welcome Page</title>
+            <title>Diploman - home</title>
             <meta
               name='description'
-              content='welcome page'
+              content='home page'
             />
       </Helmet>
 

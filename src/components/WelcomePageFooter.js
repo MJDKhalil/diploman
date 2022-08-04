@@ -52,10 +52,10 @@ function WelcomePageFooter() {
                             <a href='https://www.instagram.com/diploman_official/' target='_blank' rel='noreferrer'><InstagramIcon className='welcomePageFooter__incon'/></a>
                         </li>
                         <li className='social__icons__li'>
-                            <a href='https://twitter.com/Diploman8/' target='_blank' rel='noreferrer'><TwitterIcon className='welcomePageFooter__incon'/></a>
+                            <a href='https://twitter.com/DIPL0MAN' target='_blank' rel='noreferrer'><TwitterIcon className='welcomePageFooter__incon'/></a>
                         </li>
                         <li className='social__icons__li'>
-                            <a href='https://www.linkedin.com/company/diploman/?viewAsMember=true/' target='_blank' rel='noreferrer'><LinkedInIcon className='welcomePageFooter__incon'/></a>
+                            <a href='https://www.linkedin.com/company/diploman/' target='_blank' rel='noreferrer'><LinkedInIcon className='welcomePageFooter__incon'/></a>
                         </li>
                     </ul>
                 <p className='copyright'>Diploman © 2022</p>

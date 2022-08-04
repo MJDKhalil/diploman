@@ -62,10 +62,10 @@ function Admission({ setAlert }) {
     })
     .then(res => {
           navigate('/'); 
-          setAlert('request Sent Successfully', 'success');
+          setAlert(t('alert_recquest_sent'), 'success');
     })
     .catch(err => {
-        setAlert('Error with Sending Request', 'error');
+        setAlert(t('alert_request_err'), 'error');
     })
   };
 
@@ -108,6 +108,24 @@ function Admission({ setAlert }) {
                   <div onClick={()=> setShowSchools(!showSchools)} className='request__admission__selected' id="schoolRadio">{t('admissionForm_select')}<ExpandMoreIcon className='request__admission__expand'/></div>
                     { showSchools?<>
                       <div className='request__admission__option__container '>
+                      <div className='request__admission__option'>
+                            <label className='request__admission__box__label'>
+                                <input
+                                  type='radio'
+                                  name='school' 
+                                  value='France Langue (FR)' 
+                                  className='request__admission__input__radio' 
+                                  onChange={e => onChange(e)}
+                                  checked={school === 'France Langue (FR)'}
+                                  onClick={()=> {
+                                    setShowSchools(false)
+                                    displaySchoolRadioValue()
+                                    setShowOtherSchool(false)
+                                  }}
+                                />
+                                <span>France Langue (FR)</span>
+                            </label>
+                          </div>
                           <div className='request__admission__option'>
                             <label className='request__admission__box__label'>
                                 <input
@@ -124,6 +142,24 @@ function Admission({ setAlert }) {
                                   }}
                                 />
                                 <span>ACE (Malta)</span>
+                            </label>
+                          </div>
+                          <div className='request__admission__option'>
+                            <label className='request__admission__box__label'>
+                                <input
+                                  type='radio'
+                                  name='school' 
+                                  value='GSE (Malta)' 
+                                  className='request__admission__input__radio' 
+                                  onChange={e => onChange(e)}
+                                  checked={school === 'GSE (Malta)'}
+                                  onClick={()=> {
+                                    setShowSchools(false)
+                                    displaySchoolRadioValue()
+                                    setShowOtherSchool(false)
+                                  }}
+                                />
+                                <span>GSE (Malta)</span>
                             </label>
                           </div>
                           <div className='request__admission__option'>
@@ -178,6 +214,24 @@ function Admission({ setAlert }) {
                                   }}
                               />
                               <span>California Kl (MY)</span>
+                            </label>
+                          </div>
+                          <div className='request__admission__option'>
+                            <label className='request__admission__box__label'>
+                              <input
+                                  type='radio'
+                                  name='school'
+                                  value='Elec (MY)'
+                                  className='request__admission__input__radio'
+                                  onChange={e => onChange(e)}
+                                  checked={school === 'Elec (Maylasia)'}
+                                  onClick={()=> {
+                                    setShowSchools(false)
+                                    displaySchoolRadioValue()
+                                    setShowOtherSchool(false)
+                                  }}
+                              />
+                              <span>Elec (Maylasia)</span>
                             </label>
                           </div>
                           <div className='request__admission__option'>

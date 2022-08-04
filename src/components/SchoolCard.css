@@ -30,13 +30,23 @@
     background-color: white;
     display: flex;
     justify-content: center;
+	height: 20vh;
 }
 .schoolCard__info > ul > li {
     font-size: 12px;
 }
-.school__display__image {
+/* .school__display__image {
 	height: 20vh;
-    
+} */
+.schoolCard__image1{
+	margin: auto;
+	width: 160px;
+	height: fit-content;
+}
+.schoolCard__gseImage {
+	margin: auto;
+	width: fit-content;
+	height: fit-content;
 }
 .school__language__center {
 	font-size: 1.8rem;

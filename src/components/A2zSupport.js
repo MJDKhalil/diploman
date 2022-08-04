@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Helmet } from 'react-helmet';
 import axios from 'axios';
 import { connect } from 'react-redux';
 import { setAlert } from '../actions/alert';
@@ -32,23 +31,17 @@ function A2zSupport({ setAlert }) {
     axios.post(`${process.env.REACT_APP_API_URL}/api/service-request/prem-request/`, { name, email, phone, message }, config)
       .then(res => {
           navigate('/'); 
-          setAlert('Request Sent Successfuly', 'success');
+          setAlert(t('alert_recquest_sent'), 'success');
       })
       .catch(err => {
-          setAlert('Error with Sending Request', 'error');
+          setAlert(t('alert_request_err'), 'error');
       })
   };
 
   return (
     <div className='a2zSupport'>
       <div className='a2zSupport__bx'>
-        <Helmet>
-            <title>Diploman - Request Premuim Support</title>
-            <meta
-              name='description'
-              content='premuim support'
-            />
-        </Helmet>
+        
         <div  className='a2zSupport__form'>
           <h1 className='a2zSupport__title'>{t('premform_title')}</h1>
           <hr className='a2zSupport__hr'/>

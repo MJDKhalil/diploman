@@ -34,10 +34,10 @@ function RequestVisaAssist({ setAlert }) {
         axios.post(`${process.env.REACT_APP_API_URL}/api/service-request/request-visa-assist/`, { name, email, phone, destination, message }, config)
         .then(res => {
             navigate('/'); 
-            setAlert('Request Sent Successfuly', 'success');
+            setAlert(t('alert_recquest_sent'), 'success');
         })
         .catch(err => {
-            setAlert('Error with Sending Request', 'error');
+            setAlert(t('alert_request_err'), 'error');
         })
     };
 

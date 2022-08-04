@@ -12,8 +12,18 @@
 .logo {
     position: relative;
     top: 10%;
-
     cursor: pointer;
+}
+.logo__link {
+    text-decoration: none;
+}
+.logo__text {
+    font-size: 0.6rem;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+    color: #282d32 !important;
+    margin: 5px 0px 0px 0px;
+    width: 160px;
 }
 .logo__secondPart {
     color: #282d32;
@@ -105,7 +115,7 @@
         font-size: 19px;
     }
     .dropdown__services {
-        top: 12px;
+        top: 13px;
         padding-bottom: 24px;
     }
     .dropdown__services__content {
@@ -113,6 +123,9 @@
     }
     .lang__selected  {
         margin: 0px 30px 0px 30px;
+    }
+    .middle__header__bx {
+        margin: 0px 80px 0px 80px;
     }
 }
 /****Medium and Large Devices****/
@@ -127,28 +140,24 @@
         font-size: 12.5px ;
     }
     .dropdown__services {
-        top: 13px;
+        top: 14px;
     }
     .dropdown__services__content {
-        margin-top: 13px;
+        margin-top: 14px;
     }
     .dropdown__services {
         padding-bottom: 26px;
     }
-    /* .sortIcon__bx, .loggedin__icon__bx {
-        display: none !important;
-    } */
+    .middle__header__bx {
+        margin: 0px 50px 0px 50px;
+    }
 }
 /****Small Devices****/
-@media (max-width: 740px) {
+@media (min-width: 450px) and (max-width: 740px) {
     .loginHeader__loginButton, .loginHeader__signupButton, .loginHeader__logoutButton {
         display: none;
     }
-    .logo {
-        top: 18%;
-        height: 38px;
-        width: 130px;
-    }
+
     .dropdown__services {
         display: none;
     }
@@ -157,6 +166,27 @@
     }
     .lang__selected {
         margin: 0px 10px 0px 10px;
+    }
+    .middle__header__bx {
+        margin: 0px 30px 0px 30px;
+    }
+}
+@media (max-width: 450px) {
+    .loginHeader__loginButton, .loginHeader__signupButton, .loginHeader__logoutButton {
+        display: none;
+    }
+
+    .dropdown__services {
+        display: none;
+    }
+    .loginHeader__menuItem {
+        font-size: 5px;
+    }
+    .lang__selected {
+        margin: 0px 10px 0px 10px;
+    }
+    .middle__header__bx {
+        margin: 0px 0px 0px 15px;
     }
 }
 .dropdown__btn {

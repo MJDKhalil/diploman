@@ -1,5 +1,7 @@
 import axios from 'axios';
 import { setAlert } from './alert';
+import i18n from '../i18n'
+
 import {
     LOGIN_SUCCESS,
     LOGIN_FAIL,
@@ -90,20 +92,19 @@ export const login = (email, password) => async dispatch => {
     };
 
     const body = JSON.stringify({ email, password });
-
     try {
             const res = await axios.post(`${process.env.REACT_APP_API_URL}/auth/jwt/create/`, body, config);
             dispatch({
                 type: LOGIN_SUCCESS,
                 payload: res.data
             });
-            dispatch(setAlert('Authenticated successfully', 'success'));
+            dispatch(setAlert(i18n.t('alert_login'), 'success'));
             dispatch(load_user());
         }catch (err) {
             dispatch({
                 type: LOGIN_FAIL
             });
-            dispatch(setAlert('Error Authenticating', 'error'));
+            dispatch(setAlert(i18n.t('alert_loginFail'), 'error'));
     }
 };
 
@@ -123,7 +124,7 @@ export const signup = (name, email, password, re_password) => async dispatch => 
             type: SIGNUP_SUCCESS,
             payload: res.data
         });
-        dispatch(setAlert('Check Your Email to Activate Your Account.', 'warning'));
+        dispatch(setAlert(i18n.t('alert_signup'), 'warning'));
     } catch (err) {
         dispatch({
             type: SIGNUP_FAIL
@@ -132,6 +133,7 @@ export const signup = (name, email, password, re_password) => async dispatch => 
 };
 
 export const verify = (uid, token) => async dispatch => {
+    
     const config = {
         headers: {
             'Content-Type': 'application/json'
@@ -146,7 +148,7 @@ export const verify = (uid, token) => async dispatch => {
         dispatch({
             type: ACTIVATION_SUCCESS,
         });
-        dispatch(setAlert('Account Activated Successfully.', 'success'));
+        dispatch(setAlert(i18n.t('alert_verify'), 'success'));
     } catch (err) {
         dispatch({
             type: ACTIVATION_FAIL
@@ -168,7 +170,7 @@ export const reset_password = (email) => async dispatch => {
         dispatch({
             type: PASSWORD_RESET_SUCCESS
         });
-        dispatch(setAlert('Check Your Email to Rest Password.', 'warning'));
+        dispatch(setAlert(i18n.t('alert_pwReset'), 'warning'));
     } catch (err) {
         dispatch({
             type: PASSWORD_RESET_FAIL
@@ -188,7 +190,7 @@ export const reset_password_confirm = (uid, token, new_password, re_new_password
     
     try {
         await axios.post (`${process.env.REACT_APP_API_URL}/auth/users/reset_password_confirm/`, body, config);
-        dispatch(setAlert('Password Rest Successful.', 'success'));
+        dispatch(setAlert(i18n.t('alert_pwChanged'), 'success'));
         dispatch({
             type: PASSWORD_RESET_CONFIRM_SUCCESS
         });
@@ -201,7 +203,7 @@ export const reset_password_confirm = (uid, token, new_password, re_new_password
 
 //Logout
 export const logout = () => dispatch => {
-    dispatch(setAlert('Logout successful.', 'success'));
+    dispatch(setAlert(i18n.t('alert_logout'), 'success'));
     dispatch({
         type: LOGOUT
     });
