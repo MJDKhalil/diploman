@@ -1,7 +1,7 @@
 .loginHeader {
     padding: 13px 20px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     box-shadow: 0px 5px 8px -9px rgba(0, 0, 0, 0.75);
     width: 100%;
     position: sticky;
@@ -23,15 +23,8 @@
     letter-spacing: 0.2px;
     color: #282d32 !important;
     margin: 5px 0px 0px 0px;
-    width: 160px;
 }
-.logo__secondPart {
-    color: #282d32;
-}
-.loginHeader__left {
-    flex: 5;
-    margin: 0px 30px 0px 30px;
-}
+
 .loginHeader__right {
     display: flex;
     position: relative;
@@ -127,11 +120,14 @@
     .middle__header__bx {
         margin: 0px 80px 0px 80px;
     }
+    .loginHeader__left {
+        margin: 0px 30px 0px 30px;
+    }
 }
 /****Medium and Large Devices****/
 @media (min-width: 740px) and (max-width: 900px) {
     .loginHeader__left {
-        flex: 4;
+        margin: 0px 30px 0px 30px;
     }
     .lang__selected  {
         margin: 0px 30px 0px 30px;
@@ -150,6 +146,9 @@
     }
     .middle__header__bx {
         margin: 0px 50px 0px 50px;
+    }
+    .loginHeader__left {
+        margin: 0px 30px 0px 30px;
     }
 }
 /****Small Devices****/
@@ -187,6 +186,13 @@
     }
     .middle__header__bx {
         margin: 0px 0px 0px 15px;
+    }
+    .logo {
+        width: 120px;
+        height: 25px;
+    }
+    .logo__text {
+        font-size: 7px;
     }
 }
 .dropdown__btn {

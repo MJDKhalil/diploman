@@ -103,8 +103,8 @@ function LoginHeader({ logout, isAuthenticated }) {
               <Link className='loginHeader__menuItem' to='/request-service'>{t('header_dropdown_requestService')}</Link>
               <Link className='loginHeader__menuItem' to='/forms'>{t('services_forms')}</Link>
               <Link className='loginHeader__menuItem' to='/contact'>{t('header_dropdown_contact')}</Link>
-              <Link className='loginHeader__menuItem' to='/uk-application-form'>{t('forms_uk_application')}</Link>
-              <Link className='loginHeader__menuItem' to='/usa-application-form'>{t('forms_us_application')}</Link>
+              <Link className='loginHeader__menuItem' to='/usa-application-form'>{t('usaForm_barTitle')}</Link>
+              <Link className='loginHeader__menuItem' to='/uk-application-form'>{t('ukForm_barTitle')}</Link>
               <Link className='loginHeader__menuItem' to='/signup'>{t('header_signup')}</Link>
               <Link className='loginHeader__menuItem' to='/login'>{t('header_login')}</Link>
               <Link className='loginHeader__menuItem' to='/guid'>{t('header_dropdown_guide')}</Link>
@@ -173,8 +173,8 @@ function LoginHeader({ logout, isAuthenticated }) {
               <Link className='loginHeader__menuItem' to='/request-service'>{t('header_dropdown_requestService')}</Link>
               <Link className='loginHeader__menuItem' to='/forms'>{t('services_forms')}</Link>
               <Link className='loginHeader__menuItem' to='/contact'>{t('header_dropdown_contact')}</Link>
-              <Link className='loginHeader__menuItem' to='/uk-application-form'>{t('forms_uk_application')}</Link>
-              <Link className='loginHeader__menuItem' to='/usa-application-form'>{t('forms_us_application')}</Link>
+              <Link className='loginHeader__menuItem' to='/usa-application-form'>{t('usaForm_barTitle')}</Link>
+              <Link className='loginHeader__menuItem' to='/uk-application-form'>{t('ukForm_barTitle')}</Link>
               <Link className='loginHeader__menuItem' to='/guid'>{t('header_dropdown_guide')}</Link>
               <button onClick={logout} className='logout__btn'>{t('header_logout')}</button>
             </div>

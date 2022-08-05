@@ -323,6 +323,8 @@
 
     "forms_us_application": "نموذج التأشيرة الامريكية",
     "forms_uk_application": "نموذج التأشيرة البريطانية",
+    "usaForm_barTitle": "نموذج تأشيرة امريكيا",
+    "ukForm_barTitle": "نموذج تأشيرة بريطانيا",
 
     "Form_name": "الإسم *",
     "Form_email": "البريد الإلكتروني *",
@@ -510,5 +512,6 @@
     "usaForm_reference": "البيانات المرجعية",
     "usaForm_reference_note": "يرجى تقديم التفاصيل الخاصة بشخصين (خارج الاسرة)",
     "usaForm_reference1": "بيانات المرجع الأول:",
-    "usaForm_reference2": "بيانات المرجع الثاني:"
+    "usaForm_reference2": "بيانات المرجع الثاني:",
+    "usaForm_reference3": ""
 }
