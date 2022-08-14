@@ -14,7 +14,7 @@ function VisaAssistProcess() {
   return (
     <div className='visaAssistProcess'>
       <h2 className='visaAssistProcess__title'>{t('vaProcess_title')}</h2>
-      <h2 className='visaAssistProcess__pr'>{t('vaProcess_li1')}</h2>
+      <h2 className='visaAssistProcess__title2'>{t('vaProcess_li1')}</h2>
       <ul className='visaAssistProcess__ul'>
           <li><FactCheckIcon className='visaAssistProcess__icons'/> {t('vaProcess_li2')} </li>
           <li><FormatAlignLeftIcon className='visaAssistProcess__icons'/> {t('vaProcess_li3')} </li>

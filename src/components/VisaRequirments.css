@@ -50,3 +50,14 @@
         width: 420px;
     }
 }
+@media (max-width: 389px) {
+    .visaRequirments__li {
+        padding: 0px 20px 0px 25px;
+    }
+    .visaRequirments {
+        padding: 0px 30px 0px 30px;
+    }
+    .visaRequirments__ul__title {
+        padding: 0px 35px 0px 35px;
+    }
+}

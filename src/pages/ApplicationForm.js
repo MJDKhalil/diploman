@@ -446,9 +446,9 @@ function ApplicationForm({ setAlert }) {
                         <div className='form__wrap'>
                             <div className='input_grp'>
                                 <div className='form__wrap'>
-                                    <label className='applicationForm__form__label' htmlFor='email'>{t('Form_email')}</label>
+                                    <label className='ukForm__form__label' htmlFor='email'>{t('Form_email')}</label>
                                     <input 
-                                        className='applicationForm__form__input input__for__two' 
+                                        className='applicationForm__form__input ukForm__input__for__two' 
                                         name='email' 
                                         type='email' 
                                         placeholder='exam@gmail.com' 
@@ -458,9 +458,9 @@ function ApplicationForm({ setAlert }) {
                                     />
                                 </div>
                                 <div className='form__wrap'>
-                                    <label className='applicationForm__form__label' htmlFor='phone'>{t('Form_phone')}</label>
+                                    <label className='ukForm__form__label' htmlFor='phone'>{t('Form_phone')}</label>
                                     <input 
-                                        className='applicationForm__form__input input__for__two' 
+                                        className='applicationForm__form__input ukForm__input__for__two' 
                                         name='phone' 
                                         type='text' 
                                         onChange={e => onChange(e)} 
@@ -473,7 +473,7 @@ function ApplicationForm({ setAlert }) {
                             <p className='passport__section__title'>{t('Form_main_passport')}</p>
                             <div className='input_grp'>
                                 <div className='input_wrap input_wrap__bt'>
-                                    <p className='expand__p'>{t('Form_passport_info')}</p>
+                                    <p className='ukForm__text'>{t('Form_passport_info')}</p>
                                     <IconButton onClick={()=> setShow(true)}>
                                         <ExpandMoreIcon className='expand__bt'/>
                                     </IconButton>
@@ -482,9 +482,9 @@ function ApplicationForm({ setAlert }) {
                                     </IconButton>
                                 </div>
                                 <div className='input_wrap input_wrap__bt import__passport'>
-                                    <label className='applicationForm__form__label' htmlFor='passport_photo'>{t('Form_passport_import')}</label>
+                                    <label className='ukForm__form__label' htmlFor='passport_photo'>{t('Form_passport_import')}</label>
                                     <input 
-                                        className='input__for__two import__passport' 
+                                        className='ukForm__input__for__two import__passport' 
                                         name='passport_photo' 
                                         type='file' 
                                         accept='image/*,.pdf'
@@ -497,9 +497,9 @@ function ApplicationForm({ setAlert }) {
                                 <>
                                     <div className='input_grp'>
                                         <div className='input_wrap'>
-                                            <label className='applicationForm__form__label appForm__subject' htmlFor='first_name'>{t('Form_firstName')}</label>
+                                            <label className='ukForm__form__label appForm__subject' htmlFor='first_name'>{t('Form_firstName')}</label>
                                             <input 
-                                                className='applicationForm__form__input input__for__two' 
+                                                className='applicationForm__form__input ukForm__input__for__two' 
                                                 name='first_name' 
                                                 type='text' 
                                                 placeholder={t('Form_firstName')} 
@@ -508,9 +508,9 @@ function ApplicationForm({ setAlert }) {
                                             />
                                         </div>
                                         <div className='input_wrap'>
-                                            <label className='applicationForm__form__label' htmlFor='last_name'>{t('Form_lastName')}</label>
+                                            <label className='ukForm__form__label' htmlFor='last_name'>{t('Form_lastName')}</label>
                                             <input 
-                                                className='applicationForm__form__input input__for__two' 
+                                                className='applicationForm__form__input ukForm__input__for__two' 
                                                 name='last_name' 
                                                 type='text' 
                                                 placeholder={t('Form_lastName')} 
@@ -523,9 +523,9 @@ function ApplicationForm({ setAlert }) {
 
                                     <div className='input_grp'>
                                         <div className='form__wrap'>
-                                            <label className='applicationForm__form__label' htmlFor='dob'>{t('Form_dob')}</label>
+                                            <label className='ukForm__form__label' htmlFor='dob'>{t('Form_dob')}</label>
                                             <input 
-                                                className='applicationForm__form__input input__for__two' 
+                                                className='applicationForm__form__input ukForm__input__for__two' 
                                                 name='dob' 
                                                 type='date' 
                                                 onChange={e => onChange(e)} 
@@ -533,9 +533,9 @@ function ApplicationForm({ setAlert }) {
                                             />
                                         </div>
                                         <div className='form__wrap'>
-                                            <label className='applicationForm__form__label' htmlFor='place_of_birth'>{t('Form_pob')}</label>
+                                            <label className='ukForm__form__label' htmlFor='place_of_birth'>{t('Form_pob')}</label>
                                             <input 
-                                                className='applicationForm__form__input input__for__two' 
+                                                className='applicationForm__form__input ukForm__input__for__two' 
                                                 name='place_of_birth' 
                                                 type='text' 
                                                 placeholder={t('Form_pobEx')} 
@@ -547,9 +547,9 @@ function ApplicationForm({ setAlert }) {
 
                                     <div className='input_grp'>
                                         <div className='form__wrap'>
-                                            <label className='applicationForm__form__label' htmlFor='pasport_number'>{t('Form_passportNo')}</label>
+                                            <label className='ukForm__form__label' htmlFor='pasport_number'>{t('Form_passportNo')}</label>
                                             <input 
-                                                className='applicationForm__form__input input__for__two' 
+                                                className='applicationForm__form__input ukForm__input__for__two' 
                                                 name='pasport_number' 
                                                 type='text' 
                                                 placeholder={t('Form_passportNo')}
@@ -558,9 +558,9 @@ function ApplicationForm({ setAlert }) {
                                             />
                                         </div>
                                         <div className='form__wrap'>
-                                            <label className='applicationForm__form__label' htmlFor='nationality'>{t('Form_nationality')}</label>
+                                            <label className='ukForm__form__label' htmlFor='nationality'>{t('Form_nationality')}</label>
                                             <input 
-                                                className='applicationForm__form__input input__for__two' 
+                                                className='applicationForm__form__input ukForm__input__for__two' 
                                                 name='nationality' 
                                                 type='text' 
                                                 placeholder={t('Form_nationalityEx')}
@@ -572,9 +572,9 @@ function ApplicationForm({ setAlert }) {
 
                                     <div className='input_grp'>
                                         <div className='form__wrap'>
-                                            <label className='applicationForm__form__label' htmlFor='passport_issue_date'>{t('Form_pass_issueDate')}</label>
+                                            <label className='ukForm__form__label' htmlFor='passport_issue_date'>{t('Form_pass_issueDate')}</label>
                                             <input 
-                                                className='applicationForm__form__input input__for__two' 
+                                                className='applicationForm__form__input ukForm__input__for__two' 
                                                 name='passport_issue_date' 
                                                 type='date' 
                                                 onChange={e => onChange(e)} 
@@ -582,9 +582,9 @@ function ApplicationForm({ setAlert }) {
                                             />
                                         </div>
                                         <div className='form__wrap'>
-                                            <label className='applicationForm__form__label' htmlFor='passport_issue_date'>{t('Form_pass_expiryDate')}</label>
+                                            <label className='ukForm__form__label' htmlFor='passport_issue_date'>{t('Form_pass_expiryDate')}</label>
                                             <input 
-                                                className='applicationForm__form__input input__for__two' 
+                                                className='applicationForm__form__input ukForm__input__for__two' 
                                                 name='passport_expiry_date' 
                                                 type='date' 
                                                 onChange={e => onChange(e)} 
@@ -598,7 +598,7 @@ function ApplicationForm({ setAlert }) {
                                 <hr className='appform__hr'/>
 
                                 <div className='input_wrap input_wrap__bt'>
-                                    <label className='applicationForm__form__label' htmlFor='address'>{t('Form_address')}</label>
+                                    <label className='ukForm__form__label' htmlFor='address'>{t('Form_address')}</label>
                                     <input 
                                         className='input__for__one' 
                                         name='address' 
@@ -611,9 +611,9 @@ function ApplicationForm({ setAlert }) {
 
                                 <div className='input_grp'>
                                     <div className='input_wrap'>
-                                        <label className='applicationForm__form__label appForm__subject' htmlFor='residence_since'>{t('Form_addressSince')}</label>
+                                        <label className='ukForm__form__label appForm__subject' htmlFor='residence_since'>{t('Form_addressSince')}</label>
                                         <input 
-                                            className='applicationForm__form__input input__for__two' 
+                                            className='applicationForm__form__input ukForm__input__for__two' 
                                             name='residence_since' 
                                             type='text' 
                                             placeholder={t('Form_addressSinceEx')} 
@@ -659,7 +659,7 @@ function ApplicationForm({ setAlert }) {
                                     <div className='select__purpose'>
                                         <h2 className='select__op__container'>{t('Form_maritial-status')}</h2>
                                         <div className='p__select__box'>
-                                            <div onClick={()=> setShowMaritialStatus(!showMaritialStatus)} className='pp__selected' id="maritialStatusRadio">{t('Form_select')}<ExpandMoreIcon className='p__xpand__bt'/></div>
+                                            <div onClick={()=> setShowMaritialStatus(!showMaritialStatus)} className='ukForm__selected' id="maritialStatusRadio">{t('Form_select')}<ExpandMoreIcon className='p__xpand__bt'/></div>
                                             { showMaritialStatus?
                                             <>
                                                 <div className='p__option__container '>
@@ -725,9 +725,9 @@ function ApplicationForm({ setAlert }) {
                                     </div>
 
                                     <div className='input_wrap'>
-                                        <label className='applicationForm__form__label appForm__subject' htmlFor='first_name'>{t('Form_destination')}</label>
+                                        <label className='ukForm__form__label appForm__subject' htmlFor='first_name'>{t('Form_destination')}</label>
                                         <input 
-                                            className='applicationForm__form__input input__for__two' 
+                                            className='applicationForm__form__input ukForm__input__for__two' 
                                             name='destination_country' 
                                             type='text' 
                                             placeholder={t('Form_destinationEx')} 
@@ -743,7 +743,7 @@ function ApplicationForm({ setAlert }) {
                                     <p className='passport__section__title'>{t('Form_wifePassport')}</p>
                                     <div className='input_grp'>
                                         <div className='input_wrap input_wrap__bt'>
-                                            <p className='expand__p'>{t('Form_passport_info')}</p>
+                                            <p className='ukForm__text'>{t('Form_passport_info')}</p>
                                             <IconButton onClick={()=> setShowSpousSection(true)}>
                                                 <ExpandMoreIcon className='expand__bt'/>
                                             </IconButton>
@@ -752,9 +752,9 @@ function ApplicationForm({ setAlert }) {
                                             </IconButton>
                                         </div>
                                         <div className='input_wrap input_wrap__bt import__passport'>
-                                            <label className='applicationForm__form__label' htmlFor='spouse_passport_photo'>{t('Form_passport_import')}</label>
+                                            <label className='ukForm__form__label' htmlFor='spouse_passport_photo'>{t('Form_passport_import')}</label>
                                             <input 
-                                                className='input__for__two import__passport' 
+                                                className='ukForm__input__for__two import__passport' 
                                                 name='spouse_passport_photo' 
                                                 type='file' 
                                                 accept='image/*,.pdf'
@@ -832,9 +832,9 @@ function ApplicationForm({ setAlert }) {
                                         <>
                                             <div className='input_grp'>
                                                 <div className='input_wrap'>
-                                                    <label className='applicationForm__form__label appForm__subject' htmlFor='spouse_first_name'>{t('Form_wife_firstName')}</label>
+                                                    <label className='ukForm__form__label appForm__subject' htmlFor='spouse_first_name'>{t('Form_wife_firstName')}</label>
                                                     <input 
-                                                        className='applicationForm__form__input input__for__two' 
+                                                        className='applicationForm__form__input ukForm__input__for__two' 
                                                         name='spouse_first_name' 
                                                         type='text' 
                                                         placeholder={t('Form_firstName')} 
@@ -843,9 +843,9 @@ function ApplicationForm({ setAlert }) {
                                                     />
                                                 </div>
                                                 <div className='input_wrap'>
-                                                    <label className='applicationForm__form__label' htmlFor='last_name'>{t('Form_wife_lastName')}</label>
+                                                    <label className='ukForm__form__label' htmlFor='last_name'>{t('Form_wife_lastName')}</label>
                                                     <input 
-                                                        className='applicationForm__form__input input__for__two' 
+                                                        className='applicationForm__form__input ukForm__input__for__two' 
                                                         name='spouse_last_name' 
                                                         type='text' 
                                                         placeholder={t('Form_lastName')} 
@@ -857,9 +857,9 @@ function ApplicationForm({ setAlert }) {
 
                                             <div className='input_grp'>
                                                 <div className='form__wrap'>
-                                                    <label className='applicationForm__form__label' htmlFor='spouse_pasport_number'>{t('Form_passportNo')}</label>
+                                                    <label className='ukForm__form__label' htmlFor='spouse_pasport_number'>{t('Form_passportNo')}</label>
                                                     <input 
-                                                        className='applicationForm__form__input input__for__two' 
+                                                        className='applicationForm__form__input ukForm__input__for__two' 
                                                         name='spouse_pasport_number' 
                                                         type='text' 
                                                         placeholder={t('Form_passportNo')}
@@ -868,9 +868,9 @@ function ApplicationForm({ setAlert }) {
                                                     />
                                                 </div>
                                                 <div className='form__wrap'>
-                                                    <label className='applicationForm__form__label' htmlFor='spouse_nationality'>{t('Form_nationality')}</label>
+                                                    <label className='ukForm__form__label' htmlFor='spouse_nationality'>{t('Form_nationality')}</label>
                                                     <input 
-                                                        className='applicationForm__form__input input__for__two' 
+                                                        className='applicationForm__form__input ukForm__input__for__two' 
                                                         name='spouse_nationality' 
                                                         type='text' 
                                                         placeholder={t('Form_nationalityEx')}
@@ -881,9 +881,9 @@ function ApplicationForm({ setAlert }) {
                                             </div>
                                             <div className='input_grp'>
                                                 <div className='form__wrap'>
-                                                    <label className='applicationForm__form__label' htmlFor='spouse_dob'>{t('Form_dob')}</label>
+                                                    <label className='ukForm__form__label' htmlFor='spouse_dob'>{t('Form_dob')}</label>
                                                     <input 
-                                                        className='applicationForm__form__input input__for__two' 
+                                                        className='applicationForm__form__input ukForm__input__for__two' 
                                                         name='spouse_dob' 
                                                         type='date' 
                                                         onChange={e => onChange(e)} 
@@ -899,9 +899,9 @@ function ApplicationForm({ setAlert }) {
                             <hr className='appform__hr'/>
                             <div className='input_grp'>
                                 <div className='input_wrap'>
-                                    <label className='applicationForm__form__label' htmlFor='trip_expenses'>{t('Form_tripExpenses')}</label>
+                                    <label className='ukForm__form__label' htmlFor='trip_expenses'>{t('Form_tripExpenses')}</label>
                                     <input 
-                                        className='applicationForm__form__input input__for__two' 
+                                        className='applicationForm__form__input ukForm__input__for__two' 
                                         name='trip_expenses' 
                                         type='text' 
                                         placeholder={t('Form_tripExpensesEx')}
@@ -913,7 +913,7 @@ function ApplicationForm({ setAlert }) {
                                 <div className='select__purpose'>
                                     <h2 className='select__op__container'>{t('Form_tripPurpose')}</h2>
                                     <div className='p__select__box'>
-                                        <div onClick={()=> setShowPurpose(!showPurpose)} className='pp__selected' id="myRadioCheck">{t('Form_select')}<ExpandMoreIcon className='p__xpand__bt'/></div>
+                                        <div onClick={()=> setShowPurpose(!showPurpose)} className='ukForm__selected' id="myRadioCheck">{t('Form_select')}<ExpandMoreIcon className='p__xpand__bt'/></div>
                                         { showPurpose?
                                         <>
                                             <div className='p__option__container '>
@@ -1033,9 +1033,9 @@ function ApplicationForm({ setAlert }) {
                                 <>
                                     <div className='input_grp'>
                                         <div className='input_wrap'>
-                                            <label className='applicationForm__form__label appForm__subject' htmlFor='first_name'>{t('Form_instituteName')}</label>
+                                            <label className='ukForm__form__label appForm__subject' htmlFor='first_name'>{t('Form_instituteName')}</label>
                                             <input 
-                                                className='applicationForm__form__input input__for__two' 
+                                                className='applicationForm__form__input ukForm__input__for__two' 
                                                 name='school_name' 
                                                 type='text' 
                                                 placeholder={t('Form_instituteEx')}
@@ -1044,9 +1044,9 @@ function ApplicationForm({ setAlert }) {
                                             />
                                         </div>
                                         <div className='input_wrap input_wrap__bt import__passport'>
-                                            <label className='applicationForm__form__label' htmlFor='admission_offer_photo'>{t('Form_instituteAdmission')}</label>
+                                            <label className='ukForm__form__label' htmlFor='admission_offer_photo'>{t('Form_instituteAdmission')}</label>
                                             <input 
-                                                className='input__for__two import__passport' 
+                                                className='ukForm__input__for__two import__passport' 
                                                 name='admission_offer_photo' 
                                                 type='file' 
                                                 accept='image/*,.pdf'
@@ -1061,9 +1061,9 @@ function ApplicationForm({ setAlert }) {
                                 <>
                                     <div className='input_grp'>
                                         <div className='input_wrap'>
-                                            <label className='applicationForm__form__label appForm__subject' htmlFor='inviter_full_name'>{t('Form_inviter')}</label>
+                                            <label className='ukForm__form__label appForm__subject' htmlFor='inviter_full_name'>{t('Form_inviter')}</label>
                                             <input 
-                                                className='applicationForm__form__input input__for__two' 
+                                                className='applicationForm__form__input ukForm__input__for__two' 
                                                 name='inviter_full_name' 
                                                 type='text' 
                                                 placeholder={t('Form_inviterEx')} 
@@ -1072,9 +1072,9 @@ function ApplicationForm({ setAlert }) {
                                             />
                                         </div>
                                         <div className='input_wrap'>
-                                            <label className='applicationForm__form__label' htmlFor='inviter_email'>{t('Form_email')}</label>
+                                            <label className='ukForm__form__label' htmlFor='inviter_email'>{t('Form_email')}</label>
                                             <input 
-                                                className='applicationForm__form__input input__for__two' 
+                                                className='applicationForm__form__input ukForm__input__for__two' 
                                                 name='inviter_email' 
                                                 type='text' 
                                                 placeholder={t('Form_emailEx')}
@@ -1085,7 +1085,7 @@ function ApplicationForm({ setAlert }) {
                                     </div>
 
                                     <div className='input_wrap input_wrap__bt'>
-                                        <label className='applicationForm__form__label' htmlFor='inviter_address'>{t('Form_address')}</label>
+                                        <label className='ukForm__form__label' htmlFor='inviter_address'>{t('Form_address')}</label>
                                         <input 
                                             className='input__for__one' 
                                             name='inviter_address' 
@@ -1103,9 +1103,9 @@ function ApplicationForm({ setAlert }) {
                                 <>
                                     <div className='input_grp'>
                                         <div className='input_wrap'>
-                                            <label className='applicationForm__form__label appForm__subject' htmlFor='hospital_name'>{t('Form_hospital')}</label>
+                                            <label className='ukForm__form__label appForm__subject' htmlFor='hospital_name'>{t('Form_hospital')}</label>
                                             <input 
-                                                className='applicationForm__form__input input__for__two' 
+                                                className='applicationForm__form__input ukForm__input__for__two' 
                                                 name='hospital_name' 
                                                 type='text' 
                                                 placeholder={t('Form_hospitalEx')}
@@ -1114,9 +1114,9 @@ function ApplicationForm({ setAlert }) {
                                             />
                                         </div>
                                         <div className='input_wrap input_wrap__bt import__passport'>
-                                            <label className='applicationForm__form__label' htmlFor='medical_invitation_letter'>{t('Form_hospitalLetter')}</label>
+                                            <label className='ukForm__form__label' htmlFor='medical_invitation_letter'>{t('Form_hospitalLetter')}</label>
                                             <input 
-                                                className='input__for__two import__passport' 
+                                                className='ukForm__input__for__two import__passport' 
                                                 name='medical_invitation_letter' 
                                                 type='file' 
                                                 accept='image/*,.pdf'
@@ -1126,7 +1126,7 @@ function ApplicationForm({ setAlert }) {
                                     </div>
 
                                     <div className='input_wrap'>
-                                        <label className='applicationForm__form__label' htmlFor='medical_details'>{t('Form_additional')}</label>
+                                        <label className='ukForm__form__label' htmlFor='medical_details'>{t('Form_additional')}</label>
                                         <textarea 
                                             className='applicationForm__form__textarea'
                                             name='medical_details'
@@ -1143,7 +1143,7 @@ function ApplicationForm({ setAlert }) {
                             {showOtherTripDetails?
                                 <>
                                     <div className='input_wrap'>
-                                        <label className='applicationForm__form__label' htmlFor='other_travel_reason'>{t('Form_additional')}</label>
+                                        <label className='ukForm__form__label' htmlFor='other_travel_reason'>{t('Form_additional')}</label>
                                         <textarea 
                                             className='applicationForm__form__textarea'
                                             name='other_travel_reason'
@@ -1159,9 +1159,9 @@ function ApplicationForm({ setAlert }) {
 
                             <div className='input_grp'>
                                  <div className='form__wrap'>
-                                        <label className='applicationForm__form__label' htmlFor='arrive_date'>{t('Form_tripArrival')}</label>
+                                        <label className='ukForm__form__label' htmlFor='arrive_date'>{t('Form_tripArrival')}</label>
                                         <input 
-                                            className='applicationForm__form__input input__for__two' 
+                                            className='applicationForm__form__input ukForm__input__for__two' 
                                             name='arrive_date' 
                                             type='date' 
                                             onChange={e => onChange(e)} 
@@ -1169,9 +1169,9 @@ function ApplicationForm({ setAlert }) {
                                         />
                                 </div>
                                  <div className='form__wrap'>
-                                    <label className='applicationForm__form__label' htmlFor='leave_date'>{t('Form_tripDepature')}</label>
+                                    <label className='ukForm__form__label' htmlFor='leave_date'>{t('Form_tripDepature')}</label>
                                     <input 
-                                        className='applicationForm__form__input input__for__two' 
+                                        className='applicationForm__form__input ukForm__input__for__two' 
                                         name='leave_date' 
                                         type='date' 
                                         onChange={e => onChange(e)} 
@@ -1184,9 +1184,9 @@ function ApplicationForm({ setAlert }) {
                                 { showInviterDetails?
                                  <>
                                     <div className='input_wrap input_wrap__bt import__passport'>
-                                        <label className='applicationForm__form__label' htmlFor='invitation_letter'>{t('Form_invitation')}</label>
+                                        <label className='ukForm__form__label' htmlFor='invitation_letter'>{t('Form_invitation')}</label>
                                         <input 
-                                            className='input__for__two import__passport' 
+                                            className='ukForm__input__for__two import__passport' 
                                             name='invitation_letter' 
                                             type='file' 
                                             accept='image/*,.pdf'
@@ -1251,9 +1251,9 @@ function ApplicationForm({ setAlert }) {
                                 <>
                                     <div className='input_grp'>
                                         <div className='input_wrap'>
-                                            <label className='applicationForm__form__label appForm__subject' htmlFor='first_name'>{t('Form_job')}</label>
+                                            <label className='ukForm__form__label appForm__subject' htmlFor='first_name'>{t('Form_job')}</label>
                                             <input 
-                                                className='applicationForm__form__input input__for__two' 
+                                                className='applicationForm__form__input ukForm__input__for__two' 
                                                 name='job_title' 
                                                 type='text' 
                                                 placeholder={t('Form_jobEx')}
@@ -1262,9 +1262,9 @@ function ApplicationForm({ setAlert }) {
                                             />
                                         </div>
                                         <div className='input_wrap'>
-                                            <label className='applicationForm__form__label' htmlFor='last_name'>{t('Form_startDate')}</label>
+                                            <label className='ukForm__form__label' htmlFor='last_name'>{t('Form_startDate')}</label>
                                             <input 
-                                                className='applicationForm__form__input input__for__two' 
+                                                className='applicationForm__form__input ukForm__input__for__two' 
                                                 name='starting_date' 
                                                 type='date' 
                                                 onChange={e => onChange(e)} 
@@ -1275,9 +1275,9 @@ function ApplicationForm({ setAlert }) {
 
                                     <div className='input_grp'>
                                         <div className='input_wrap'>
-                                            <label className='applicationForm__form__label appForm__subject' htmlFor='company_name'>{t('Form_employerName')}</label>
+                                            <label className='ukForm__form__label appForm__subject' htmlFor='company_name'>{t('Form_employerName')}</label>
                                             <input 
-                                                className='applicationForm__form__input input__for__two' 
+                                                className='applicationForm__form__input ukForm__input__for__two' 
                                                 name='company_name' 
                                                 type='text' 
                                                 placeholder={t('Form_employerNameEx')}
@@ -1286,9 +1286,9 @@ function ApplicationForm({ setAlert }) {
                                             />
                                         </div>
                                         <div className='input_wrap'>
-                                            <label className='applicationForm__form__label' htmlFor='company_phone'>{t('Form_employerNamePhone')}</label>
+                                            <label className='ukForm__form__label' htmlFor='company_phone'>{t('Form_employerNamePhone')}</label>
                                             <input 
-                                                className='applicationForm__form__input input__for__two' 
+                                                className='applicationForm__form__input ukForm__input__for__two' 
                                                 name='company_phone' 
                                                 type='text' 
                                                 onChange={e => onChange(e)} 
@@ -1299,9 +1299,9 @@ function ApplicationForm({ setAlert }) {
 
                                     <div className='input_grp'>
                                         <div className='input_wrap'>
-                                            <label className='applicationForm__form__label appForm__subject' htmlFor='salary'>{t('Form_jobIncome')}</label>
+                                            <label className='ukForm__form__label appForm__subject' htmlFor='salary'>{t('Form_jobIncome')}</label>
                                             <input 
-                                                className='applicationForm__form__input input__for__two' 
+                                                className='applicationForm__form__input ukForm__input__for__two' 
                                                 name='salary' 
                                                 type='text' 
                                                 placeholder={t('Form_jobSalary')} 
@@ -1310,9 +1310,9 @@ function ApplicationForm({ setAlert }) {
                                             />
                                         </div>
                                         <div className='input_wrap'>
-                                            <label className='applicationForm__form__label' htmlFor='monthly_living_expenses'>{t('Form_livingExpenses')}</label>
+                                            <label className='ukForm__form__label' htmlFor='monthly_living_expenses'>{t('Form_livingExpenses')}</label>
                                             <input 
-                                                className='applicationForm__form__input input__for__two' 
+                                                className='applicationForm__form__input ukForm__input__for__two' 
                                                 name='monthly_living_expenses' 
                                                 type='text' 
                                                 placeholder={t('Form_tripExpensesEx')}
@@ -1322,7 +1322,7 @@ function ApplicationForm({ setAlert }) {
                                         </div>
                                     </div>
                                         <div className='input_wrap'>
-                                            <label className='applicationForm__form__label appForm__subject' htmlFor='salary'>{t('Form_employerAddress')}</label>
+                                            <label className='ukForm__form__label appForm__subject' htmlFor='salary'>{t('Form_employerAddress')}</label>
                                             <input 
                                                 className='applicationForm__form__input input__for__one' 
                                                 name='job_address' 
@@ -1337,9 +1337,9 @@ function ApplicationForm({ setAlert }) {
 
                             <div className='input_grp'>
                                 <div className='input_wrap'>
-                                    <label className='applicationForm__form__label appForm__subject' htmlFor='father_first_name'>{t('Form_father_firstName')}</label>
+                                    <label className='ukForm__form__label appForm__subject' htmlFor='father_first_name'>{t('Form_father_firstName')}</label>
                                     <input 
-                                        className='applicationForm__form__input input__for__two' 
+                                        className='applicationForm__form__input ukForm__input__for__two' 
                                         name='father_first_name' 
                                         type='text' 
                                         placeholder={t('Form_father_firstNameEx')}
@@ -1348,9 +1348,9 @@ function ApplicationForm({ setAlert }) {
                                     />
                                 </div>
                                 <div className='input_wrap'>
-                                    <label className='applicationForm__form__label' htmlFor='father_last_name'>{t('Form_father_lastName')}</label>
+                                    <label className='ukForm__form__label' htmlFor='father_last_name'>{t('Form_father_lastName')}</label>
                                     <input 
-                                        className='applicationForm__form__input input__for__two' 
+                                        className='applicationForm__form__input ukForm__input__for__two' 
                                         name='father_last_name' 
                                         type='text' 
                                         placeholder={t('Form_father_lastNameEx')}
@@ -1362,9 +1362,9 @@ function ApplicationForm({ setAlert }) {
 
                             <div className='input_grp'>
                                 <div className='form__wrap'>
-                                    <label className='applicationForm__form__label' htmlFor='father_dob'>{t('Form_father_dob')}</label>
+                                    <label className='ukForm__form__label' htmlFor='father_dob'>{t('Form_father_dob')}</label>
                                     <input 
-                                        className='applicationForm__form__input input__for__two' 
+                                        className='applicationForm__form__input ukForm__input__for__two' 
                                         name='father_dob' 
                                         type='date' 
                                         onChange={e => onChange(e)} 
@@ -1372,9 +1372,9 @@ function ApplicationForm({ setAlert }) {
                                     />
                                 </div>
                                 <div className='form__wrap'>
-                                    <label className='applicationForm__form__label' htmlFor='father_nationality'>{t('Form_father_nationality')}</label>
+                                    <label className='ukForm__form__label' htmlFor='father_nationality'>{t('Form_father_nationality')}</label>
                                     <input 
-                                        className='applicationForm__form__input input__for__two' 
+                                        className='applicationForm__form__input ukForm__input__for__two' 
                                         name='father_nationality' 
                                         type='text' 
                                         placeholder={t('Form_father_nationalityEx')}
@@ -1388,9 +1388,9 @@ function ApplicationForm({ setAlert }) {
 
                             <div className='input_grp'>
                                 <div className='input_wrap'>
-                                    <label className='applicationForm__form__label appForm__subject' htmlFor='mother_first_name'>{t('Form_mother_firstName')}</label>
+                                    <label className='ukForm__form__label appForm__subject' htmlFor='mother_first_name'>{t('Form_mother_firstName')}</label>
                                     <input 
-                                        className='applicationForm__form__input input__for__two' 
+                                        className='applicationForm__form__input ukForm__input__for__two' 
                                         name='mother_first_name' 
                                         type='text' 
                                         placeholder={t('Form_mother_firstNameEx')}
@@ -1399,9 +1399,9 @@ function ApplicationForm({ setAlert }) {
                                     />
                                 </div>
                                 <div className='input_wrap'>
-                                    <label className='applicationForm__form__label' htmlFor='mother_last_name'>{t('Form_mother_lastName')}</label>
+                                    <label className='ukForm__form__label' htmlFor='mother_last_name'>{t('Form_mother_lastName')}</label>
                                     <input 
-                                        className='applicationForm__form__input input__for__two' 
+                                        className='applicationForm__form__input ukForm__input__for__two' 
                                         name='mother_last_name' 
                                         type='text' 
                                         placeholder={t('Form_mother_lastNameEx')}
@@ -1413,9 +1413,9 @@ function ApplicationForm({ setAlert }) {
 
                             <div className='input_grp'>
                                 <div className='form__wrap'>
-                                    <label className='applicationForm__form__label' htmlFor='dob'>{t('Form_mother_dob')}</label>
+                                    <label className='ukForm__form__label' htmlFor='dob'>{t('Form_mother_dob')}</label>
                                     <input 
-                                        className='applicationForm__form__input input__for__two' 
+                                        className='applicationForm__form__input ukForm__input__for__two' 
                                         name='mother_dob' 
                                         type='date' 
                                         onChange={e => onChange(e)} 
@@ -1423,9 +1423,9 @@ function ApplicationForm({ setAlert }) {
                                     />
                                 </div>
                                 <div className='form__wrap'>
-                                    <label className='applicationForm__form__label' htmlFor='place_of_birth'>{t('Form_mother_nationality')}</label>
+                                    <label className='ukForm__form__label' htmlFor='place_of_birth'>{t('Form_mother_nationality')}</label>
                                     <input 
-                                        className='applicationForm__form__input input__for__two' 
+                                        className='applicationForm__form__input ukForm__input__for__two' 
                                         name='mother_nationality' 
                                         type='text' 
                                         placeholder={t('Form_mother_nationalityEx')}
@@ -1437,7 +1437,7 @@ function ApplicationForm({ setAlert }) {
                             <hr className='appform__hr'/> 
 
                             <div className='input_grp'>
-                                <p className='child__section__question' >{t('Form_childrenQ')}</p>
+                                <p className='ukForm__section__question' >{t('Form_childrenQ')}</p>
                                 <div className='input_wrap passport__input__radio'>
                                     <ul className='appform__ul'>
                                         <li className='appform__il'>
@@ -1475,7 +1475,7 @@ function ApplicationForm({ setAlert }) {
                             {showChildSectionNumbered?
                                 <>
                                 <hr className='appform__hr'/> 
-                                    <p className='child__section__question'>{t('Form_childrenNo')}</p>
+                                    <p className='ukForm__section__question'>{t('Form_childrenNo')}</p>
                                     <div className='input_wrap input__radio__group'>
                                             <div className='input_wrap passport__input__radio'>
                                                 <ul className='appform__ul'>
@@ -1643,7 +1643,7 @@ function ApplicationForm({ setAlert }) {
                                                 <p className='passport__section__title'>{t('Form_childPassport')}</p>
                                                 <div className='input_grp'>
                                                     <div className='input_wrap input_wrap__bt'>
-                                                        <p className='expand__p'>{t('Form_passport_info')}</p>
+                                                        <p className='ukForm__text'>{t('Form_passport_info')}</p>
                                                         <IconButton onClick={()=> setShowChild1PassportDetails(true)}>
                                                             <ExpandMoreIcon className='expand__bt'/>
                                                         </IconButton>
@@ -1652,9 +1652,9 @@ function ApplicationForm({ setAlert }) {
                                                         </IconButton>
                                                     </div>
                                                     <div className='input_wrap input_wrap__bt import__passport'>
-                                                        <label className='applicationForm__form__label' htmlFor='spouse_passport_photo'>{t('Form_passport_import')}</label>
+                                                        <label className='ukForm__form__label' htmlFor='spouse_passport_photo'>{t('Form_passport_import')}</label>
                                                             <input 
-                                                            className='input__for__two import__passport' 
+                                                            className='ukForm__input__for__two import__passport' 
                                                             name='child1_passport_photo' 
                                                             type='file' 
                                                             accept='image/*,.pdf'
@@ -1734,9 +1734,9 @@ function ApplicationForm({ setAlert }) {
                                                  <>
                                                     <div className='input_grp'>
                                                         <div className='input_wrap'>
-                                                            <label className='applicationForm__form__label appForm__subject' htmlFor='child1_first_name'>{t('Form_childFirstName')}</label>
+                                                            <label className='ukForm__form__label appForm__subject' htmlFor='child1_first_name'>{t('Form_childFirstName')}</label>
                                                             <input 
-                                                                className='applicationForm__form__input input__for__two'
+                                                                className='applicationForm__form__input ukForm__input__for__two'
                                                                 type='text'
                                                                 name='child1_first_name' 
                                                                 value={child1_first_name} 
@@ -1745,9 +1745,9 @@ function ApplicationForm({ setAlert }) {
                                                             />
                                                         </div>
                                                         <div className='input_wrap'>
-                                                            <label className='applicationForm__form__label appForm__subject' htmlFor='child1_last_name'>{t('Form_childlastName')}</label>
+                                                            <label className='ukForm__form__label appForm__subject' htmlFor='child1_last_name'>{t('Form_childlastName')}</label>
                                                             <input 
-                                                                className='applicationForm__form__input input__for__two'
+                                                                className='applicationForm__form__input ukForm__input__for__two'
                                                                 type='text'
                                                                 name='child1_last_name' 
                                                                 value={child1_last_name} 
@@ -1759,9 +1759,9 @@ function ApplicationForm({ setAlert }) {
 
                                                     <div className='input_grp'>
                                                         <div className='input_wrap'>
-                                                            <label className='applicationForm__form__label appForm__subject' htmlFor='child1_dob'>{t('Form_childDob')}</label>
+                                                            <label className='ukForm__form__label appForm__subject' htmlFor='child1_dob'>{t('Form_childDob')}</label>
                                                             <input 
-                                                                className='applicationForm__form__input input__for__two'
+                                                                className='applicationForm__form__input ukForm__input__for__two'
                                                                 type='date'
                                                                 name='child1_dob' 
                                                                 value={child1_dob} 
@@ -1769,9 +1769,9 @@ function ApplicationForm({ setAlert }) {
                                                             />
                                                         </div>
                                                         <div className='input_wrap'>
-                                                            <label className='applicationForm__form__label appForm__subject' htmlFor='child1_nationality'>{t('Form_childNationality')}</label>
+                                                            <label className='ukForm__form__label appForm__subject' htmlFor='child1_nationality'>{t('Form_childNationality')}</label>
                                                             <input 
-                                                                className='applicationForm__form__input input__for__two'
+                                                                className='applicationForm__form__input ukForm__input__for__two'
                                                                 type='text'
                                                                 name='child1_nationality' 
                                                                 value={child1_nationality} 
@@ -1782,7 +1782,7 @@ function ApplicationForm({ setAlert }) {
                                                     </div>
 
                                                     <div className='input_wrap input_wrap__bt'>
-                                                        <label className='applicationForm__form__label' htmlFor='child1_address'>{t('Form_address')}</label>
+                                                        <label className='ukForm__form__label' htmlFor='child1_address'>{t('Form_address')}</label>
                                                         <input 
                                                             className='input__for__one' 
                                                             name='child1_address' 
@@ -1803,7 +1803,7 @@ function ApplicationForm({ setAlert }) {
                                                 <p className='passport__section__title'>{t('Form_childPassport')}</p>
                                                 <div className='input_grp'>
                                                     <div className='input_wrap input_wrap__bt'>
-                                                        <p className='expand__p'>{t('Form_passport_info')}</p>
+                                                        <p className='ukForm__text'>{t('Form_passport_info')}</p>
                                                         <IconButton onClick={()=> setShowChild2PassportDetails(true)}>
                                                             <ExpandMoreIcon className='expand__bt'/>
                                                         </IconButton>
@@ -1812,9 +1812,9 @@ function ApplicationForm({ setAlert }) {
                                                         </IconButton>
                                                     </div>
                                                     <div className='input_wrap input_wrap__bt import__passport'>
-                                                        <label className='applicationForm__form__label' htmlFor='child2_passport_photo'>{t('Form_passport_import')}</label>
+                                                        <label className='ukForm__form__label' htmlFor='child2_passport_photo'>{t('Form_passport_import')}</label>
                                                             <input 
-                                                            className='input__for__two import__passport' 
+                                                            className='ukForm__input__for__two import__passport' 
                                                             name='child2_passport_photo' 
                                                             type='file' 
                                                             accept='image/*,.pdf'
@@ -1894,9 +1894,9 @@ function ApplicationForm({ setAlert }) {
                                                  <>
                                                     <div className='input_grp'>
                                                         <div className='input_wrap'>
-                                                            <label className='applicationForm__form__label appForm__subject' htmlFor='child2_first_name'>{t('Form_childFirstName')}</label>
+                                                            <label className='ukForm__form__label appForm__subject' htmlFor='child2_first_name'>{t('Form_childFirstName')}</label>
                                                             <input 
-                                                                className='applicationForm__form__input input__for__two'
+                                                                className='applicationForm__form__input ukForm__input__for__two'
                                                                 type='text'
                                                                 name='child2_first_name' 
                                                                 value={child2_first_name} 
@@ -1905,9 +1905,9 @@ function ApplicationForm({ setAlert }) {
                                                             />
                                                         </div>
                                                         <div className='input_wrap'>
-                                                            <label className='applicationForm__form__label appForm__subject' htmlFor='child2_last_name'>{t('Form_childlastName')}</label>
+                                                            <label className='ukForm__form__label appForm__subject' htmlFor='child2_last_name'>{t('Form_childlastName')}</label>
                                                             <input 
-                                                                className='applicationForm__form__input input__for__two'
+                                                                className='applicationForm__form__input ukForm__input__for__two'
                                                                 type='text'
                                                                 name='child2_last_name' 
                                                                 value={child2_last_name} 
@@ -1919,9 +1919,9 @@ function ApplicationForm({ setAlert }) {
 
                                                     <div className='input_grp'>
                                                         <div className='input_wrap'>
-                                                            <label className='applicationForm__form__label appForm__subject' htmlFor='child2_dob'>{t('Form_childDob')}</label>
+                                                            <label className='ukForm__form__label appForm__subject' htmlFor='child2_dob'>{t('Form_childDob')}</label>
                                                             <input 
-                                                                className='applicationForm__form__input input__for__two'
+                                                                className='applicationForm__form__input ukForm__input__for__two'
                                                                 type='date'
                                                                 name='child2_dob' 
                                                                 value={child2_dob} 
@@ -1929,9 +1929,9 @@ function ApplicationForm({ setAlert }) {
                                                             />
                                                         </div>
                                                         <div className='input_wrap'>
-                                                            <label className='applicationForm__form__label appForm__subject' htmlFor='child2_nationality'>{t('Form_childNationality')}</label>
+                                                            <label className='ukForm__form__label appForm__subject' htmlFor='child2_nationality'>{t('Form_childNationality')}</label>
                                                             <input 
-                                                                className='applicationForm__form__input input__for__two'
+                                                                className='applicationForm__form__input ukForm__input__for__two'
                                                                 type='text'
                                                                 name='child2_nationality' 
                                                                 value={child2_nationality} 
@@ -1942,7 +1942,7 @@ function ApplicationForm({ setAlert }) {
                                                     </div>
 
                                                     <div className='input_wrap input_wrap__bt'>
-                                                        <label className='applicationForm__form__label' htmlFor='child2_address'>{t('Form_address')}</label>
+                                                        <label className='ukForm__form__label' htmlFor='child2_address'>{t('Form_address')}</label>
                                                         <input 
                                                             className='input__for__one' 
                                                             name='child2_address' 
@@ -1963,7 +1963,7 @@ function ApplicationForm({ setAlert }) {
                                                 <p className='passport__section__title'>{t('Form_childPassport')}</p>
                                                 <div className='input_grp'>
                                                     <div className='input_wrap input_wrap__bt'>
-                                                        <p className='expand__p'>{t('Form_passport_info')}</p>
+                                                        <p className='ukForm__text'>{t('Form_passport_info')}</p>
                                                         <IconButton onClick={()=> setShowChild3PassportDetails(true)}>
                                                             <ExpandMoreIcon className='expand__bt'/>
                                                         </IconButton>
@@ -1972,9 +1972,9 @@ function ApplicationForm({ setAlert }) {
                                                         </IconButton>
                                                     </div>
                                                     <div className='input_wrap input_wrap__bt import__passport'>
-                                                        <label className='applicationForm__form__label' htmlFor='child3_passport_photo'>{t('Form_passport_import')}</label>
+                                                        <label className='ukForm__form__label' htmlFor='child3_passport_photo'>{t('Form_passport_import')}</label>
                                                             <input 
-                                                            className='input__for__two import__passport' 
+                                                            className='ukForm__input__for__two import__passport' 
                                                             name='child3_passport_photo' 
                                                             type='file' 
                                                             accept='image/*,.pdf'
@@ -2054,9 +2054,9 @@ function ApplicationForm({ setAlert }) {
                                                  <>
                                                     <div className='input_grp'>
                                                         <div className='input_wrap'>
-                                                            <label className='applicationForm__form__label appForm__subject' htmlFor='child3_first_name'>{t('Form_childFirstName')}</label>
+                                                            <label className='ukForm__form__label appForm__subject' htmlFor='child3_first_name'>{t('Form_childFirstName')}</label>
                                                             <input 
-                                                                className='applicationForm__form__input input__for__two'
+                                                                className='applicationForm__form__input ukForm__input__for__two'
                                                                 type='text'
                                                                 name='child3_first_name' 
                                                                 value={child3_first_name} 
@@ -2065,9 +2065,9 @@ function ApplicationForm({ setAlert }) {
                                                             />
                                                         </div>
                                                         <div className='input_wrap'>
-                                                            <label className='applicationForm__form__label appForm__subject' htmlFor='child3_last_name'>{t('Form_childlastName')}</label>
+                                                            <label className='ukForm__form__label appForm__subject' htmlFor='child3_last_name'>{t('Form_childlastName')}</label>
                                                             <input 
-                                                                className='applicationForm__form__input input__for__two'
+                                                                className='applicationForm__form__input ukForm__input__for__two'
                                                                 type='text'
                                                                 name='child3_last_name' 
                                                                 value={child3_last_name} 
@@ -2079,9 +2079,9 @@ function ApplicationForm({ setAlert }) {
 
                                                     <div className='input_grp'>
                                                         <div className='input_wrap'>
-                                                            <label className='applicationForm__form__label appForm__subject' htmlFor='child3_dob'>{t('Form_childDob')}</label>
+                                                            <label className='ukForm__form__label appForm__subject' htmlFor='child3_dob'>{t('Form_childDob')}</label>
                                                             <input 
-                                                                className='applicationForm__form__input input__for__two'
+                                                                className='applicationForm__form__input ukForm__input__for__two'
                                                                 type='date'
                                                                 name='child3_dob' 
                                                                 value={child3_dob} 
@@ -2089,9 +2089,9 @@ function ApplicationForm({ setAlert }) {
                                                             />
                                                         </div>
                                                         <div className='input_wrap'>
-                                                            <label className='applicationForm__form__label appForm__subject' htmlFor='child3_nationality'>{t('Form_childNationality')}</label>
+                                                            <label className='ukForm__form__label appForm__subject' htmlFor='child3_nationality'>{t('Form_childNationality')}</label>
                                                             <input 
-                                                                className='applicationForm__form__input input__for__two'
+                                                                className='applicationForm__form__input ukForm__input__for__two'
                                                                 type='text'
                                                                 name='child3_nationality' 
                                                                 value={child3_nationality} 
@@ -2102,7 +2102,7 @@ function ApplicationForm({ setAlert }) {
                                                     </div>
 
                                                     <div className='input_wrap input_wrap__bt'>
-                                                        <label className='applicationForm__form__label' htmlFor='child3_address'>{t('Form_address')}</label>
+                                                        <label className='ukForm__form__label' htmlFor='child3_address'>{t('Form_address')}</label>
                                                         <input 
                                                             className='input__for__one' 
                                                             name='child3_address' 
@@ -2123,7 +2123,7 @@ function ApplicationForm({ setAlert }) {
                                                 <p className='passport__section__title'>{t('Form_childPassport')}</p>
                                                 <div className='input_grp'>
                                                     <div className='input_wrap input_wrap__bt'>
-                                                        <p className='expand__p'>{t('Form_passport_info')}</p>
+                                                        <p className='ukForm__text'>{t('Form_passport_info')}</p>
                                                         <IconButton onClick={()=> setShowChild4PassportDetails(true)}>
                                                             <ExpandMoreIcon className='expand__bt'/>
                                                         </IconButton>
@@ -2132,9 +2132,9 @@ function ApplicationForm({ setAlert }) {
                                                         </IconButton>
                                                     </div>
                                                     <div className='input_wrap input_wrap__bt import__passport'>
-                                                        <label className='applicationForm__form__label' htmlFor='child4_passport_photo'>{t('Form_passport_import')}</label>
+                                                        <label className='ukForm__form__label' htmlFor='child4_passport_photo'>{t('Form_passport_import')}</label>
                                                             <input 
-                                                            className='input__for__two import__passport' 
+                                                            className='ukForm__input__for__two import__passport' 
                                                             name='child4_passport_photo' 
                                                             type='file' 
                                                             accept='image/*,.pdf'
@@ -2214,9 +2214,9 @@ function ApplicationForm({ setAlert }) {
                                                  <>
                                                     <div className='input_grp'>
                                                         <div className='input_wrap'>
-                                                            <label className='applicationForm__form__label appForm__subject' htmlFor='child4_first_name'>{t('Form_childFirstName')}</label>
+                                                            <label className='ukForm__form__label appForm__subject' htmlFor='child4_first_name'>{t('Form_childFirstName')}</label>
                                                             <input 
-                                                                className='applicationForm__form__input input__for__two'
+                                                                className='applicationForm__form__input ukForm__input__for__two'
                                                                 type='text'
                                                                 name='child4_first_name' 
                                                                 value={child4_first_name} 
@@ -2225,9 +2225,9 @@ function ApplicationForm({ setAlert }) {
                                                             />
                                                         </div>
                                                         <div className='input_wrap'>
-                                                            <label className='applicationForm__form__label appForm__subject' htmlFor='child4_last_name'>{t('Form_childlastName')}</label>
+                                                            <label className='ukForm__form__label appForm__subject' htmlFor='child4_last_name'>{t('Form_childlastName')}</label>
                                                             <input 
-                                                                className='applicationForm__form__input input__for__two'
+                                                                className='applicationForm__form__input ukForm__input__for__two'
                                                                 type='text'
                                                                 name='child4_last_name' 
                                                                 value={child4_last_name} 
@@ -2239,9 +2239,9 @@ function ApplicationForm({ setAlert }) {
 
                                                     <div className='input_grp'>
                                                         <div className='input_wrap'>
-                                                            <label className='applicationForm__form__label appForm__subject' htmlFor='child4_dob'>{t('Form_childDob')}</label>
+                                                            <label className='ukForm__form__label appForm__subject' htmlFor='child4_dob'>{t('Form_childDob')}</label>
                                                             <input 
-                                                                className='applicationForm__form__input input__for__two'
+                                                                className='applicationForm__form__input ukForm__input__for__two'
                                                                 type='date'
                                                                 name='child4_dob' 
                                                                 value={child4_dob} 
@@ -2249,9 +2249,9 @@ function ApplicationForm({ setAlert }) {
                                                             />
                                                         </div>
                                                         <div className='input_wrap'>
-                                                            <label className='applicationForm__form__label appForm__subject' htmlFor='child4_nationality'>{t('Form_childNationality')}</label>
+                                                            <label className='ukForm__form__label appForm__subject' htmlFor='child4_nationality'>{t('Form_childNationality')}</label>
                                                             <input 
-                                                                className='applicationForm__form__input input__for__two'
+                                                                className='applicationForm__form__input ukForm__input__for__two'
                                                                 type='text'
                                                                 name='child4_nationality' 
                                                                 value={child4_nationality} 
@@ -2262,7 +2262,7 @@ function ApplicationForm({ setAlert }) {
                                                     </div>
 
                                                     <div className='input_wrap input_wrap__bt'>
-                                                        <label className='applicationForm__form__label' htmlFor='child4_address'>{t('Form_address')}</label>
+                                                        <label className='ukForm__form__label' htmlFor='child4_address'>{t('Form_address')}</label>
                                                         <input 
                                                             className='input__for__one' 
                                                             name='child4_address' 
@@ -2283,7 +2283,7 @@ function ApplicationForm({ setAlert }) {
                                                 <p className='passport__section__title'>{t('Form_childPassport')}</p>
                                                 <div className='input_grp'>
                                                     <div className='input_wrap input_wrap__bt'>
-                                                        <p className='expand__p'>{t('Form_passport_info')}</p>
+                                                        <p className='ukForm__text'>{t('Form_passport_info')}</p>
                                                         <IconButton onClick={()=> setShowChild5PassportDetails(true)}>
                                                             <ExpandMoreIcon className='expand__bt'/>
                                                         </IconButton>
@@ -2292,9 +2292,9 @@ function ApplicationForm({ setAlert }) {
                                                         </IconButton>
                                                     </div>
                                                     <div className='input_wrap input_wrap__bt import__passport'>
-                                                        <label className='applicationForm__form__label' htmlFor='child5_passport_photo'>{t('Form_passport_import')}</label>
+                                                        <label className='ukForm__form__label' htmlFor='child5_passport_photo'>{t('Form_passport_import')}</label>
                                                             <input 
-                                                            className='input__for__two import__passport' 
+                                                            className='ukForm__input__for__two import__passport' 
                                                             name='child5_passport_photo' 
                                                             type='file' 
                                                             accept='image/*,.pdf'
@@ -2374,9 +2374,9 @@ function ApplicationForm({ setAlert }) {
                                                  <>
                                                     <div className='input_grp'>
                                                         <div className='input_wrap'>
-                                                            <label className='applicationForm__form__label appForm__subject' htmlFor='child5_first_name'>{t('Form_childFirstName')}</label>
+                                                            <label className='ukForm__form__label appForm__subject' htmlFor='child5_first_name'>{t('Form_childFirstName')}</label>
                                                             <input 
-                                                                className='applicationForm__form__input input__for__two'
+                                                                className='applicationForm__form__input ukForm__input__for__two'
                                                                 type='text'
                                                                 name='child5_first_name' 
                                                                 value={child5_first_name} 
@@ -2385,9 +2385,9 @@ function ApplicationForm({ setAlert }) {
                                                             />
                                                         </div>
                                                         <div className='input_wrap'>
-                                                            <label className='applicationForm__form__label appForm__subject' htmlFor='child5_last_name'>{t('Form_childlastName')}</label>
+                                                            <label className='ukForm__form__label appForm__subject' htmlFor='child5_last_name'>{t('Form_childlastName')}</label>
                                                             <input 
-                                                                className='applicationForm__form__input input__for__two'
+                                                                className='applicationForm__form__input ukForm__input__for__two'
                                                                 type='text'
                                                                 name='child5_last_name' 
                                                                 value={child5_last_name} 
@@ -2399,9 +2399,9 @@ function ApplicationForm({ setAlert }) {
 
                                                     <div className='input_grp'>
                                                         <div className='input_wrap'>
-                                                            <label className='applicationForm__form__label appForm__subject' htmlFor='child5_dob'>{t('Form_childDob')}</label>
+                                                            <label className='ukForm__form__label appForm__subject' htmlFor='child5_dob'>{t('Form_childDob')}</label>
                                                             <input 
-                                                                className='applicationForm__form__input input__for__two'
+                                                                className='applicationForm__form__input ukForm__input__for__two'
                                                                 type='date'
                                                                 name='child5_dob' 
                                                                 value={child5_dob} 
@@ -2409,9 +2409,9 @@ function ApplicationForm({ setAlert }) {
                                                             />
                                                         </div>
                                                         <div className='input_wrap'>
-                                                            <label className='applicationForm__form__label appForm__subject' htmlFor='child5_nationality'>{t('Form_childNationality')}</label>
+                                                            <label className='ukForm__form__label appForm__subject' htmlFor='child5_nationality'>{t('Form_childNationality')}</label>
                                                             <input 
-                                                                className='applicationForm__form__input input__for__two'
+                                                                className='applicationForm__form__input ukForm__input__for__two'
                                                                 type='text'
                                                                 name='child5_nationality' 
                                                                 value={child5_nationality} 
@@ -2422,7 +2422,7 @@ function ApplicationForm({ setAlert }) {
                                                     </div>
 
                                                     <div className='input_wrap input_wrap__bt'>
-                                                        <label className='applicationForm__form__label' htmlFor='child5_address'>{t('Form_address')}</label>
+                                                        <label className='ukForm__form__label' htmlFor='child5_address'>{t('Form_address')}</label>
                                                         <input 
                                                             className='input__for__one' 
                                                             name='child5_address' 
@@ -2443,7 +2443,7 @@ function ApplicationForm({ setAlert }) {
                                                 <p className='passport__section__title'>{t('Form_childPassport')}</p>
                                                 <div className='input_grp'>
                                                     <div className='input_wrap input_wrap__bt'>
-                                                        <p className='expand__p'>{t('Form_passport_info')}</p>
+                                                        <p className='ukForm__text'>{t('Form_passport_info')}</p>
                                                         <IconButton onClick={()=> setShowChild6PassportDetails(true)}>
                                                             <ExpandMoreIcon className='expand__bt'/>
                                                         </IconButton>
@@ -2452,9 +2452,9 @@ function ApplicationForm({ setAlert }) {
                                                         </IconButton>
                                                     </div>
                                                     <div className='input_wrap input_wrap__bt import__passport'>
-                                                        <label className='applicationForm__form__label' htmlFor='child6_passport_photo'>{t('Form_passport_import')}</label>
+                                                        <label className='ukForm__form__label' htmlFor='child6_passport_photo'>{t('Form_passport_import')}</label>
                                                             <input 
-                                                            className='input__for__two import__passport' 
+                                                            className='ukForm__input__for__two import__passport' 
                                                             name='child6_passport_photo' 
                                                             type='file' 
                                                             accept='image/*,.pdf'
@@ -2534,9 +2534,9 @@ function ApplicationForm({ setAlert }) {
                                                  <>
                                                     <div className='input_grp'>
                                                         <div className='input_wrap'>
-                                                            <label className='applicationForm__form__label appForm__subject' htmlFor='child6_first_name'>{t('Form_childTravel')}</label>
+                                                            <label className='ukForm__form__label appForm__subject' htmlFor='child6_first_name'>{t('Form_childTravel')}</label>
                                                             <input 
-                                                                className='applicationForm__form__input input__for__two'
+                                                                className='applicationForm__form__input ukForm__input__for__two'
                                                                 type='text'
                                                                 name='child6_first_name' 
                                                                 value={child6_first_name} 
@@ -2545,9 +2545,9 @@ function ApplicationForm({ setAlert }) {
                                                             />
                                                         </div>
                                                         <div className='input_wrap'>
-                                                            <label className='applicationForm__form__label appForm__subject' htmlFor='child6_last_name'>{t('Form_childlastName')}</label>
+                                                            <label className='ukForm__form__label appForm__subject' htmlFor='child6_last_name'>{t('Form_childlastName')}</label>
                                                             <input 
-                                                                className='applicationForm__form__input input__for__two'
+                                                                className='applicationForm__form__input ukForm__input__for__two'
                                                                 type='text'
                                                                 name='child6_last_name' 
                                                                 value={child6_last_name} 
@@ -2559,9 +2559,9 @@ function ApplicationForm({ setAlert }) {
 
                                                     <div className='input_grp'>
                                                         <div className='input_wrap'>
-                                                            <label className='applicationForm__form__label appForm__subject' htmlFor='child6_dob'>{t('Form_childDob')}</label>
+                                                            <label className='ukForm__form__label appForm__subject' htmlFor='child6_dob'>{t('Form_childDob')}</label>
                                                             <input 
-                                                                className='applicationForm__form__input input__for__two'
+                                                                className='applicationForm__form__input ukForm__input__for__two'
                                                                 type='date'
                                                                 name='child6_dob' 
                                                                 value={child6_dob} 
@@ -2569,9 +2569,9 @@ function ApplicationForm({ setAlert }) {
                                                             />
                                                         </div>
                                                         <div className='input_wrap'>
-                                                            <label className='applicationForm__form__label appForm__subject' htmlFor='child6_nationality'>{t('Form_childNationality')}</label>
+                                                            <label className='ukForm__form__label appForm__subject' htmlFor='child6_nationality'>{t('Form_childNationality')}</label>
                                                             <input 
-                                                                className='applicationForm__form__input input__for__two'
+                                                                className='applicationForm__form__input ukForm__input__for__two'
                                                                 type='text'
                                                                 name='child6_nationality' 
                                                                 value={child6_nationality} 
@@ -2582,7 +2582,7 @@ function ApplicationForm({ setAlert }) {
                                                     </div>
 
                                                     <div className='input_wrap input_wrap__bt'>
-                                                        <label className='applicationForm__form__label' htmlFor='child6_address'>{t('Form_address')}</label>
+                                                        <label className='ukForm__form__label' htmlFor='child6_address'>{t('Form_address')}</label>
                                                         <input 
                                                             className='input__for__one' 
                                                             name='child6_address' 
@@ -2603,7 +2603,7 @@ function ApplicationForm({ setAlert }) {
                                                 <p className='passport__section__title'>{t('Form_childPassport')}</p>
                                                 <div className='input_grp'>
                                                     <div className='input_wrap input_wrap__bt'>
-                                                        <p className='expand__p'>{t('Form_passport_info')}</p>
+                                                        <p className='ukForm__text'>{t('Form_passport_info')}</p>
                                                         <IconButton onClick={()=> setShowChild7PassportDetails(true)}>
                                                             <ExpandMoreIcon className='expand__bt'/>
                                                         </IconButton>
@@ -2612,9 +2612,9 @@ function ApplicationForm({ setAlert }) {
                                                         </IconButton>
                                                     </div>
                                                     <div className='input_wrap input_wrap__bt import__passport'>
-                                                        <label className='applicationForm__form__label' htmlFor='child7_passport_photo'>{t('Form_passport_import')}</label>
+                                                        <label className='ukForm__form__label' htmlFor='child7_passport_photo'>{t('Form_passport_import')}</label>
                                                             <input 
-                                                            className='input__for__two import__passport' 
+                                                            className='ukForm__input__for__two import__passport' 
                                                             name='child7_passport_photo' 
                                                             type='file' 
                                                             accept='image/*,.pdf'
@@ -2694,9 +2694,9 @@ function ApplicationForm({ setAlert }) {
                                                  <>
                                                     <div className='input_grp'>
                                                         <div className='input_wrap'>
-                                                            <label className='applicationForm__form__label appForm__subject' htmlFor='child7_first_name'>{t('Form_childFirstName')}</label>
+                                                            <label className='ukForm__form__label appForm__subject' htmlFor='child7_first_name'>{t('Form_childFirstName')}</label>
                                                             <input 
-                                                                className='applicationForm__form__input input__for__two'
+                                                                className='applicationForm__form__input ukForm__input__for__two'
                                                                 type='text'
                                                                 name='child7_first_name' 
                                                                 value={child7_first_name} 
@@ -2705,9 +2705,9 @@ function ApplicationForm({ setAlert }) {
                                                             />
                                                         </div>
                                                         <div className='input_wrap'>
-                                                            <label className='applicationForm__form__label appForm__subject' htmlFor='child7_last_name'>{t('Form_childlastName')}</label>
+                                                            <label className='ukForm__form__label appForm__subject' htmlFor='child7_last_name'>{t('Form_childlastName')}</label>
                                                             <input 
-                                                                className='applicationForm__form__input input__for__two'
+                                                                className='applicationForm__form__input ukForm__input__for__two'
                                                                 type='text'
                                                                 name='child7_last_name' 
                                                                 value={child7_last_name} 
@@ -2719,9 +2719,9 @@ function ApplicationForm({ setAlert }) {
 
                                                     <div className='input_grp'>
                                                         <div className='input_wrap'>
-                                                            <label className='applicationForm__form__label appForm__subject' htmlFor='child7_dob'>{t('Form_childDob')}</label>
+                                                            <label className='ukForm__form__label appForm__subject' htmlFor='child7_dob'>{t('Form_childDob')}</label>
                                                             <input 
-                                                                className='applicationForm__form__input input__for__two'
+                                                                className='applicationForm__form__input ukForm__input__for__two'
                                                                 type='date'
                                                                 name='child7_dob' 
                                                                 value={child7_dob} 
@@ -2729,9 +2729,9 @@ function ApplicationForm({ setAlert }) {
                                                             />
                                                         </div>
                                                         <div className='input_wrap'>
-                                                            <label className='applicationForm__form__label appForm__subject' htmlFor='child7_nationality'>{t('Form_childNationality')}</label>
+                                                            <label className='ukForm__form__label appForm__subject' htmlFor='child7_nationality'>{t('Form_childNationality')}</label>
                                                             <input 
-                                                                className='applicationForm__form__input input__for__two'
+                                                                className='applicationForm__form__input ukForm__input__for__two'
                                                                 type='text'
                                                                 name='child7_nationality' 
                                                                 value={child7_nationality} 
@@ -2742,7 +2742,7 @@ function ApplicationForm({ setAlert }) {
                                                     </div>
 
                                                     <div className='input_wrap input_wrap__bt'>
-                                                        <label className='applicationForm__form__label' htmlFor='child7_address'>{t('Form_address')}</label>
+                                                        <label className='ukForm__form__label' htmlFor='child7_address'>{t('Form_address')}</label>
                                                         <input 
                                                             className='input__for__one' 
                                                             name='child7_address' 
@@ -2761,7 +2761,7 @@ function ApplicationForm({ setAlert }) {
                             :null}
 
                             <hr className='appform__hr'/>
-                            <p className='child__section__question'>{t('Form_visaRefusal')}</p>
+                            <p className='ukForm__section__question'>{t('Form_visaRefusal')}</p>
                             <div className='input_wrap input__radio__group'>
                                 <div className='input_wrap passport__input__radio'>
                                     <ul className='appform__ul'>
@@ -2801,9 +2801,9 @@ function ApplicationForm({ setAlert }) {
                                 <>
                                     <div className='input_grp'>
                                         <div className='input_wrap'>
-                                            <label className='applicationForm__form__label appForm__subject' htmlFor='country_of_refusal'>{t('Form_visaRefusal_country')}</label>
+                                            <label className='ukForm__form__label appForm__subject' htmlFor='country_of_refusal'>{t('Form_visaRefusal_country')}</label>
                                             <input 
-                                                className='applicationForm__form__input input__for__two'
+                                                className='applicationForm__form__input ukForm__input__for__two'
                                                 type='text'
                                                 name='country_of_refusal' 
                                                 value={country_of_refusal} 
@@ -2812,9 +2812,9 @@ function ApplicationForm({ setAlert }) {
                                             />
                                         </div>
                                         <div className='input_wrap'>
-                                            <label className='applicationForm__form__label appForm__subject' htmlFor='visa_refusal_date'>{t('Form_visaRefusal_date')}</label>
+                                            <label className='ukForm__form__label appForm__subject' htmlFor='visa_refusal_date'>{t('Form_visaRefusal_date')}</label>
                                             <input 
-                                                className='applicationForm__form__input input__for__two'
+                                                className='applicationForm__form__input ukForm__input__for__two'
                                                 type='date'
                                                 name='visa_refusal_date' 
                                                 value={visa_refusal_date} 
@@ -2823,7 +2823,7 @@ function ApplicationForm({ setAlert }) {
                                         </div>
                                     </div>
                                     <div className='input_wrap'>
-                                        <label className='applicationForm__form__label' htmlFor='visa_refusal_desc'>{t('Form_visaRefusal_details')}</label>
+                                        <label className='ukForm__form__label' htmlFor='visa_refusal_desc'>{t('Form_visaRefusal_details')}</label>
                                         <textarea 
                                             className='applicationForm__form__textarea'
                                             name='visa_refusal_desc'
@@ -2838,7 +2838,7 @@ function ApplicationForm({ setAlert }) {
                             :null}
 
                             <hr className='appform__hr'/>
-                            <p className='child__section__question'>{t('Form_travel_history')}</p>
+                            <p className='ukForm__section__question'>{t('Form_travel_history')}</p>
                             <div className='input_wrap input__radio__group'>
                                 <div className='input_wrap passport__input__radio'>
                                     <ul className='appform__ul'>
@@ -2879,7 +2879,7 @@ function ApplicationForm({ setAlert }) {
                             {showUkTripsSection?
                                 <>
                                     <hr className='appform__hr'/>
-                                    <p className='child__section__question'>{t('ukForm_medical')}</p>
+                                    <p className='ukForm__section__question'>{t('ukForm_medical')}</p>
                                     <div className='input_wrap input__radio__group'>
                                         <div className='input_wrap passport__input__radio'>
                                             <ul className='appform__ul'>
@@ -2914,7 +2914,7 @@ function ApplicationForm({ setAlert }) {
                                     </div>
 
                                     <hr className='appform__hr'/>
-                                    <p className='child__section__question'>{t('ukForm_insuranceNo')}</p>
+                                    <p className='ukForm__section__question'>{t('ukForm_insuranceNo')}</p>
                                     <div className='input_wrap input__radio__group'>
                                         <div className='input_wrap passport__input__radio'>
                                             <ul className='appform__ul'>
@@ -2949,7 +2949,7 @@ function ApplicationForm({ setAlert }) {
                                     </div>
 
                                     <hr className='appform__hr'/>
-                                    <p className='child__section__question'>{t('ukForm_drivingLC')}</p>
+                                    <p className='ukForm__section__question'>{t('ukForm_drivingLC')}</p>
                                     <div className='input_wrap input__radio__group'>
                                         <div className='input_wrap passport__input__radio'>
                                             <ul className='appform__ul'>
@@ -2984,7 +2984,7 @@ function ApplicationForm({ setAlert }) {
                                     </div>
 
                                     <hr className='appform__hr'/>
-                                    <p className='child__section__question'>{t('ukForm_visaIssued')}</p>
+                                    <p className='ukForm__section__question'>{t('ukForm_visaIssued')}</p>
                                     <div className='input_wrap input__radio__group'>
                                         <div className='input_wrap passport__input__radio'>
                                             <ul className='appform__ul'>
@@ -3029,9 +3029,9 @@ function ApplicationForm({ setAlert }) {
                                             <hr className='appform__hr'/>
                                             <div className='input_grp'>
                                                 <div className='form__wrap'>
-                                                    <label className='applicationForm__form__label' htmlFor='uk_visit_arrival_date2'>{t('ukForm_visaIssue_date')}</label>
+                                                    <label className='ukForm__form__label' htmlFor='uk_visit_arrival_date2'>{t('ukForm_visaIssue_date')}</label>
                                                     <input 
-                                                        className='applicationForm__form__input input__for__two' 
+                                                        className='applicationForm__form__input ukForm__input__for__two' 
                                                         name='uk_visa_issue_date' 
                                                         placeholder={t('ukForm_visaIssue_dateEx')}
                                                         type='text' 
@@ -3044,7 +3044,7 @@ function ApplicationForm({ setAlert }) {
                                     :null}
 
                                     <hr className='appform__hr'/>
-                                    <p className='child__section__question'>{t('ukForm_visa_extend')}</p>
+                                    <p className='ukForm__section__question'>{t('ukForm_visa_extend')}</p>
                                     <div className='input_wrap input__radio__group'>
                                         <div className='input_wrap passport__input__radio'>
                                             <ul className='appform__ul'>
@@ -3089,9 +3089,9 @@ function ApplicationForm({ setAlert }) {
                                             <hr className='appform__hr'/>
                                             <div className='input_grp'>
                                                 <div className='form__wrap'>
-                                                    <label className='applicationForm__form__label' htmlFor='uk_remain_visa_date'>{t('ukForm_visa_extendDate')}</label>
+                                                    <label className='ukForm__form__label' htmlFor='uk_remain_visa_date'>{t('ukForm_visa_extendDate')}</label>
                                                     <input 
-                                                        className='applicationForm__form__input input__for__two' 
+                                                        className='applicationForm__form__input ukForm__input__for__two' 
                                                         name='uk_remain_visa_date' 
                                                         placeholder={t('ukForm_visaIssue_dateEx')}
                                                         type='text' 
@@ -3134,7 +3134,7 @@ function ApplicationForm({ setAlert }) {
                                     :null}
 
                                     <hr className='appform__hr'/>
-                                    <p className='child__section__question'>{t('ukForm_tripsNo')}</p>
+                                    <p className='ukForm__section__question'>{t('ukForm_tripsNo')}</p>
                                     <div className='input_wrap input__radio__group'>
                                             <div className='input_wrap passport__input__radio'>
                                                 <ul className='appform__ul'>
@@ -3292,9 +3292,9 @@ function ApplicationForm({ setAlert }) {
                                             <hr className='appform__hr'/>
                                             <div className='input_grp'>
                                                 <div className='input_wrap'>
-                                                    <label className='applicationForm__form__label appForm__subject' htmlFor='purpose_of_uk_visit'>{t('ukForm_visaPurpose')}</label>
+                                                    <label className='ukForm__form__label appForm__subject' htmlFor='purpose_of_uk_visit'>{t('ukForm_visaPurpose')}</label>
                                                     <input 
-                                                        className='applicationForm__form__input input__for__two' 
+                                                        className='applicationForm__form__input ukForm__input__for__two' 
                                                         name='purpose_of_uk_visit' 
                                                         type='text' 
                                                         placeholder={t('ukForm_visaPurposeEx')}
@@ -3306,9 +3306,9 @@ function ApplicationForm({ setAlert }) {
 
                                             <div className='input_grp'>
                                                 <div className='form__wrap'>
-                                                    <label className='applicationForm__form__label' htmlFor='uk_visit_arrival_date'>{t('ukForm_ukVisit_date')}</label>
+                                                    <label className='ukForm__form__label' htmlFor='uk_visit_arrival_date'>{t('ukForm_ukVisit_date')}</label>
                                                     <input 
-                                                        className='applicationForm__form__input input__for__two' 
+                                                        className='applicationForm__form__input ukForm__input__for__two' 
                                                         name='uk_visit_arrival_date' 
                                                         placeholder={t('ukForm_visaIssue_dateEx')}
                                                         type='text' 
@@ -3317,9 +3317,9 @@ function ApplicationForm({ setAlert }) {
                                                     />
                                                 </div>
                                                 <div className='form__wrap'>
-                                                    <label className='applicationForm__form__label' htmlFor='period_of_uk_stay'>{t('ukForm_uk_StudyPeriod')}</label>
+                                                    <label className='ukForm__form__label' htmlFor='period_of_uk_stay'>{t('ukForm_uk_StudyPeriod')}</label>
                                                     <input 
-                                                        className='applicationForm__form__input input__for__two' 
+                                                        className='applicationForm__form__input ukForm__input__for__two' 
                                                         name='period_of_uk_stay' 
                                                         type='text' 
                                                         placeholder={t('ukForm_uk_StudyPeriodEx')}
@@ -3334,9 +3334,9 @@ function ApplicationForm({ setAlert }) {
                                             <hr className='appform__hr'/>
                                             <div className='input_grp'>
                                                 <div className='input_wrap'>
-                                                    <label className='applicationForm__form__label appForm__subject' htmlFor='purpose_of_uk_visit2'>{t('ukForm_visaPurpose')}</label>
+                                                    <label className='ukForm__form__label appForm__subject' htmlFor='purpose_of_uk_visit2'>{t('ukForm_visaPurpose')}</label>
                                                     <input 
-                                                        className='applicationForm__form__input input__for__two' 
+                                                        className='applicationForm__form__input ukForm__input__for__two' 
                                                         name='purpose_of_uk_visit2' 
                                                         type='text' 
                                                         placeholder={t('ukForm_visaPurposeEx')}
@@ -3348,9 +3348,9 @@ function ApplicationForm({ setAlert }) {
 
                                             <div className='input_grp'>
                                                 <div className='form__wrap'>
-                                                    <label className='applicationForm__form__label' htmlFor='uk_visit_arrival_date2'>{t('ukForm_ukVisit_date')}</label>
+                                                    <label className='ukForm__form__label' htmlFor='uk_visit_arrival_date2'>{t('ukForm_ukVisit_date')}</label>
                                                     <input 
-                                                        className='applicationForm__form__input input__for__two' 
+                                                        className='applicationForm__form__input ukForm__input__for__two' 
                                                         name='uk_visit_arrival_date2' 
                                                         placeholder={t('ukForm_visaIssue_dateEx')}
                                                         type='text' 
@@ -3359,9 +3359,9 @@ function ApplicationForm({ setAlert }) {
                                                     />
                                                 </div>
                                                 <div className='form__wrap'>
-                                                    <label className='applicationForm__form__label' htmlFor='period_of_uk_stay2'>{t('ukForm_uk_StudyPeriod')}</label>
+                                                    <label className='ukForm__form__label' htmlFor='period_of_uk_stay2'>{t('ukForm_uk_StudyPeriod')}</label>
                                                     <input 
-                                                        className='applicationForm__form__input input__for__two' 
+                                                        className='applicationForm__form__input ukForm__input__for__two' 
                                                         name='period_of_uk_stay2' 
                                                         type='text' 
                                                         placeholder={t('ukForm_uk_StudyPeriodEx')}
@@ -3378,9 +3378,9 @@ function ApplicationForm({ setAlert }) {
                                             <hr className='appform__hr'/>
                                             <div className='input_grp'>
                                                 <div className='input_wrap'>
-                                                    <label className='applicationForm__form__label appForm__subject' htmlFor='purpose_of_uk_visit3'>{t('ukForm_visaPurpose')}</label>
+                                                    <label className='ukForm__form__label appForm__subject' htmlFor='purpose_of_uk_visit3'>{t('ukForm_visaPurpose')}</label>
                                                     <input 
-                                                        className='applicationForm__form__input input__for__two' 
+                                                        className='applicationForm__form__input ukForm__input__for__two' 
                                                         name='purpose_of_uk_visit3' 
                                                         type='text' 
                                                         placeholder={t('ukForm_visaPurposeEx')}
@@ -3392,9 +3392,9 @@ function ApplicationForm({ setAlert }) {
 
                                             <div className='input_grp'>
                                                 <div className='form__wrap'>
-                                                    <label className='applicationForm__form__label' htmlFor='uk_visit_arrival_date3'>{t('ukForm_ukVisit_date')}</label>
+                                                    <label className='ukForm__form__label' htmlFor='uk_visit_arrival_date3'>{t('ukForm_ukVisit_date')}</label>
                                                     <input 
-                                                        className='applicationForm__form__input input__for__two' 
+                                                        className='applicationForm__form__input ukForm__input__for__two' 
                                                         name='uk_visit_arrival_date3' 
                                                         placeholder={t('ukForm_visaIssue_dateEx')}
                                                         type='text' 
@@ -3403,9 +3403,9 @@ function ApplicationForm({ setAlert }) {
                                                     />
                                                 </div>
                                                 <div className='form__wrap'>
-                                                    <label className='applicationForm__form__label' htmlFor='period_of_uk_stay3'>{t('ukForm_uk_StudyPeriod')}</label>
+                                                    <label className='ukForm__form__label' htmlFor='period_of_uk_stay3'>{t('ukForm_uk_StudyPeriod')}</label>
                                                     <input 
-                                                        className='applicationForm__form__input input__for__two' 
+                                                        className='applicationForm__form__input ukForm__input__for__two' 
                                                         name='period_of_uk_stay3' 
                                                         type='text' 
                                                         placeholder={t('ukForm_uk_StudyPeriodEx')}
@@ -3421,9 +3421,9 @@ function ApplicationForm({ setAlert }) {
                                             <hr className='appform__hr'/>
                                             <div className='input_grp'>
                                                 <div className='input_wrap'>
-                                                    <label className='applicationForm__form__label appForm__subject' htmlFor='purpose_of_uk_visit4'>{t('ukForm_visaPurpose')}</label>
+                                                    <label className='ukForm__form__label appForm__subject' htmlFor='purpose_of_uk_visit4'>{t('ukForm_visaPurpose')}</label>
                                                     <input 
-                                                        className='applicationForm__form__input input__for__two' 
+                                                        className='applicationForm__form__input ukForm__input__for__two' 
                                                         name='purpose_of_uk_visit4' 
                                                         type='text' 
                                                         placeholder={t('ukForm_visaPurposeEx')}
@@ -3435,9 +3435,9 @@ function ApplicationForm({ setAlert }) {
 
                                             <div className='input_grp'>
                                                 <div className='form__wrap'>
-                                                    <label className='applicationForm__form__label' htmlFor='uk_visit_arrival_date4'>{t('ukForm_ukVisit_date')}</label>
+                                                    <label className='ukForm__form__label' htmlFor='uk_visit_arrival_date4'>{t('ukForm_ukVisit_date')}</label>
                                                     <input 
-                                                        className='applicationForm__form__input input__for__two' 
+                                                        className='applicationForm__form__input ukForm__input__for__two' 
                                                         name='uk_visit_arrival_date4' 
                                                         placeholder={t('ukForm_visaIssue_dateEx')}
                                                         type='text' 
@@ -3446,9 +3446,9 @@ function ApplicationForm({ setAlert }) {
                                                     />
                                                 </div>
                                                 <div className='form__wrap'>
-                                                    <label className='applicationForm__form__label' htmlFor='period_of_uk_stay4'>{t('ukForm_uk_StudyPeriod')}</label>
+                                                    <label className='ukForm__form__label' htmlFor='period_of_uk_stay4'>{t('ukForm_uk_StudyPeriod')}</label>
                                                     <input 
-                                                        className='applicationForm__form__input input__for__two' 
+                                                        className='applicationForm__form__input ukForm__input__for__two' 
                                                         name='period_of_uk_stay4' 
                                                         type='text' 
                                                         placeholder={t('ukForm_uk_StudyPeriodEx')}
@@ -3464,9 +3464,9 @@ function ApplicationForm({ setAlert }) {
                                             <hr className='appform__hr'/>
                                             <div className='input_grp'>
                                                 <div className='input_wrap'>
-                                                    <label className='applicationForm__form__label appForm__subject' htmlFor='purpose_of_uk_visit5'>{t('ukForm_visaPurpose')}</label>
+                                                    <label className='ukForm__form__label appForm__subject' htmlFor='purpose_of_uk_visit5'>{t('ukForm_visaPurpose')}</label>
                                                     <input 
-                                                        className='applicationForm__form__input input__for__two' 
+                                                        className='applicationForm__form__input ukForm__input__for__two' 
                                                         name='purpose_of_uk_visit5' 
                                                         type='text' 
                                                         placeholder={t('ukForm_visaPurposeEx')}
@@ -3478,9 +3478,9 @@ function ApplicationForm({ setAlert }) {
 
                                             <div className='input_grp'>
                                                 <div className='form__wrap'>
-                                                    <label className='applicationForm__form__label' htmlFor='uk_visit_arrival_date5'>{t('ukForm_ukVisit_date')}</label>
+                                                    <label className='ukForm__form__label' htmlFor='uk_visit_arrival_date5'>{t('ukForm_ukVisit_date')}</label>
                                                     <input 
-                                                        className='applicationForm__form__input input__for__two' 
+                                                        className='applicationForm__form__input ukForm__input__for__two' 
                                                         name='uk_visit_arrival_date5' 
                                                         placeholder={t('ukForm_visaIssue_dateEx')}
                                                         type='text' 
@@ -3489,9 +3489,9 @@ function ApplicationForm({ setAlert }) {
                                                     />
                                                 </div>
                                                 <div className='form__wrap'>
-                                                    <label className='applicationForm__form__label' htmlFor='period_of_uk_stay5'>{t('ukForm_uk_StudyPeriod')}</label>
+                                                    <label className='ukForm__form__label' htmlFor='period_of_uk_stay5'>{t('ukForm_uk_StudyPeriod')}</label>
                                                     <input 
-                                                        className='applicationForm__form__input input__for__two' 
+                                                        className='applicationForm__form__input ukForm__input__for__two' 
                                                         name='period_of_uk_stay5' 
                                                         type='text' 
                                                         placeholder={t('ukForm_uk_StudyPeriodEx')}
@@ -3507,9 +3507,9 @@ function ApplicationForm({ setAlert }) {
                                             <hr className='appform__hr'/>
                                             <div className='input_grp'>
                                                 <div className='input_wrap'>
-                                                    <label className='applicationForm__form__label appForm__subject' htmlFor='purpose_of_uk_visit6'>{t('ukForm_visaPurpose')}</label>
+                                                    <label className='ukForm__form__label appForm__subject' htmlFor='purpose_of_uk_visit6'>{t('ukForm_visaPurpose')}</label>
                                                     <input 
-                                                        className='applicationForm__form__input input__for__two' 
+                                                        className='applicationForm__form__input ukForm__input__for__two' 
                                                         name='purpose_of_uk_visit6' 
                                                         type='text' 
                                                         placeholder={t('ukForm_visaPurposeEx')}
@@ -3521,9 +3521,9 @@ function ApplicationForm({ setAlert }) {
 
                                             <div className='input_grp'>
                                                 <div className='form__wrap'>
-                                                    <label className='applicationForm__form__label' htmlFor='uk_visit_arrival_date6'>{t('ukForm_ukVisit_date')}</label>
+                                                    <label className='ukForm__form__label' htmlFor='uk_visit_arrival_date6'>{t('ukForm_ukVisit_date')}</label>
                                                     <input 
-                                                        className='applicationForm__form__input input__for__two' 
+                                                        className='applicationForm__form__input ukForm__input__for__two' 
                                                         name='uk_visit_arrival_date6' 
                                                         placeholder={t('ukForm_visaIssue_dateEx')}
                                                         type='text' 
@@ -3532,9 +3532,9 @@ function ApplicationForm({ setAlert }) {
                                                     />
                                                 </div>
                                                 <div className='form__wrap'>
-                                                    <label className='applicationForm__form__label' htmlFor='period_of_uk_stay6'>{t('ukForm_uk_StudyPeriod')}</label>
+                                                    <label className='ukForm__form__label' htmlFor='period_of_uk_stay6'>{t('ukForm_uk_StudyPeriod')}</label>
                                                     <input 
-                                                        className='applicationForm__form__input input__for__two' 
+                                                        className='applicationForm__form__input ukForm__input__for__two' 
                                                         name='period_of_uk_stay6' 
                                                         type='text' 
                                                         placeholder={t('ukForm_uk_StudyPeriodEx')}
@@ -3550,9 +3550,9 @@ function ApplicationForm({ setAlert }) {
                                             <hr className='appform__hr'/>
                                             <div className='input_grp'>
                                                 <div className='input_wrap'>
-                                                    <label className='applicationForm__form__label appForm__subject' htmlFor='purpose_of_uk_visit7'>{t('ukForm_visaPurpose')}</label>
+                                                    <label className='ukForm__form__label appForm__subject' htmlFor='purpose_of_uk_visit7'>{t('ukForm_visaPurpose')}</label>
                                                     <input 
-                                                        className='applicationForm__form__input input__for__two' 
+                                                        className='applicationForm__form__input ukForm__input__for__two' 
                                                         name='purpose_of_uk_visit7' 
                                                         type='text' 
                                                         placeholder={t('ukForm_visaPurposeEx')}
@@ -3564,9 +3564,9 @@ function ApplicationForm({ setAlert }) {
 
                                             <div className='input_grp'>
                                                 <div className='form__wrap'>
-                                                    <label className='applicationForm__form__label' htmlFor='uk_visit_arrival_date7'>{t('ukForm_ukVisit_date')}</label>
+                                                    <label className='ukForm__form__label' htmlFor='uk_visit_arrival_date7'>{t('ukForm_ukVisit_date')}</label>
                                                     <input 
-                                                        className='applicationForm__form__input input__for__two' 
+                                                        className='applicationForm__form__input ukForm__input__for__two' 
                                                         name='uk_visit_arrival_date7' 
                                                         placeholder={t('ukForm_visaIssue_dateEx')}
                                                         type='text' 
@@ -3575,9 +3575,9 @@ function ApplicationForm({ setAlert }) {
                                                     />
                                                 </div>
                                                 <div className='form__wrap'>
-                                                    <label className='applicationForm__form__label' htmlFor='period_of_uk_stay7'>{t('ukForm_uk_StudyPeriod')}</label>
+                                                    <label className='ukForm__form__label' htmlFor='period_of_uk_stay7'>{t('ukForm_uk_StudyPeriod')}</label>
                                                     <input 
-                                                        className='applicationForm__form__input input__for__two' 
+                                                        className='applicationForm__form__input ukForm__input__for__two' 
                                                         name='period_of_uk_stay7' 
                                                         type='text' 
                                                         placeholder={t('ukForm_uk_StudyPeriodEx')}
@@ -3592,7 +3592,7 @@ function ApplicationForm({ setAlert }) {
                             :null}
 
                             <hr className='appform__hr'/>
-                            <p className='child__section__question'>{t('Form_otherTrips')}</p>
+                            <p className='ukForm__section__question'>{t('Form_otherTrips')}</p>
                             <div className='input_wrap input__radio__group'>
                                 <div className='input_wrap passport__input__radio'>
                                     <ul className='appform__ul'>
@@ -3632,7 +3632,7 @@ function ApplicationForm({ setAlert }) {
 
                             {showTripsSection?
                                 <>
-                                    <p className='child__section__question'>{t('Form_otherTripsNo')}</p>
+                                    <p className='ukForm__section__question'>{t('Form_otherTripsNo')}</p>
                                     <div className='input_wrap input__radio__group'>
                                             <div className='input_wrap passport__input__radio'>
                                                 <ul className='appform__ul'>
@@ -3790,9 +3790,9 @@ function ApplicationForm({ setAlert }) {
                                             <hr className='appform__hr'/>
                                             <div className='input_grp'>
                                                 <div className='input_wrap'>
-                                                    <label className='applicationForm__form__label appForm__subject' htmlFor='visted_country'>{t('Form_countryName')}</label>
+                                                    <label className='ukForm__form__label appForm__subject' htmlFor='visted_country'>{t('Form_countryName')}</label>
                                                     <input 
-                                                        className='applicationForm__form__input input__for__two' 
+                                                        className='applicationForm__form__input ukForm__input__for__two' 
                                                         name='visted_country' 
                                                         type='text' 
                                                         placeholder={t('Form_countryEx')}
@@ -3801,9 +3801,9 @@ function ApplicationForm({ setAlert }) {
                                                     />
                                                 </div>
                                                 <div className='input_wrap'>
-                                                    <label className='applicationForm__form__label' htmlFor='purpose_of_visit'>{t('ukForm_visaPurpose')}</label>
+                                                    <label className='ukForm__form__label' htmlFor='purpose_of_visit'>{t('ukForm_visaPurpose')}</label>
                                                     <input 
-                                                        className='applicationForm__form__input input__for__two' 
+                                                        className='applicationForm__form__input ukForm__input__for__two' 
                                                         name='purpose_of_visit' 
                                                         type='text' 
                                                         placeholder={t('Form_visitPurpose')}
@@ -3815,9 +3815,9 @@ function ApplicationForm({ setAlert }) {
 
                                             <div className='input_grp'>
                                                 <div className='form__wrap'>
-                                                    <label className='applicationForm__form__label' htmlFor='visit_arrival_date'>{t('Form_visit_entry')}</label>
+                                                    <label className='ukForm__form__label' htmlFor='visit_arrival_date'>{t('Form_visit_entry')}</label>
                                                     <input 
-                                                        className='applicationForm__form__input input__for__two' 
+                                                        className='applicationForm__form__input ukForm__input__for__two' 
                                                         name='visit_arrival_date' 
                                                         type='date' 
                                                         onChange={e => onChange(e)} 
@@ -3825,9 +3825,9 @@ function ApplicationForm({ setAlert }) {
                                                     />
                                                 </div>
                                                 <div className='form__wrap'>
-                                                    <label className='applicationForm__form__label' htmlFor='visit_departure_date'>{t('Form_visit_depature')}</label>
+                                                    <label className='ukForm__form__label' htmlFor='visit_departure_date'>{t('Form_visit_depature')}</label>
                                                     <input 
-                                                        className='applicationForm__form__input input__for__two' 
+                                                        className='applicationForm__form__input ukForm__input__for__two' 
                                                         name='visit_departure_date' 
                                                         type='date' 
                                                         onChange={e => onChange(e)} 
@@ -3841,9 +3841,9 @@ function ApplicationForm({ setAlert }) {
                                             <hr className='appform__hr'/>
                                             <div className='input_grp'>
                                                 <div className='input_wrap'>
-                                                    <label className='applicationForm__form__label appForm__subject' htmlFor='visted_country'>{t('Form_countryName')}</label>
+                                                    <label className='ukForm__form__label appForm__subject' htmlFor='visted_country'>{t('Form_countryName')}</label>
                                                     <input 
-                                                        className='applicationForm__form__input input__for__two' 
+                                                        className='applicationForm__form__input ukForm__input__for__two' 
                                                         name='visted_country2' 
                                                         type='text' 
                                                         placeholder={t('Form_countryEx')}
@@ -3852,9 +3852,9 @@ function ApplicationForm({ setAlert }) {
                                                     />
                                                 </div>
                                                 <div className='input_wrap'>
-                                                    <label className='applicationForm__form__label' htmlFor='last_name'>{t('ukForm_visaPurpose')}</label>
+                                                    <label className='ukForm__form__label' htmlFor='last_name'>{t('ukForm_visaPurpose')}</label>
                                                     <input 
-                                                        className='applicationForm__form__input input__for__two' 
+                                                        className='applicationForm__form__input ukForm__input__for__two' 
                                                         name='purpose_of_visit2' 
                                                         type='text' 
                                                         placeholder={t('Form_visitPurpose')}
@@ -3866,9 +3866,9 @@ function ApplicationForm({ setAlert }) {
 
                                             <div className='input_grp'>
                                                 <div className='form__wrap'>
-                                                    <label className='applicationForm__form__label' htmlFor='passport_issue_date'>{t('Form_visit_entry')}</label>
+                                                    <label className='ukForm__form__label' htmlFor='passport_issue_date'>{t('Form_visit_entry')}</label>
                                                     <input 
-                                                        className='applicationForm__form__input input__for__two' 
+                                                        className='applicationForm__form__input ukForm__input__for__two' 
                                                         name='visit_arrival_date2' 
                                                         type='date' 
                                                         onChange={e => onChange(e)} 
@@ -3876,9 +3876,9 @@ function ApplicationForm({ setAlert }) {
                                                     />
                                                 </div>
                                                 <div className='form__wrap'>
-                                                    <label className='applicationForm__form__label' htmlFor='passport_issue_date'>{t('Form_visit_depature')}</label>
+                                                    <label className='ukForm__form__label' htmlFor='passport_issue_date'>{t('Form_visit_depature')}</label>
                                                     <input 
-                                                        className='applicationForm__form__input input__for__two' 
+                                                        className='applicationForm__form__input ukForm__input__for__two' 
                                                         name='visit_departure_date2' 
                                                         type='date' 
                                                         onChange={e => onChange(e)} 
@@ -3895,9 +3895,9 @@ function ApplicationForm({ setAlert }) {
                                             <hr className='appform__hr'/>
                                             <div className='input_grp'>
                                                 <div className='input_wrap'>
-                                                    <label className='applicationForm__form__label appForm__subject' htmlFor='visted_country3'>{t('Form_countryName')}</label>
+                                                    <label className='ukForm__form__label appForm__subject' htmlFor='visted_country3'>{t('Form_countryName')}</label>
                                                     <input 
-                                                        className='applicationForm__form__input input__for__two' 
+                                                        className='applicationForm__form__input ukForm__input__for__two' 
                                                         name='visted_country3' 
                                                         type='text' 
                                                         placeholder={t('Form_countryEx')}
@@ -3906,9 +3906,9 @@ function ApplicationForm({ setAlert }) {
                                                     />
                                                 </div>
                                                 <div className='input_wrap'>
-                                                    <label className='applicationForm__form__label' htmlFor='purpose_of_visit3'>{t('ukForm_visaPurpose')}</label>
+                                                    <label className='ukForm__form__label' htmlFor='purpose_of_visit3'>{t('ukForm_visaPurpose')}</label>
                                                     <input 
-                                                        className='applicationForm__form__input input__for__two' 
+                                                        className='applicationForm__form__input ukForm__input__for__two' 
                                                         name='purpose_of_visit3' 
                                                         type='text' 
                                                         placeholder={t('Form_visitPurpose')}
@@ -3920,9 +3920,9 @@ function ApplicationForm({ setAlert }) {
 
                                             <div className='input_grp'>
                                                 <div className='form__wrap'>
-                                                    <label className='applicationForm__form__label' htmlFor='visit_arrival_date3'>{t('Form_visit_entry')}</label>
+                                                    <label className='ukForm__form__label' htmlFor='visit_arrival_date3'>{t('Form_visit_entry')}</label>
                                                     <input 
-                                                        className='applicationForm__form__input input__for__two' 
+                                                        className='applicationForm__form__input ukForm__input__for__two' 
                                                         name='visit_arrival_date3' 
                                                         type='date' 
                                                         onChange={e => onChange(e)} 
@@ -3930,9 +3930,9 @@ function ApplicationForm({ setAlert }) {
                                                     />
                                                 </div>
                                                 <div className='form__wrap'>
-                                                    <label className='applicationForm__form__label' htmlFor='visit_departure_date3'>{t('Form_visit_depature')}</label>
+                                                    <label className='ukForm__form__label' htmlFor='visit_departure_date3'>{t('Form_visit_depature')}</label>
                                                     <input 
-                                                        className='applicationForm__form__input input__for__two' 
+                                                        className='applicationForm__form__input ukForm__input__for__two' 
                                                         name='visit_departure_date3' 
                                                         type='date' 
                                                         onChange={e => onChange(e)} 
@@ -3949,9 +3949,9 @@ function ApplicationForm({ setAlert }) {
                                             <hr className='appform__hr'/>
                                             <div className='input_grp'>
                                                 <div className='input_wrap'>
-                                                    <label className='applicationForm__form__label appForm__subject' htmlFor='visted_country4'>{t('Form_countryName')}</label>
+                                                    <label className='ukForm__form__label appForm__subject' htmlFor='visted_country4'>{t('Form_countryName')}</label>
                                                     <input 
-                                                        className='applicationForm__form__input input__for__two' 
+                                                        className='applicationForm__form__input ukForm__input__for__two' 
                                                         name='visted_country4' 
                                                         type='text' 
                                                         placeholder={t('Form_countryEx')}
@@ -3960,9 +3960,9 @@ function ApplicationForm({ setAlert }) {
                                                     />
                                                 </div>
                                                 <div className='input_wrap'>
-                                                    <label className='applicationForm__form__label' htmlFor='purpose_of_visit4'>{t('ukForm_visaPurpose')}</label>
+                                                    <label className='ukForm__form__label' htmlFor='purpose_of_visit4'>{t('ukForm_visaPurpose')}</label>
                                                     <input 
-                                                        className='applicationForm__form__input input__for__two' 
+                                                        className='applicationForm__form__input ukForm__input__for__two' 
                                                         name='purpose_of_visit4' 
                                                         type='text' 
                                                         placeholder={t('Form_visitPurpose')} 
@@ -3974,9 +3974,9 @@ function ApplicationForm({ setAlert }) {
 
                                             <div className='input_grp'>
                                                 <div className='form__wrap'>
-                                                    <label className='applicationForm__form__label' htmlFor='visit_arrival_date4'>{t('Form_visit_entry')}</label>
+                                                    <label className='ukForm__form__label' htmlFor='visit_arrival_date4'>{t('Form_visit_entry')}</label>
                                                     <input 
-                                                        className='applicationForm__form__input input__for__two' 
+                                                        className='applicationForm__form__input ukForm__input__for__two' 
                                                         name='visit_arrival_date4' 
                                                         type='date' 
                                                         onChange={e => onChange(e)} 
@@ -3984,9 +3984,9 @@ function ApplicationForm({ setAlert }) {
                                                     />
                                                 </div>
                                                 <div className='form__wrap'>
-                                                    <label className='applicationForm__form__label' htmlFor='visit_departure_date4'>{t('Form_visit_depature')}</label>
+                                                    <label className='ukForm__form__label' htmlFor='visit_departure_date4'>{t('Form_visit_depature')}</label>
                                                     <input 
-                                                        className='applicationForm__form__input input__for__two' 
+                                                        className='applicationForm__form__input ukForm__input__for__two' 
                                                         name='visit_departure_date4' 
                                                         type='date' 
                                                         onChange={e => onChange(e)} 
@@ -4003,9 +4003,9 @@ function ApplicationForm({ setAlert }) {
                                             <hr className='appform__hr'/>
                                             <div className='input_grp'>
                                                 <div className='input_wrap'>
-                                                    <label className='applicationForm__form__label appForm__subject' htmlFor='visted_country5'>{t('Form_countryName')}</label>
+                                                    <label className='ukForm__form__label appForm__subject' htmlFor='visted_country5'>{t('Form_countryName')}</label>
                                                     <input 
-                                                        className='applicationForm__form__input input__for__two' 
+                                                        className='applicationForm__form__input ukForm__input__for__two' 
                                                         name='visted_country5' 
                                                         type='text' 
                                                         placeholder={t('Form_countryEx')}
@@ -4014,9 +4014,9 @@ function ApplicationForm({ setAlert }) {
                                                     />
                                                 </div>
                                                 <div className='input_wrap'>
-                                                    <label className='applicationForm__form__label' htmlFor='purpose_of_visit5'>{t('ukForm_visaPurpose')}</label>
+                                                    <label className='ukForm__form__label' htmlFor='purpose_of_visit5'>{t('ukForm_visaPurpose')}</label>
                                                     <input 
-                                                        className='applicationForm__form__input input__for__two' 
+                                                        className='applicationForm__form__input ukForm__input__for__two' 
                                                         name='purpose_of_visit5' 
                                                         type='text' 
                                                         placeholder={t('Form_visitPurpose')}
@@ -4028,9 +4028,9 @@ function ApplicationForm({ setAlert }) {
 
                                             <div className='input_grp'>
                                                 <div className='form__wrap'>
-                                                    <label className='applicationForm__form__label' htmlFor='visit_arrival_date5'>{t('Form_visit_entry')}</label>
+                                                    <label className='ukForm__form__label' htmlFor='visit_arrival_date5'>{t('Form_visit_entry')}</label>
                                                     <input 
-                                                        className='applicationForm__form__input input__for__two' 
+                                                        className='applicationForm__form__input ukForm__input__for__two' 
                                                         name='visit_arrival_date5' 
                                                         type='date' 
                                                         onChange={e => onChange(e)} 
@@ -4038,9 +4038,9 @@ function ApplicationForm({ setAlert }) {
                                                     />
                                                 </div>
                                                 <div className='form__wrap'>
-                                                    <label className='applicationForm__form__label' htmlFor='visit_departure_date5'>{t('Form_visit_depature')}</label>
+                                                    <label className='ukForm__form__label' htmlFor='visit_departure_date5'>{t('Form_visit_depature')}</label>
                                                     <input 
-                                                        className='applicationForm__form__input input__for__two' 
+                                                        className='applicationForm__form__input ukForm__input__for__two' 
                                                         name='visit_departure_date5' 
                                                         type='date' 
                                                         onChange={e => onChange(e)} 
@@ -4056,9 +4056,9 @@ function ApplicationForm({ setAlert }) {
                                             <hr className='appform__hr'/>
                                             <div className='input_grp'>
                                                 <div className='input_wrap'>
-                                                    <label className='applicationForm__form__label appForm__subject' htmlFor='visted_country6'>{t('Form_countryName')}</label>
+                                                    <label className='ukForm__form__label appForm__subject' htmlFor='visted_country6'>{t('Form_countryName')}</label>
                                                     <input 
-                                                        className='applicationForm__form__input input__for__two' 
+                                                        className='applicationForm__form__input ukForm__input__for__two' 
                                                         name='visted_country6' 
                                                         type='text' 
                                                         placeholder={t('Form_countryEx')}
@@ -4067,9 +4067,9 @@ function ApplicationForm({ setAlert }) {
                                                     />
                                                 </div>
                                                 <div className='input_wrap'>
-                                                    <label className='applicationForm__form__label' htmlFor='purpose_of_visit6'>{t('ukForm_visaPurpose')}</label>
+                                                    <label className='ukForm__form__label' htmlFor='purpose_of_visit6'>{t('ukForm_visaPurpose')}</label>
                                                     <input 
-                                                        className='applicationForm__form__input input__for__two' 
+                                                        className='applicationForm__form__input ukForm__input__for__two' 
                                                         name='purpose_of_visit6' 
                                                         type='text' 
                                                         placeholder={t('Form_visitPurpose')}
@@ -4081,9 +4081,9 @@ function ApplicationForm({ setAlert }) {
 
                                             <div className='input_grp'>
                                                 <div className='form__wrap'>
-                                                    <label className='applicationForm__form__label' htmlFor='visit_arrival_date6'>{t('Form_visit_entry')}</label>
+                                                    <label className='ukForm__form__label' htmlFor='visit_arrival_date6'>{t('Form_visit_entry')}</label>
                                                     <input 
-                                                        className='applicationForm__form__input input__for__two' 
+                                                        className='applicationForm__form__input ukForm__input__for__two' 
                                                         name='visit_arrival_date6' 
                                                         type='date' 
                                                         onChange={e => onChange(e)} 
@@ -4091,9 +4091,9 @@ function ApplicationForm({ setAlert }) {
                                                     />
                                                 </div>
                                                 <div className='form__wrap'>
-                                                    <label className='applicationForm__form__label' htmlFor='visit_departure_date6'>{t('Form_visit_depature')}</label>
+                                                    <label className='ukForm__form__label' htmlFor='visit_departure_date6'>{t('Form_visit_depature')}</label>
                                                     <input 
-                                                        className='applicationForm__form__input input__for__two' 
+                                                        className='applicationForm__form__input ukForm__input__for__two' 
                                                         name='visit_departure_date6' 
                                                         type='date' 
                                                         onChange={e => onChange(e)} 
@@ -4109,9 +4109,9 @@ function ApplicationForm({ setAlert }) {
                                             <hr className='appform__hr'/>
                                             <div className='input_grp'>
                                                 <div className='input_wrap'>
-                                                    <label className='applicationForm__form__label appForm__subject' htmlFor='visted_country7'>{t('Form_countryName')}</label>
+                                                    <label className='ukForm__form__label appForm__subject' htmlFor='visted_country7'>{t('Form_countryName')}</label>
                                                     <input 
-                                                        className='applicationForm__form__input input__for__two' 
+                                                        className='applicationForm__form__input ukForm__input__for__two' 
                                                         name='visted_country7' 
                                                         type='text' 
                                                         placeholder={t('Form_countryEx')}
@@ -4120,9 +4120,9 @@ function ApplicationForm({ setAlert }) {
                                                     />
                                                 </div>
                                                 <div className='input_wrap'>
-                                                    <label className='applicationForm__form__label' htmlFor='purpose_of_visit7'>{t('ukForm_visaPurpose')}</label>
+                                                    <label className='ukForm__form__label' htmlFor='purpose_of_visit7'>{t('ukForm_visaPurpose')}</label>
                                                     <input 
-                                                        className='applicationForm__form__input input__for__two' 
+                                                        className='applicationForm__form__input ukForm__input__for__two' 
                                                         name='purpose_of_visit7' 
                                                         type='text' 
                                                         placeholder={t('Form_visitPurpose')} 
@@ -4134,9 +4134,9 @@ function ApplicationForm({ setAlert }) {
 
                                             <div className='input_grp'>
                                                 <div className='form__wrap'>
-                                                    <label className='applicationForm__form__label' htmlFor='visit_arrival_date7'>{t('Form_visit_entry')}</label>
+                                                    <label className='ukForm__form__label' htmlFor='visit_arrival_date7'>{t('Form_visit_entry')}</label>
                                                     <input 
-                                                        className='applicationForm__form__input input__for__two' 
+                                                        className='applicationForm__form__input ukForm__input__for__two' 
                                                         name='visit_arrival_date7' 
                                                         type='date' 
                                                         onChange={e => onChange(e)} 
@@ -4144,9 +4144,9 @@ function ApplicationForm({ setAlert }) {
                                                     />
                                                 </div>
                                                 <div className='form__wrap'>
-                                                    <label className='applicationForm__form__label' htmlFor='visit_departure_date7'>{t('Form_visit_depature')}</label>
+                                                    <label className='ukForm__form__label' htmlFor='visit_departure_date7'>{t('Form_visit_depature')}</label>
                                                     <input 
-                                                        className='applicationForm__form__input input__for__two' 
+                                                        className='applicationForm__form__input ukForm__input__for__two' 
                                                         name='visit_departure_date7' 
                                                         type='date' 
                                                         onChange={e => onChange(e)} 
@@ -4160,7 +4160,7 @@ function ApplicationForm({ setAlert }) {
                             :null}
 
                             <hr className='appform__hr'/>
-                            <p className='child__section__question'>{t('ukForm_ukFamily')}</p>
+                            <p className='ukForm__section__question'>{t('ukForm_ukFamily')}</p>
                             <div className='input_wrap input__radio__group'>
                                 <div className='input_wrap passport__input__radio'>
                                     <ul className='appform__ul'>
@@ -4198,7 +4198,7 @@ function ApplicationForm({ setAlert }) {
 
                             {showFamilyAbroadSection?
                                 <>
-                                    <p className='child__section__question'>{t('Form_howMany')}</p>
+                                    <p className='ukForm__section__question'>{t('Form_howMany')}</p>
                                     <div className='input_wrap input__radio__group'>
                                             <div className='input_wrap passport__input__radio'>
                                                 <ul className='appform__ul'>
@@ -4304,9 +4304,9 @@ function ApplicationForm({ setAlert }) {
                                         <hr className='appform__hr'/>
                                         <div className='input_grp'>
                                             <div className='input_wrap'>
-                                                <label className='applicationForm__form__label appForm__subject' htmlFor='relative1_first_name'>{t('Form_relative_firstName')}</label>
+                                                <label className='ukForm__form__label appForm__subject' htmlFor='relative1_first_name'>{t('Form_relative_firstName')}</label>
                                                 <input 
-                                                    className='applicationForm__form__input input__for__two' 
+                                                    className='applicationForm__form__input ukForm__input__for__two' 
                                                     name='relative1_first_name' 
                                                     type='text' 
                                                     placeholder={t('Form_firstName')}
@@ -4315,9 +4315,9 @@ function ApplicationForm({ setAlert }) {
                                                 />
                                             </div>
                                             <div className='input_wrap'>
-                                                <label className='applicationForm__form__label' htmlFor='relative1_last_name'>{t('Form_relative_lastName')}</label>
+                                                <label className='ukForm__form__label' htmlFor='relative1_last_name'>{t('Form_relative_lastName')}</label>
                                                 <input 
-                                                    className='applicationForm__form__input input__for__two' 
+                                                    className='applicationForm__form__input ukForm__input__for__two' 
                                                     name='relative1_last_name' 
                                                     type='text' 
                                                     placeholder={t('Form_lastName')}
@@ -4329,9 +4329,9 @@ function ApplicationForm({ setAlert }) {
 
                                         <div className='input_grp'>
                                             <div className='input_wrap'>
-                                                <label className='applicationForm__form__label appForm__subject' htmlFor='relative1_nationality'>{t('Form_nationality')}</label>
+                                                <label className='ukForm__form__label appForm__subject' htmlFor='relative1_nationality'>{t('Form_nationality')}</label>
                                                 <input 
-                                                    className='applicationForm__form__input input__for__two' 
+                                                    className='applicationForm__form__input ukForm__input__for__two' 
                                                     name='relative1_nationality' 
                                                     type='text' 
                                                     placeholder={t('Form_nationalityEx')}
@@ -4340,9 +4340,9 @@ function ApplicationForm({ setAlert }) {
                                                 />
                                             </div>
                                             <div className='input_wrap'>
-                                                <label className='applicationForm__form__label' htmlFor='relative1_relationship'>{t('Form_relationship')}</label>
+                                                <label className='ukForm__form__label' htmlFor='relative1_relationship'>{t('Form_relationship')}</label>
                                                 <input 
-                                                    className='applicationForm__form__input input__for__two' 
+                                                    className='applicationForm__form__input ukForm__input__for__two' 
                                                     name='relative1_relationship' 
                                                     type='text' 
                                                     placeholder={t('Form_relationshipEx')}
@@ -4354,9 +4354,9 @@ function ApplicationForm({ setAlert }) {
 
                                         <div className='input_grp'>
                                             <div className='input_wrap'>
-                                                <label className='applicationForm__form__label appForm__subject' htmlFor='relative1_passport_no'>{t('Form_relative_PassportNo')}</label>
+                                                <label className='ukForm__form__label appForm__subject' htmlFor='relative1_passport_no'>{t('Form_relative_PassportNo')}</label>
                                                 <input 
-                                                    className='applicationForm__form__input input__for__two' 
+                                                    className='applicationForm__form__input ukForm__input__for__two' 
                                                     name='relative1_passport_no' 
                                                     type='text' 
                                                     placeholder={t('Form_relative_PassportNoEx')}
@@ -4371,9 +4371,9 @@ function ApplicationForm({ setAlert }) {
                                                 <hr className='appform__hr'/>
                                                 <div className='input_grp'>
                                                     <div className='input_wrap'>
-                                                        <label className='applicationForm__form__label appForm__subject' htmlFor='relative2_first_name'>{t('Form_relative_firstName')}</label>
+                                                        <label className='ukForm__form__label appForm__subject' htmlFor='relative2_first_name'>{t('Form_relative_firstName')}</label>
                                                         <input 
-                                                            className='applicationForm__form__input input__for__two' 
+                                                            className='applicationForm__form__input ukForm__input__for__two' 
                                                             name='relative2_first_name' 
                                                             type='text' 
                                                             placeholder={t('Form_firstName')}
@@ -4382,9 +4382,9 @@ function ApplicationForm({ setAlert }) {
                                                         />
                                                     </div>
                                                     <div className='input_wrap'>
-                                                        <label className='applicationForm__form__label' htmlFor='relative1_last_name'>{t('Form_relative_lastName')}</label>
+                                                        <label className='ukForm__form__label' htmlFor='relative1_last_name'>{t('Form_relative_lastName')}</label>
                                                         <input 
-                                                            className='applicationForm__form__input input__for__two' 
+                                                            className='applicationForm__form__input ukForm__input__for__two' 
                                                             name='relative2_last_name' 
                                                             type='text' 
                                                             placeholder={t('Form_lastName')}
@@ -4396,9 +4396,9 @@ function ApplicationForm({ setAlert }) {
 
                                                 <div className='input_grp'>
                                                     <div className='input_wrap'>
-                                                        <label className='applicationForm__form__label appForm__subject' htmlFor='relative2_nationality'>{t('Form_nationality')}</label>
+                                                        <label className='ukForm__form__label appForm__subject' htmlFor='relative2_nationality'>{t('Form_nationality')}</label>
                                                         <input 
-                                                            className='applicationForm__form__input input__for__two' 
+                                                            className='applicationForm__form__input ukForm__input__for__two' 
                                                             name='relative2_nationality' 
                                                             type='text' 
                                                             placeholder={t('Form_nationalityEx')} 
@@ -4407,9 +4407,9 @@ function ApplicationForm({ setAlert }) {
                                                         />
                                                     </div>
                                                     <div className='input_wrap'>
-                                                        <label className='applicationForm__form__label' htmlFor='relative2_relationship'>{t('Form_relationship')}</label>
+                                                        <label className='ukForm__form__label' htmlFor='relative2_relationship'>{t('Form_relationship')}</label>
                                                         <input 
-                                                            className='applicationForm__form__input input__for__two' 
+                                                            className='applicationForm__form__input ukForm__input__for__two' 
                                                             name='relative2_relationship' 
                                                             type='text' 
                                                             placeholder={t('Form_relationshipEx')}
@@ -4421,9 +4421,9 @@ function ApplicationForm({ setAlert }) {
 
                                                 <div className='input_grp'>
                                                     <div className='input_wrap'>
-                                                        <label className='applicationForm__form__label appForm__subject' htmlFor='relative2_passport_no'>{t('Form_relative_PassportNo')}</label>
+                                                        <label className='ukForm__form__label appForm__subject' htmlFor='relative2_passport_no'>{t('Form_relative_PassportNo')}</label>
                                                         <input 
-                                                            className='applicationForm__form__input input__for__two' 
+                                                            className='applicationForm__form__input ukForm__input__for__two' 
                                                             name='relative2_passport_no' 
                                                             type='text' 
                                                             placeholder={t('Form_relative_PassportNoEx')}
@@ -4439,9 +4439,9 @@ function ApplicationForm({ setAlert }) {
                                                 <hr className='appform__hr'/>
                                                 <div className='input_grp'>
                                                     <div className='input_wrap'>
-                                                        <label className='applicationForm__form__label appForm__subject' htmlFor='relative3_first_name'>{t('Form_relative_firstName')}</label>
+                                                        <label className='ukForm__form__label appForm__subject' htmlFor='relative3_first_name'>{t('Form_relative_firstName')}</label>
                                                         <input 
-                                                            className='applicationForm__form__input input__for__two' 
+                                                            className='applicationForm__form__input ukForm__input__for__two' 
                                                             name='relative3_first_name' 
                                                             type='text' 
                                                             placeholder={t('Form_firstName')}
@@ -4450,9 +4450,9 @@ function ApplicationForm({ setAlert }) {
                                                         />
                                                     </div>
                                                     <div className='input_wrap'>
-                                                        <label className='applicationForm__form__label' htmlFor='relative3_last_name'>{t('Form_relative_lastName')}</label>
+                                                        <label className='ukForm__form__label' htmlFor='relative3_last_name'>{t('Form_relative_lastName')}</label>
                                                         <input 
-                                                            className='applicationForm__form__input input__for__two' 
+                                                            className='applicationForm__form__input ukForm__input__for__two' 
                                                             name='relative3_last_name' 
                                                             type='text' 
                                                             placeholder={t('Form_lastName')}
@@ -4464,9 +4464,9 @@ function ApplicationForm({ setAlert }) {
 
                                                 <div className='input_grp'>
                                                     <div className='input_wrap'>
-                                                        <label className='applicationForm__form__label appForm__subject' htmlFor='relative3_nationality'>{t('Form_nationality')}</label>
+                                                        <label className='ukForm__form__label appForm__subject' htmlFor='relative3_nationality'>{t('Form_nationality')}</label>
                                                         <input 
-                                                            className='applicationForm__form__input input__for__two' 
+                                                            className='applicationForm__form__input ukForm__input__for__two' 
                                                             name='relative3_nationality' 
                                                             type='text' 
                                                             placeholder={t('Form_nationalityEx')}
@@ -4475,9 +4475,9 @@ function ApplicationForm({ setAlert }) {
                                                         />
                                                     </div>
                                                     <div className='input_wrap'>
-                                                        <label className='applicationForm__form__label' htmlFor='relative3_relationship'>{t('Form_relationship')}</label>
+                                                        <label className='ukForm__form__label' htmlFor='relative3_relationship'>{t('Form_relationship')}</label>
                                                         <input 
-                                                            className='applicationForm__form__input input__for__two' 
+                                                            className='applicationForm__form__input ukForm__input__for__two' 
                                                             name='relative3_relationship' 
                                                             type='text' 
                                                             placeholder={t('Form_relationshipEx')}
@@ -4489,9 +4489,9 @@ function ApplicationForm({ setAlert }) {
 
                                                 <div className='input_grp'>
                                                     <div className='input_wrap'>
-                                                        <label className='applicationForm__form__label appForm__subject' htmlFor='relative3_passport_no'>{t('Form_relative_PassportNo')}</label>
+                                                        <label className='ukForm__form__label appForm__subject' htmlFor='relative3_passport_no'>{t('Form_relative_PassportNo')}</label>
                                                         <input 
-                                                            className='applicationForm__form__input input__for__two' 
+                                                            className='applicationForm__form__input ukForm__input__for__two' 
                                                             name='relative3_passport_no' 
                                                             type='text' 
                                                             placeholder={t('Form_relative_PassportNoEx')}
@@ -4507,9 +4507,9 @@ function ApplicationForm({ setAlert }) {
                                                 <hr className='appform__hr'/>
                                                 <div className='input_grp'>
                                                     <div className='input_wrap'>
-                                                        <label className='applicationForm__form__label appForm__subject' htmlFor='relative4_first_name'>{t('Form_relative_firstName')}</label>
+                                                        <label className='ukForm__form__label appForm__subject' htmlFor='relative4_first_name'>{t('Form_relative_firstName')}</label>
                                                         <input 
-                                                            className='applicationForm__form__input input__for__two' 
+                                                            className='applicationForm__form__input ukForm__input__for__two' 
                                                             name='relative4_first_name' 
                                                             type='text' 
                                                             placeholder={t('Form_firstName')}
@@ -4518,9 +4518,9 @@ function ApplicationForm({ setAlert }) {
                                                         />
                                                     </div>
                                                     <div className='input_wrap'>
-                                                        <label className='applicationForm__form__label' htmlFor='relative4_last_name'>{t('Form_relative_lastName')}</label>
+                                                        <label className='ukForm__form__label' htmlFor='relative4_last_name'>{t('Form_relative_lastName')}</label>
                                                         <input 
-                                                            className='applicationForm__form__input input__for__two' 
+                                                            className='applicationForm__form__input ukForm__input__for__two' 
                                                             name='relative4_last_name' 
                                                             type='text' 
                                                             placeholder={t('Form_lastName')}
@@ -4532,9 +4532,9 @@ function ApplicationForm({ setAlert }) {
 
                                                 <div className='input_grp'>
                                                     <div className='input_wrap'>
-                                                        <label className='applicationForm__form__label appForm__subject' htmlFor='relative4_nationality'>{t('Form_nationality')}</label>
+                                                        <label className='ukForm__form__label appForm__subject' htmlFor='relative4_nationality'>{t('Form_nationality')}</label>
                                                         <input 
-                                                            className='applicationForm__form__input input__for__two' 
+                                                            className='applicationForm__form__input ukForm__input__for__two' 
                                                             name='relative4_nationality' 
                                                             type='text' 
                                                             placeholder={t('Form_nationalityEx')}
@@ -4543,9 +4543,9 @@ function ApplicationForm({ setAlert }) {
                                                         />
                                                     </div>
                                                     <div className='input_wrap'>
-                                                        <label className='applicationForm__form__label' htmlFor='relative4_relationship'>{t('Form_relationship')}</label>
+                                                        <label className='ukForm__form__label' htmlFor='relative4_relationship'>{t('Form_relationship')}</label>
                                                         <input 
-                                                            className='applicationForm__form__input input__for__two' 
+                                                            className='applicationForm__form__input ukForm__input__for__two' 
                                                             name='relative4_relationship' 
                                                             type='text' 
                                                             placeholder={t('Form_relationshipEx')}
@@ -4557,9 +4557,9 @@ function ApplicationForm({ setAlert }) {
 
                                                 <div className='input_grp'>
                                                     <div className='input_wrap'>
-                                                        <label className='applicationForm__form__label appForm__subject' htmlFor='relative4_passport_no'>{t('Form_relative_PassportNo')}</label>
+                                                        <label className='ukForm__form__label appForm__subject' htmlFor='relative4_passport_no'>{t('Form_relative_PassportNo')}</label>
                                                         <input 
-                                                            className='applicationForm__form__input input__for__two' 
+                                                            className='applicationForm__form__input ukForm__input__for__two' 
                                                             name='relative4_passport_no' 
                                                             type='text' 
                                                             placeholder={t('Form_relative_PassportNoEx')}
@@ -4575,9 +4575,9 @@ function ApplicationForm({ setAlert }) {
                                                 <hr className='appform__hr'/>
                                                 <div className='input_grp'>
                                                     <div className='input_wrap'>
-                                                        <label className='applicationForm__form__label appForm__subject' htmlFor='relative5_first_name'>{t('Form_relative_firstName')}</label>
+                                                        <label className='ukForm__form__label appForm__subject' htmlFor='relative5_first_name'>{t('Form_relative_firstName')}</label>
                                                         <input 
-                                                            className='applicationForm__form__input input__for__two' 
+                                                            className='applicationForm__form__input ukForm__input__for__two' 
                                                             name='relative5_first_name' 
                                                             type='text' 
                                                             placeholder={t('Form_firstName')}
@@ -4586,9 +4586,9 @@ function ApplicationForm({ setAlert }) {
                                                         />
                                                     </div>
                                                     <div className='input_wrap'>
-                                                        <label className='applicationForm__form__label' htmlFor='relative5_last_name'>{t('Form_relative_lastName')}</label>
+                                                        <label className='ukForm__form__label' htmlFor='relative5_last_name'>{t('Form_relative_lastName')}</label>
                                                         <input 
-                                                            className='applicationForm__form__input input__for__two' 
+                                                            className='applicationForm__form__input ukForm__input__for__two' 
                                                             name='relative5_last_name' 
                                                             type='text' 
                                                             placeholder={t('Form_lastName')}
@@ -4600,9 +4600,9 @@ function ApplicationForm({ setAlert }) {
 
                                                 <div className='input_grp'>
                                                     <div className='input_wrap'>
-                                                        <label className='applicationForm__form__label appForm__subject' htmlFor='relative5_nationality'>{t('Form_nationality')}</label>
+                                                        <label className='ukForm__form__label appForm__subject' htmlFor='relative5_nationality'>{t('Form_nationality')}</label>
                                                         <input 
-                                                            className='applicationForm__form__input input__for__two' 
+                                                            className='applicationForm__form__input ukForm__input__for__two' 
                                                             name='relative5_nationality' 
                                                             type='text' 
                                                             placeholder={t('Form_nationalityEx')}
@@ -4611,9 +4611,9 @@ function ApplicationForm({ setAlert }) {
                                                         />
                                                     </div>
                                                     <div className='input_wrap'>
-                                                        <label className='applicationForm__form__label' htmlFor='relative5_relationship'>{t('Form_relationship')}</label>
+                                                        <label className='ukForm__form__label' htmlFor='relative5_relationship'>{t('Form_relationship')}</label>
                                                         <input 
-                                                            className='applicationForm__form__input input__for__two' 
+                                                            className='applicationForm__form__input ukForm__input__for__two' 
                                                             name='relative5_relationship' 
                                                             type='text' 
                                                             placeholder={t('Form_relationshipEx')}
@@ -4625,9 +4625,9 @@ function ApplicationForm({ setAlert }) {
 
                                                 <div className='input_grp'>
                                                     <div className='input_wrap'>
-                                                        <label className='applicationForm__form__label appForm__subject' htmlFor='relative5_passport_no'>{t('Form_relative_PassportNo')}</label>
+                                                        <label className='ukForm__form__label appForm__subject' htmlFor='relative5_passport_no'>{t('Form_relative_PassportNo')}</label>
                                                         <input 
-                                                            className='applicationForm__form__input input__for__two' 
+                                                            className='applicationForm__form__input ukForm__input__for__two' 
                                                             name='relative5_passport_no' 
                                                             type='text' 
                                                             placeholder={t('Form_relative_PassportNoEx')}
@@ -4643,7 +4643,7 @@ function ApplicationForm({ setAlert }) {
 
                             <hr className='appform__hr'/>
                             <div className='input_wrap'>
-                                <label className='applicationForm__form__label' htmlFor='message'>{t('Form_additional')}</label>
+                                <label className='ukForm__form__label' htmlFor='message'>{t('Form_additional')}</label>
                                 <textarea 
                                     className='applicationForm__form__textarea'
                                     name='aditional_info'

@@ -15,8 +15,8 @@ function AdmissionProcess() {
   return (
     <div className='admissionProcess'>
       <h1 className='admissionProcess__title'> {t('admissionProcess_header')} <WbSunnyIcon className='ad__sunIcon'/> </h1>
+      <span className='admissionProcess__span'>{t('admissionProcess_ul')}</span>
       <ul>
-          <span className='admissionProcess__span'>{t('admissionProcess_ul')}</span>
           <li className='admissionProcess__1st__li admissionProcess__li'><GroupWorkIcon className='admissionProcess__icons'/> {t('admissionProcess_li1')}</li>
           <li className='admissionProcess__li'><AddCircleOutlineIcon className='admissionProcess__icons'/> {t('admissionProcess_li2')}</li>
           <li className='admissionProcess__li'><AddCircleOutlineIcon className='admissionProcess__icons'/> {t('admissionProcess_li3')}</li>

@@ -77,4 +77,13 @@
     display: flex;
     justify-content: space-between;
     width: 100px;
+    margin: 0px 20px 0px 20px;
+}
+.admissionProcess__span {
+    display: flex;
+    text-align: start;
+    font-weight: 500;
+    padding: 0px 4px 0px 10px;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
 }

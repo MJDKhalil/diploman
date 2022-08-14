@@ -125,7 +125,7 @@
     }
 }
 /****Medium and Large Devices****/
-@media (min-width: 740px) and (max-width: 900px) {
+@media (min-width: 746px) and (max-width: 900px) {
     .loginHeader__left {
         margin: 0px 30px 0px 30px;
     }
@@ -152,7 +152,7 @@
     }
 }
 /****Small Devices****/
-@media (min-width: 450px) and (max-width: 740px) {
+@media (min-width: 450px) and (max-width: 746px) {
     .loginHeader__loginButton, .loginHeader__signupButton, .loginHeader__logoutButton {
         display: none;
     }
@@ -186,6 +186,10 @@
     }
     .middle__header__bx {
         margin: 0px 0px 0px 15px;
+    }
+    .logo__link {
+        position: relative;
+        top: 10%;
     }
     .logo {
         width: 120px;

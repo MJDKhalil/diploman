@@ -48,10 +48,11 @@
     text-align: center;
 }
 .visaAssistProcess__pr {
-    margin: 20px 0px 15px 0px !important;
-    letter-spacing: 0.5px;
-    font-weight: 500;
-    font-size: 13px;
+    letter-spacing: 1px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-align: initial;
+    width: 100%;
 }
 .visaAssistProcess__ul li {
     text-align: initial;

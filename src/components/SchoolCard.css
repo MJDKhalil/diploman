@@ -35,17 +35,12 @@
 .schoolCard__info > ul > li {
     font-size: 12px;
 }
-/* .school__display__image {
-	height: 20vh;
-} */
-.schoolCard__image1{
+.schoolCard__display {
+	height: 25vh;
+}
+.schoolCard__image{
 	margin: auto;
 	width: 160px;
-	height: fit-content;
-}
-.schoolCard__gseImage {
-	margin: auto;
-	width: fit-content;
 	height: fit-content;
 }
 .school__language__center {

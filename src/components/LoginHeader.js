@@ -101,7 +101,6 @@ function LoginHeader({ logout, isAuthenticated }) {
               <Link className='loginHeader__menuItem' to='/visa-assist'>{t('header_dropdown_visaAssist')}</Link>
               <Link className='loginHeader__menuItem' to='/admission'>{t('header_dropdown_admission')}</Link>
               <Link className='loginHeader__menuItem' to='/request-service'>{t('header_dropdown_requestService')}</Link>
-              <Link className='loginHeader__menuItem' to='/forms'>{t('services_forms')}</Link>
               <Link className='loginHeader__menuItem' to='/contact'>{t('header_dropdown_contact')}</Link>
               <Link className='loginHeader__menuItem' to='/usa-application-form'>{t('usaForm_barTitle')}</Link>
               <Link className='loginHeader__menuItem' to='/uk-application-form'>{t('ukForm_barTitle')}</Link>
@@ -171,7 +170,6 @@ function LoginHeader({ logout, isAuthenticated }) {
               <Link className='loginHeader__menuItem' to='/admission'>{t('header_dropdown_admission')}</Link>
               <Link className='loginHeader__menuItem' to='/visa-assist'>{t('header_dropdown_visaAssist')}</Link>
               <Link className='loginHeader__menuItem' to='/request-service'>{t('header_dropdown_requestService')}</Link>
-              <Link className='loginHeader__menuItem' to='/forms'>{t('services_forms')}</Link>
               <Link className='loginHeader__menuItem' to='/contact'>{t('header_dropdown_contact')}</Link>
               <Link className='loginHeader__menuItem' to='/usa-application-form'>{t('usaForm_barTitle')}</Link>
               <Link className='loginHeader__menuItem' to='/uk-application-form'>{t('ukForm_barTitle')}</Link>

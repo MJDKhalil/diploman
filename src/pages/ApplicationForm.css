@@ -27,7 +27,7 @@
     margin-top: 30px;
 	margin-bottom: 20px;
     text-align: center;
-	font-size: 1.5rem;
+	font-size: 1.2rem;
 	text-transform: uppercase;
 	letter-spacing: 1px;
 	font-weight: 700;
@@ -48,13 +48,13 @@
 .form_wrap, .input_wrap:last-child{
 	margin-bottom: 0 ;
 }
-.applicationForm__form__label, .expand__p {
+.ukForm__form__label, .ukForm__text {
 	display: block;
 	margin-bottom: 3px;
 	color: black;
 	font-weight: 500;
 }
-.child__section__question {
+.ukForm__section__question {
 	margin-bottom: 3px;
 	color: black;
 	font-weight: 500;
@@ -78,7 +78,7 @@
 .input_grp  input[type="text, email, date"]{
 	width: 165px;
 }
-.input__for__two {
+.ukForm__input__for__two {
 	width: 200px;
 }
 .passport__input__radio {
@@ -180,7 +180,7 @@
 
 .p__select__box {
 	display: flex;
-	width: 170px;
+	width: 200px;
 	flex-direction: column;
 }
 .p__select__box .p__option__container {
@@ -191,11 +191,11 @@
   	border-radius: 8px;
   	overflow: hidden;
 	padding: 0;
-	width: 170px;
+	width: 200px;
 
 	order: 1;
 }
-.travel__p__option, .pp__selected {
+.travel__p__option, .ukForm__selected {
 	padding: 12px 24px;
 	cursor: pointer;
 }
@@ -217,7 +217,7 @@
 .p__box__label .p__input_radio  {
 	display: none;
 }
-.pp__selected {
+.ukForm__selected {
 	background-color: rgb(247, 244, 244);
 	box-shadow: 0px 5px 8px -8px rgba(0, 0, 0, 0.75);	border-radius: 8px;
 	margin-bottom: 8px;
@@ -238,17 +238,16 @@
 	.radio_wrap span {
 		font-size: 0.7rem;
 	}
-	.child__section__question {
-		font-size: 0.8rem;
+	.ukForm__section__question, .ukForm__form__label, .ukForm__input__for__two, .input__for__one, .select__op__container, .ukForm__selected, .ukForm__text {
+		font-size: 0.8rem !important;
 	}
 	.p__select__box, .p__select__box .p__option__container {
 		width: 145px;
 	}
-	.input__for__two {
+	.ukForm__input__for__two {
 		width: 145px;
-		font-size: 0.8rem;
 	}
-	.applicationForm__form__label, .pp__selected, .select__op__container, .input__for__one {
+	.ukForm__form__label, .ukForm__selected, .select__op__container, .input__for__one {
 		font-size: 0.9rem;
 	}
 }
