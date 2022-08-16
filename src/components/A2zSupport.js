@@ -21,7 +21,6 @@ function A2zSupport({ setAlert }) {
   const onChange = e => setFormData({ ...formData, [e.target.name]: e.target.value });
   const onSubmit = e => {
     e.preventDefault();
-
     const config = {
       headers: {
                 'Content-Type': 'application/json'

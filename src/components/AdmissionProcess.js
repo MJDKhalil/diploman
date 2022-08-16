@@ -24,12 +24,12 @@ function AdmissionProcess() {
       <p className='admissionProcess__note'>{t('admissionProcess_note1')}</p>
       <p className='admissionProcess__note'>{t('admissionProcess_note2')}</p>
  
-        <h2 className='admissionProcess__title2'>{t('requestAdmission_header')} </h2>
-        <div className='admissionProcess__icons__bx'>
-            <TravelExploreIcon className='request__admission__icon'/> 
-            <FlightIcon className='request__admission__icon'/> 
-            <MenuBookIcon className='request__admission__icon'/>
-        </div>
+      <h2 className='admissionProcess__title2'>{t('requestAdmission_header')} </h2>
+      <div className='admissionProcess__icons__bx'>
+          <TravelExploreIcon className='request__admission__icon'/> 
+          <FlightIcon className='request__admission__icon'/> 
+          <MenuBookIcon className='request__admission__icon'/>
+      </div>
     </div>
   )
 }
