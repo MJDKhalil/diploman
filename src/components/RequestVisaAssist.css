@@ -33,17 +33,14 @@
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-
 .requestVisaAssist__label__to__hide {
 	display: none;
 }
-
 .requestVisaAssist__input_grpp{
 	display: flex;
 	justify-content: space-between !important;
 	margin-bottom: 10px;
 }
-
 .requestVisaAssist__form__input {
     border-radius: 3px;
 	border: 1px solid #9597a6;
@@ -63,7 +60,6 @@
 	margin-top: 10px;
 	font-size: 0.8rem;
 }
-
 .requestVisaAssist__form__button {
     font-size: 1rem;
     padding: 1rem 2rem;
