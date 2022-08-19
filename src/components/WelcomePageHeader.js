@@ -40,4 +40,4 @@ function WelcomePageHeader() {
   )
 }
 
-export default WelcomePageHeader
+export default WelcomePageHeader;

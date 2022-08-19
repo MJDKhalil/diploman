@@ -57,4 +57,4 @@ function VisaRequirments() {
   )
 }
 
-export default VisaRequirments
+export default VisaRequirments;

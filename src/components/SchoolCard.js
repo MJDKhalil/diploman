@@ -156,4 +156,4 @@ function SchoolCard() {
   )
 }
 
-export default SchoolCard
+export default SchoolCard;

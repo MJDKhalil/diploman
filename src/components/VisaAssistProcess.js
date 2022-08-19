@@ -29,4 +29,4 @@ function VisaAssistProcess() {
   )
 }
 
-export default VisaAssistProcess
+export default VisaAssistProcess;

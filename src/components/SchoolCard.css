@@ -13,7 +13,7 @@
 .schoolCard {
 	background-color: #233329;
 	width: 265px ;
-    min-height: 380px !important;
+    min-height: 440px !important;
 	box-shadow: 0px 5px 17px rgb(168, 167, 167) !important;
 	margin: 5px 5px 5px 5px;
 }
@@ -37,11 +37,12 @@
 }
 .schoolCard__display {
 	height: 25vh;
+	position: relative;
 }
 .schoolCard__image{
 	margin: auto;
-	width: 160px;
-	height: fit-content;
+	max-width: 190px;
+	max-height: min-content !important;
 }
 .school__language__center {
 	font-size: 1.8rem;

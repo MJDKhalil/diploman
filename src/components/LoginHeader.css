@@ -187,16 +187,20 @@
     .middle__header__bx {
         margin: 0px 0px 0px 15px;
     }
-    .logo__link {
+    /* .logo__link {
         position: relative;
         top: 10%;
-    }
+    } */
     .logo {
         width: 120px;
         height: 25px;
     }
     .logo__text {
         font-size: 7px;
+    }
+    .loginHeader__left {
+        position: relative;
+        top: 5px;
     }
 }
 .dropdown__btn {
