@@ -51,7 +51,6 @@
 	text-align: center;
 	background: linear-gradient(58deg, #233329,#7b68ee);
 	letter-spacing: 0.7px;
-
 }
 .schoolCard__ul {
     margin-top: 10px;
@@ -91,8 +90,11 @@
 	width: 80%;
 	margin: auto;
 }
-@media (max-width: 385px) {
+@media (max-width: 380px) {
 	.schoolCard__ul {
 		padding: 0px 10px 0px 10px;
+	}
+	.school__language__center {
+		font-size: 1.3rem;
 	}
 }
