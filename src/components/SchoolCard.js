@@ -9,7 +9,7 @@ import EC from '../assets/images/ec.jpg';
 import ACE from '../assets/images/ace.png';
 import Californi from '../assets/images/california_kl.png';
 import ELEC from '../assets/images/elec.png';
-import FL from '../assets/images/fl.jpg';
+import FL from '../assets/images/fl.svg';
 import GSE from '../assets/images/gse.png';
 
 const schoolBreakPoints = [
