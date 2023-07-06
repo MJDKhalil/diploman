@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useRouter } from 'next/router';
 import axios from 'axios';
 import { connect } from 'react-redux';
 import { setAlert } from '../actions/alert';
-import './RequestVisaAssist.css';
-import { useTranslation } from "react-i18next";
+import styles from '../styles/RequestVisaAssist.module.css';
+import { useTranslation } from 'next-i18next';
 
 function RequestVisaAssist({ setAlert }) {
 
   const { t } = useTranslation();
-  const navigate=useNavigate();
+  const navigate = useRouter();
 
   const [formData, setFormData] = useState({
     name: '',
@@ -42,7 +42,7 @@ function RequestVisaAssist({ setAlert }) {
     };
 
   return (
-    <div className='requestVisaAssist'>
+    <div className={styles.requestVisaAssist}>
       <div className='requestVisaAssist__bx'>
         <div  className='requestVisaAssist__form'>
          <h1 className='requestVisaAssist__title'>{t('requestVA_title')}</h1>

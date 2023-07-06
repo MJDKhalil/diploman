@@ -1,19 +1,20 @@
-import React, { useState } from 'react';
-import { Link, Navigate, useLocation  } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
 import { Button } from '@mui/material';
 import { login } from '../actions/auth';
-import './Login.css';
-import { Helmet } from 'react-helmet';
+import styles from '../styles/Login.module.css'
 import WelcomePageFooter from '../components/WelcomePageFooter';
-import { useTranslation } from "react-i18next";
+import { useTranslation } from 'next-i18next';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import Head from 'next/head';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import i18n from '../../i18n';
 
 function Login({ login, isAuthenticated }) {
 
   const { t } = useTranslation();
-
-  const { state } = useLocation();
-  const { from } = state || {};
+  const navigate = useRouter();
 
   const [formData, setFormData] = useState({
     email: '',
@@ -28,32 +29,24 @@ function Login({ login, isAuthenticated }) {
     login (email, password)
   };
  
-  if (isAuthenticated) {
-    return (
-      <Navigate
-        to={from || '/'}
-        replace
-        state={from}
-      />
-    );
-  }
+  useEffect(() => { if (isAuthenticated) navigate.replace('/'); }, [isAuthenticated]);
 
   return (
     <div>
-      <div className='login'>
-        <Helmet>
+      <div className={styles.login}>
+        <Head>
           <title>Diploman - Login</title>
           <meta
             name='description'
             content='login page'
           />
-        </Helmet>
-        <h1 className='login__title'>{t('login_title')}</h1>
-        <p className='login__lead'>{t('login_lead')}</p>
-        <form className='login__form' onSubmit={e => onSubmit(e)}>
-          <div className='login__form__group'>
+        </Head>
+        <h1 className={styles.login__title}>{t('login_title')}</h1>
+        <p className={styles.login__lead}>{t('login_lead')}</p>
+        <form className={styles.login__form} onSubmit={e => onSubmit(e)}>
+          <div className={styles.login__form__group}>
             <input
-              className='login__form__input'
+              className={styles.login__form__input}
               type='email'
               placeholder={t('Form_email')}
               name='email'
@@ -62,9 +55,9 @@ function Login({ login, isAuthenticated }) {
               required
             />
           </div>
-          <div className='login__form__group'>
+          <div className={styles.login__form__group}>
             <input
-              className='login__form__input'
+              className={styles.login__form__input}
               type='password'
               placeholder={t('Form_pw')}
               name='password'
@@ -74,19 +67,30 @@ function Login({ login, isAuthenticated }) {
               required
             />
           </div>
-          <Button className='login__button__main' type='submit'>{t('login_title')}</Button>
+          <Button className={styles.login__button__main} type='submit'>{t('login_title')}</Button>
         </form>
-        <p className='link__to__Signup'>
-        {t('login_text1')} <Link to='/signup' className='login__link'>{t('login_register')}</Link>
+        <p className={styles.link__to__Signup}>
+        {t('login_text1')} <Link legacyBehavior href='/signup'><a className={styles.login__link}>{t('login_register')}</a></Link>
         </p>
-        <p className='link__to__resetPassword'>
-        {t('login_text2')} <Link to='/reset-password' className='reset__password__link'>{t('login_reset')}</Link>
+        <p className={styles.link__to__resetPassword}>
+        {t('login_text2')} <Link legacyBehavior href='/reset-password'><a className={styles.reset__password__link}>{t('login_reset')}</a></Link>
         </p>
       </div>
       <WelcomePageFooter/>
     </div>
   )
 };
+
+export const getServerSideProps = async ({ locale }) => (
+  { props: {
+    ...(await serverSideTranslations(
+      locale,
+      ['common'],
+      i18n,
+    )),
+  } }
+);
+
 const mapStateToProps = state => ({
   isAuthenticated: state.auth.isAuthenticated
 });

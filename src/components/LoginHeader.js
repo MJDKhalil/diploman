@@ -1,19 +1,18 @@
 import React, { Fragment, useEffect, useState } from 'react';
-import './LoginHeader.css'
-import { Link } from 'react-router-dom';
+import styles from '../styles/LoginHeader.module.css'
+import Link from 'next/link';
 import { connect } from 'react-redux';
 import { logout } from '../actions/auth';
 import SortIcon from '@mui/icons-material/Sort';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import Alert from './Alert';
 import Logo from '../assets/images/logoo.png';
-import { useTranslation } from "react-i18next";
+import { useTranslation } from 'next-i18next';
 import { MenuItem } from '@mui/material';
 import LanguageIcon from '@mui/icons-material/Language';
 import { Link as Scroll } from 'react-scroll';
-
-import i18next from 'i18next';
-import cookies from 'js-cookie';
+import Image from 'next/image';
+import { useRouter } from 'next/router';
 
 const languages = [
   {
@@ -32,12 +31,19 @@ const languages = [
     country_code: 'ly',
     dir: 'rtl'
   }
-]
+];
+
+export function getServerSideProps({locale}) {
+  return {
+      locale
+  }
+};
 
 function LoginHeader({ logout, isAuthenticated }) {
 
+  const router = useRouter();
   const [show, setShow] = useState (false);
-  const currentLanguageCode = cookies.get('i18next') || 'en';
+  const currentLanguageCode = router.locale;
   const currentLanguage = languages.find(l => l.code === currentLanguageCode);
   useEffect (() => {
     document.body.dir = currentLanguage.dir || 'ltr'
@@ -48,45 +54,38 @@ function LoginHeader({ logout, isAuthenticated }) {
   
   const guestLinks = () => (
     <Fragment>
-      <div className='loginHeader__right'>
-        <div className='middle__header__bx'>
-          <div className='loginHeader__main__btns'>
-            <Link className='loginHeader__loginButton' to='/login'><button>{t('header_login')}</button></Link>
-            <Link className='loginHeader__signupButton' to='/signup'><button>{t('header_signup')}</button></Link>
+      <div className={styles.loginHeader__right}>
+        <div className={styles.middle__header__bx}>
+          <div className={styles.loginHeader__main__btns}>
+            <Link legacyBehavior href='/login'><button className={styles.login__btn}>{t('header_login')}</button></Link>
+            <Link legacyBehavior href='/signup'><button className={styles.signup__btn}>{t('header_signup')}</button></Link>
           </div> 
         
-          <div className='loginHeader__services__dropdown'>
-            <Scroll offset={-100}  to='services'><button className='dropdown__btn dropdown__services'>{t('header_services')}<ExpandMoreIcon className='services__expand'/></button></Scroll>
-            <div className='dropdown__content dropdown__services__content'>
-              <Link className='loginHeader__menuItem' to='/admission'>{t('services_addmissionOffers')}</Link>
-              <Link className='loginHeader__menuItem' to='/premuim-support'>{t('services_premium')}</Link>
-              <Link className='loginHeader__menuItem' to='/forms'>{t('services_forms')}</Link>
-              <Link className='loginHeader__menuItem' to='/visa-assist'>{t('services_visaAssist')}</Link>
+          <div className={styles.loginHeader__services__dropdown}>
+            <Scroll offset={-100}  to='services'><button className={styles['dropdown__btn']+' '+styles['dropdown__services']}>{t('header_services')}<ExpandMoreIcon className={styles.services__expand}/></button></Scroll>
+            <div className={styles['dropdown__content']+' '+styles['dropdown__services__content']}>
+              <Link legacyBehavior href='/admission'><a className={styles.loginHeader__menuItem}>{t('services_addmissionOffers')}</a></Link>
+              <Link legacyBehavior href='/premuim'><a className={styles.loginHeader__menuItem}>{t('services_premium')}</a></Link>
+              <Link legacyBehavior href='/forms'><a className={styles.loginHeader__menuItem}>{t('services_forms')}</a></Link>
+              <Link legacyBehavior href='/visa-assist'><a className={styles.loginHeader__menuItem}>{t('services_visaAssist')}</a></Link>
             </div>
           </div>
           {/* start of lang box */}
-          <div className='lang__select__box'>
-            <div onClick={()=> setShow(!show)} className='lang__selected'><LanguageIcon /></div>
+          <div className={styles.lang__select__box}>
+            <div onClick={()=> setShow(!show)} className={styles.lang__selected}><LanguageIcon /></div>
             { show?
               <>
-                <div className='lang__container '>
+                <div className={styles.lang__container}>
                 {languages.map(({code, name, country_code}) => 
                   <MenuItem
-                    className='loginHeader__select__menu'
+                    className={styles.loginHeader__select__menu}
                     key={country_code}
                   >
-                    <button 
-                      onClick={() => {
-                        i18next.changeLanguage(code)
-                        setShow(false)
-                      }}
-                      className='loginHeader__lang__btn'
-                    >
-                    {name}
-                    </button>
+                    <Link legacyBehavior href={router.asPath} locale={code}>
+                          <a onClick={()=> setShow(!show)} className={styles.loginHeader__lang__btn}>{name}</a>
+                    </Link>
                   </MenuItem>
                 )}
-                    
                 </div>
               </>
             :null}
@@ -94,87 +93,78 @@ function LoginHeader({ logout, isAuthenticated }) {
           {/* end of lang box */}
           </div>
 
-          <div className='loginHeader__services__dropdown sortIcon__bx'>
-            <SortIcon className='dropdown__btn loginHeader__sortIcon'/>
-            <div className='dropdown__content sortIcon__dropdown'>
-              <Link className='loginHeader__menuItem' to='/premuim-support'>{t('header_dropdown_prem')}</Link>
-              <Link className='loginHeader__menuItem' to='/visa-assist'>{t('header_dropdown_visaAssist')}</Link>
-              <Link className='loginHeader__menuItem' to='/admission'>{t('header_dropdown_admission')}</Link>
-              <Link className='loginHeader__menuItem' to='/request-service'>{t('header_dropdown_requestService')}</Link>
-              <Link className='loginHeader__menuItem' to='/contact'>{t('header_dropdown_contact')}</Link>
-              <Link className='loginHeader__menuItem' to='/usa-application-form'>{t('usaForm_barTitle')}</Link>
-              <Link className='loginHeader__menuItem' to='/uk-application-form'>{t('ukForm_barTitle')}</Link>
-              <Link className='loginHeader__menuItem' to='/signup'>{t('header_signup')}</Link>
-              <Link className='loginHeader__menuItem' to='/login'>{t('header_login')}</Link>
-              <Link className='loginHeader__menuItem' to='/guid'>{t('header_dropdown_guide')}</Link>
+          <div className={styles['loginHeader__services__dropdown']+' '+styles['sortIcon__bx']}>
+            <SortIcon className={styles['dropdown__btn']+' '+styles['loginHeader__sortIcon']}/>
+            <div className={styles['dropdown__content']+' '+styles['sortIcon__dropdown']}>
+              <Link legacyBehavior href='/premuim'><a className={styles.loginHeader__menuItem}>{t('header_dropdown_prem')}</a></Link>
+              <Link legacyBehavior href='/visa-assist'><a className={styles.loginHeader__menuItem}>{t('header_dropdown_visaAssist')}</a></Link>
+              <Link legacyBehavior href='/admission'><a className={styles.loginHeader__menuItem}>{t('header_dropdown_admission')}</a></Link>
+              <Link legacyBehavior href='/request-service'><a className={styles.loginHeader__menuItem}>{t('header_dropdown_requestService')}</a></Link>
+              <Link legacyBehavior href='/contact'><a className={styles.loginHeader__menuItem}>{t('header_dropdown_contact')}</a></Link>
+              <Link legacyBehavior href='/usa-application-form'><a className={styles.loginHeader__menuItem}>{t('usaForm_barTitle')}</a></Link>
+              <Link legacyBehavior href='/uk-application-form'><a className={styles.loginHeader__menuItem}>{t('ukForm_barTitle')}</a></Link>
+              <Link legacyBehavior href='/signup'><a className={styles.loginHeader__menuItem}>{t('header_signup')}</a></Link>
+              <Link legacyBehavior href='/login'><a className={styles.loginHeader__menuItem}>{t('header_login')}</a></Link>
+              <Link legacyBehavior href='/guid'><a className={styles.loginHeader__menuItem}>{t('header_dropdown_guide')}</a></Link>
             </div>
           </div>
-        
-        
       </div>
     </Fragment>
   );
 
   const authLinks = () => (
     <Fragment>
-      <div className='loginHeader__right'>
-        <div className='middle__header__bx'>
+      <div className={styles.loginHeader__right}>
+        <div className={styles.middle__header__bx}>
             
-            <div className='loginHeader__main__btns'>
-              <Link className='loginHeader__loginButton' to='/login'><button>{t('header_login')}</button></Link>
-              <Link className='loginHeader__signupButton' to='/signup'><button>{t('header_signup')}</button></Link>
+            <div className={styles.loginHeader__main__btns}>
+              <Link legacyBehavior href='/login'><button className={styles.login__btn}>{t('header_login')}</button></Link>
+              <Link legacyBehavior href='/signup'><button className={styles.signup__btn}>{t('header_signup')}</button></Link>
             </div> 
           
-            <div className='loginHeader__services__dropdown'>
-              <Scroll offset={-100}  to='services'><button className='dropdown__btn dropdown__services'>{t('header_services')}<ExpandMoreIcon className='services__expand'/></button></Scroll>
-              <div className='dropdown__content dropdown__services__content'>
-                <Link className='loginHeader__menuItem' to='/admission'>{t('services_addmissionOffers')}</Link>
-                <Link className='loginHeader__menuItem' to='/premuim-support'>{t('services_premium')}</Link>
-                <Link className='loginHeader__menuItem' to='/forms'>{t('services_forms')}</Link>
-                <Link className='loginHeader__menuItem' to='/visa-assist'>{t('services_visaAssist')}</Link>
+            <div className={styles.loginHeader__services__dropdown}>
+              <Scroll offset={-100}  to='services'><button className={styles['dropdown__btn']+' '+styles['dropdown__services']}>{t('header_services')}<ExpandMoreIcon className={styles.services__expand}/></button></Scroll>
+              <div className={styles['dropdown__content']+' '+styles['dropdown__services__content']}>
+                <Link legacyBehavior href='/admission'><a className={styles.loginHeader__menuItem}>{t('services_addmissionOffers')}</a></Link>
+                <Link legacyBehavior href='/premuim-support'><a className={styles.loginHeader__menuItem}>{t('services_premium')}</a></Link>
+                <Link legacyBehavior href='/forms'><a className={styles.loginHeader__menuItem}>{t('services_forms')}</a></Link>
+                <Link legacyBehavior href='/visa-assist'><a className={styles.loginHeader__menuItem}>{t('services_visaAssist')}</a></Link>
               </div>
             </div>
           {/* start of lang box */}
-          <div className='lang__select__box'>
-            <div onClick={()=> setShow(!show)} className='lang__selected'><LanguageIcon /></div>
+          <div className={styles.lang__select__box}>
+            <div onClick={()=> setShow(!show)} className={styles.lang__selected}><LanguageIcon /></div>
             { show?
               <>
-                <div className='lang__container '>
+                <div className={styles.lang__container}>
                 {languages.map(({code, name, country_code}) => 
                   <MenuItem
-                    className='loginHeader__select__menu'
+                    className={styles.loginHeader__select__menu}
                     key={country_code}
                   >
-                    <button 
-                      onClick={() => {
-                        i18next.changeLanguage(code)
-                        setShow(false)
-                      }}
-                      className='loginHeader__lang__btn'
-                    >
-                    {name}
-                    </button>
+                    <Link legacyBehavior href={router.asPath} locale={code}>
+                          <a className={styles.loginHeader__lang__btn}>{name}</a>
+                    </Link>
                   </MenuItem>
                 )}
-                    
                 </div>
               </>
             :null}
           </div>
           {/* end of lang box */}
           </div>
-          <div className='loginHeader__services__dropdown loggedin__icon__bx'>
-            <button className='dropdown__btn'><SortIcon className='loginHeader__sortIcon logedin__sortIcon'/></button>
-            <div className='dropdown__content logged__sortIcon__dropdown'>
-              <Link className='loginHeader__menuItem' to='/premuim-support'>{t('header_dropdown_prem')}</Link>
-              <Link className='loginHeader__menuItem' to='/admission'>{t('header_dropdown_admission')}</Link>
-              <Link className='loginHeader__menuItem' to='/visa-assist'>{t('header_dropdown_visaAssist')}</Link>
-              <Link className='loginHeader__menuItem' to='/request-service'>{t('header_dropdown_requestService')}</Link>
-              <Link className='loginHeader__menuItem' to='/contact'>{t('header_dropdown_contact')}</Link>
-              <Link className='loginHeader__menuItem' to='/usa-application-form'>{t('usaForm_barTitle')}</Link>
-              <Link className='loginHeader__menuItem' to='/uk-application-form'>{t('ukForm_barTitle')}</Link>
-              <Link className='loginHeader__menuItem' to='/guid'>{t('header_dropdown_guide')}</Link>
-              <button onClick={logout} className='logout__btn'>{t('header_logout')}</button>
+          <div className={styles['loginHeader__services__dropdown']+' '+styles['loggedin__icon__bx']}>
+            <button className={styles.dropdown__btn}><SortIcon className={styles['loginHeader__sortIcon']+' '+styles['logedin__sortIcon']}/></button>
+            <div className={styles['dropdown__content']+' '+styles['logged__sortIcon__dropdown']}>
+              <Link legacyBehavior href='/premuim-support'><a className={styles.loginHeader__menuItem}>{t('header_dropdown_prem')}</a></Link>
+              <Link legacyBehavior href='/admission'><a className={styles.loginHeader__menuItem}>{t('header_dropdown_admission')}</a></Link>
+              <Link legacyBehavior href='/visa-assist'><a className={styles.loginHeader__menuItem}>{t('header_dropdown_visaAssist')}</a></Link>
+              <Link legacyBehavior href='/request-service'><a className={styles.loginHeader__menuItem}>{t('header_dropdown_requestService')}</a></Link>
+              <Link legacyBehavior href='/contact'><a className={styles.loginHeader__menuItem}>{t('header_dropdown_contact')}</a></Link>
+              <Link legacyBehavior href='/usa-application-form'><a className={styles.loginHeader__menuItem}>{t('usaForm_barTitle')}</a></Link>
+              <Link legacyBehavior href='/uk-application-form'><a className={styles.loginHeader__menuItem}>{t('ukForm_barTitle')}</a></Link>
+              <Link legacyBehavior href='/guid'><a className={styles.loginHeader__menuItem}>{t('header_dropdown_guide')}</a></Link>
+              <button onClick={logout} className={styles.logout__btn}>{t('header_logout')}</button>
             </div>
           </div>
         
@@ -183,11 +173,13 @@ function LoginHeader({ logout, isAuthenticated }) {
   );
 
   return (
-    <div className='loginHeader'>
-      <div className='loginHeader__left'>
-        <Link className='logo__link' to='/'>
-          <img className='logo' src={Logo} alt='logo'/>
-          <p className='logo__text'>{t('logo_text')}</p>
+    <div className={styles.loginHeader}>
+      <div className={styles.loginHeader__left}>
+        <Link legacyBehavior href='/'>
+          <a className={styles.logo__link}>
+            <Image className={styles.logo} src={Logo} alt='logo'/>
+            <p className={styles.logo__text}>{t('logo_text')}</p>
+          </a>
         </Link>  
       </div>
       {isAuthenticated ? authLinks() : guestLinks()}

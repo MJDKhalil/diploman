@@ -1,0 +1,34 @@
+/* * {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	list-style: none;
+} */
+.guidPage {
+	display: block;
+    background-color: rgb(247, 244, 244);
+}
+.guidPage__container {
+	display: flex;
+    justify-content: space-around;
+}
+/****Large Devices****/
+@media (min-width: 1200px) {
+    .guidPage__topCenter {
+        display: none;
+    }
+}
+/****Medium Devices****/
+@media (max-width: 1200px) {
+    .guidPage__left, .guidPage__right {
+        display: none !important;
+    }
+}
+/****Small Devices****/
+@media (min-width: 481px) and (max-width: 768px) {
+
+}
+/****Mobile Devices****/
+@media (max-width: 480px) {
+
+}

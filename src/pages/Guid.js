@@ -1,5 +1,5 @@
 import React from 'react';
-import './Guid.css';
+import styles from '../Guid.module.css';
 import Widgets from '../components/Widgets';
 // import GuidVisaQuestion from '../components/GuidVisaQuestion';
 import VisaRequirments from '../components/VisaRequirments';
@@ -8,7 +8,7 @@ import WelcomePageFooter from '../components/WelcomePageFooter';
 
 function Guid() {
   return (
-    <div className='guidPage'>
+    <div className={styles.guidPage}>
       <div className='guidPage__container'>
         <div className='guidPage__left'>
           <VisaRequirments/>

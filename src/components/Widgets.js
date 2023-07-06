@@ -1,9 +1,9 @@
 import React from 'react';
-import './Widgets.css';
+import styles from '../styles/Widgets.module.css';
 
 function Widgets() {
     return (
-        <div className='widgets'>
+        <div className={styles.widgets}>
             <iframe  src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FDiploman-110754074994396%2F&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
              title="Iframe title"
              width="340" 

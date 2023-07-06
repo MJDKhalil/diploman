@@ -1,0 +1,30 @@
+/* * {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	list-style: none;
+} */
+.premuimSupport {
+    display: block;
+	background-color: rgb(247, 244, 244);
+}
+.premuimSupport__container {
+    display: flex;
+	justify-content: space-around !important;
+    text-align: center;
+}
+.premuimSupport__icon2 {
+	color: #fdfeff;
+}
+/****Large Devices****/
+@media (min-width: 1200px) {
+    .premuimSupport__top__center {
+        display: none;
+    }
+}
+/****Medium Devices****/
+@media (max-width: 1200px) {
+    .premuimSupport__left__bx, .premuimSupport__widgets {
+        display: none !important;
+    }
+}

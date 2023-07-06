@@ -1,12 +1,12 @@
 import React from 'react';
-import './WelcomePageFooter.css'
+import styles from '../styles/WelcomePageFooter.module.css'
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { Link as Scroll } from 'react-scroll';
-import { useTranslation } from "react-i18next";
+import { useTranslation } from 'next-i18next';
 
 
 function WelcomePageFooter() {
@@ -14,51 +14,51 @@ function WelcomePageFooter() {
     const { t } = useTranslation();
 
   return (
-      <div className='welcomePageFooter'>
+      <div className={styles.welcomePageFooter}>
         <footer>
-            <div className="welcomePageFooter__container">
-                <div className="welcomePageFooter__row">
-                    <div className="welcomePageFooter__linksContainer">
-                        <h3>{t('footer_services')}</h3>
-                        <ul className='welcomePageFooter__ul'>
-                            <li><Link className='welcomePageFooter__link' to='/admission'>{t('footer_admission')}</Link></li>
-                            <li><Link className='welcomePageFooter__link' to='/visa-assist'>{t('footer_visaAssist')}</Link></li>
-                            <li><Link className='welcomePageFooter__link' to='/guid'>{t('footer_prem')}</Link></li>
-                            <li><Link className='welcomePageFooter__link' to='/guid'>{t('footer_guide')}</Link></li>
+            <div className={styles.welcomePageFooter__container}>
+                <div className={styles.welcomePageFooter__row}>
+                    <div className={styles.welcomePageFooter__linksContainer}>
+                        <h3 className={styles.footer__header}>{t('footer_services')}</h3>
+                        <ul className={styles.welcomePageFooter__ul}>
+                            <li><Link legacyBehavior href='/admission'><a className={styles.welcomePageFooter__link}>{t('footer_admission')}</a></Link></li>
+                            <li><Link legacyBehavior href='/visa-assist'><a className={styles.welcomePageFooter__link}>{t('footer_visaAssist')}</a></Link></li>
+                            <li><Link legacyBehavior href='/guid'><a className={styles.welcomePageFooter__link}>{t('footer_prem')}</a></Link></li>
+                            <li><Link legacyBehavior href='/guid'><a className={styles.welcomePageFooter__link}>{t('footer_guide')}</a></Link></li>
                         </ul>
                     </div>
-                    <hr className='welcomePageFooter__hr'/>
-                    <div className="welcomePageFooter__linksContainer">
-                        <h3>{t('footer_links')}</h3>
-                        <ul>
-                            <li><Scroll offset={-220} className='welcomePageFooter__link' to='about'>{t('footer_about')}</Scroll></li>
-                            <li><Link className='welcomePageFooter__link' to='/contact'>{t('footer_contact')}</Link></li>
-                            <li><Scroll className='welcomePageFooter__link' offset={-100}  to='schoolCards'>{t('footer_partners')}</Scroll></li>
-                            <li><Link className='welcomePageFooter__link' to='/terms'>{t('footer_terms')}</Link></li>
+                    <hr className={styles.welcomePageFooter__hr}/>
+                    <div className={styles.welcomePageFooter__linksContainer}>
+                        <h3 className={styles.footer__header}>{t('footer_links')}</h3>
+                        <ul className={styles.footer__list}>
+                            <li><Scroll offset={-220} className={styles.welcomePageFooter__link} to='about'>{t('footer_about')}</Scroll></li>
+                            <li><Link legacyBehavior href='/contact'><a className={styles.welcomePageFooter__link}>{t('footer_contact')}</a></Link></li>
+                            <li><Scroll className={styles.welcomePageFooter__link} offset={-100}  to='schoolCards'>{t('footer_partners')}</Scroll></li>
+                            <li><Link legacyBehavior href='/terms'><a className={styles.welcomePageFooter__link}>{t('footer_terms')}</a></Link></li>
                         </ul>
                     </div>
-                    <hr className='welcomePageFooter__hr'/>
-                    <div className="welcomePageFooter__linksContainer welSmallBox">
-                        <h3>{t('footer_diploman')}</h3>
-                        <p className='welcomepageFooter__desc'>{t('footer_paragraph')}</p>
+                    <hr className={styles.welcomePageFooter__hr}/>
+                    <div className={styles['welcomePageFooter__linksContainer']+' '+styles['welSmallBox']}>
+                        <h3 className={styles.footer__header}>{t('footer_diploman')}</h3>
+                        <p className={styles.welcomepageFooter__desc}>{t('footer_paragraph')}</p>
                     </div>
-                    <hr className='welcomePageFooter__hr'/>
+                    <hr className={styles.welcomePageFooter__hr}/>
                 </div>
-                <ul className='social__icons'>
-                        <li className='social__icons__li'>
-                            <a href='https://www.facebook.com/Diploman-110754074994396/' target='_blank' rel='noreferrer'><FacebookIcon className='welcomePageFooter__incon'/></a>
+                <ul className={styles.social__icons}>
+                        <li className={styles.social__icons__li}>
+                            <a href='https://www.facebook.com/Diploman-110754074994396/' target='_blank' rel='noreferrer'><FacebookIcon className={styles.welcomePageFooter__incon}/></a>
                         </li>
-                        <li className='social__icons__li'>
-                            <a href='https://www.instagram.com/diploman_official/' target='_blank' rel='noreferrer'><InstagramIcon className='welcomePageFooter__incon'/></a>
+                        <li className={styles.social__icons__li}>
+                            <a href='https://www.instagram.com/diploman_official/' target='_blank' rel='noreferrer'><InstagramIcon className={styles.welcomePageFooter__incon}/></a>
                         </li>
-                        <li className='social__icons__li'>
-                            <a href='https://twitter.com/DIPL0MAN' target='_blank' rel='noreferrer'><TwitterIcon className='welcomePageFooter__incon'/></a>
+                        <li className={styles.social__icons__li}>
+                            <a href='https://twitter.com/DIPL0MAN' target='_blank' rel='noreferrer'><TwitterIcon className={styles.welcomePageFooter__incon}/></a>
                         </li>
-                        <li className='social__icons__li'>
-                            <a href='https://www.linkedin.com/company/diploman/' target='_blank' rel='noreferrer'><LinkedInIcon className='welcomePageFooter__incon'/></a>
+                        <li className={styles.social__icons__li}>
+                            <a href='https://www.linkedin.com/company/diploman/' target='_blank' rel='noreferrer'><LinkedInIcon className={styles.welcomePageFooter__incon}/></a>
                         </li>
                     </ul>
-                <p className='copyright'>Diploman © 2022</p>
+                <p className={styles.copyright}>Diploman © 2022</p>
             </div>
         </footer>
     </div>

@@ -1,11 +1,11 @@
 import React from 'react';
-import './PremSideBar.css';
+import styles from '../styles/PremSideBar.module.css';
 import ApprovalIcon from '@mui/icons-material/Approval';
 import FormatAlignLeftIcon from '@mui/icons-material/FormatAlignLeft';
 import FingerprintIcon from '@mui/icons-material/Fingerprint';
 import SupportAgentIcon from '@mui/icons-material/SupportAgent';
 import LightbulbIcon from '@mui/icons-material/Lightbulb';
-import { useTranslation } from "react-i18next";
+import { useTranslation } from 'next-i18next';
 import TravelExploreIcon from '@mui/icons-material/TravelExplore';
 import FlightIcon from '@mui/icons-material/Flight';
 import MenuBookIcon from '@mui/icons-material/MenuBook';
@@ -16,7 +16,7 @@ function PremSideBar() {
   const { t } = useTranslation();
 
   return (
-    <div className='premSideBar'>
+    <div className={styles.premSideBar}>
         <h1 className='premSideBar__title'>{t('prem_header')}</h1>
         <h2 className='premSideBar__pr'> {t('prem_subtitle')} </h2>
       <ul className='premSideBar__ul'>

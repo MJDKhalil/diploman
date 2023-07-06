@@ -1,6 +1,6 @@
 import React from 'react';
-import './VisaGuidProcess.css';
-import { Link } from 'react-router-dom';
+import styles from '../styles/VisaGuidProcess.module.css';
+import Link from 'next/link';
 import SupportAgentIcon from '@mui/icons-material/SupportAgent';
 import ExploreIcon from '@mui/icons-material/Explore';
 import NextPlanIcon from '@mui/icons-material/NextPlan';
@@ -9,14 +9,14 @@ import MeetingRoomIcon from '@mui/icons-material/MeetingRoom';
 import CreditScoreIcon from '@mui/icons-material/CreditScore';
 import PriorityHighIcon from '@mui/icons-material/PriorityHigh';
 import GTranslateIcon from '@mui/icons-material/GTranslate';
-import { useTranslation } from "react-i18next";
+import { useTranslation } from 'next-i18next';
 
 function VisaGuidProcess() {
 
   const { t } = useTranslation();
 
   return (
-    <div className='visaGuidProcess'>
+    <div className={styles.visaGuidProcess}>
         <h1 className='visaAssistProcess__title'>{t('guideProcess_title')}</h1>
       <hr className='visaAssistProcess__hr'/>
       
@@ -30,7 +30,7 @@ function VisaGuidProcess() {
           <li><CreditScoreIcon className='visaGuidProcess__icon1'/> {t('guideProcess_li6')} </li>
       </ul>
       <h2 className='visaAssistProcess__or'>{t('guideProcess_or')}</h2>
-      <p className='visaAssistProcess__pr'>{t('guideProcess_request')} <Link className='visaGuidProcess__link' to='/visa-assist'>{t('assist_card')}</Link> {t('guideProcess_subText')}</p>
+      <p className='visaAssistProcess__pr'>{t('guideProcess_request')} <Link legacyBehavior className='visaGuidProcess__link' href='/visa-assist'><a>{t('assist_card')}</a></Link> {t('guideProcess_subText')}</p>
       <p className='visaAssistProcess__pr'> {t('guideProcess_subText2')}</p>
       <div className='visaGuidProcess__icon__container'><ExploreIcon className='visaGuidProcess__icon2'/><NextPlanIcon className='visaGuidProcess__icon2'/><SupportAgentIcon className='visaGuidProcess__icon2'/><FormatAlignLeftIcon className='visaGuidProcess__icon2'/><MeetingRoomIcon className='visaGuidProcess__icon2'/><CreditScoreIcon className='visaGuidProcess__icon2'/></div>
     </div>

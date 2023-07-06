@@ -2,14 +2,14 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { connect } from 'react-redux';
 import { setAlert } from '../actions/alert';
-import './A2zSupport.css';
-import { useNavigate } from 'react-router-dom';
-import { useTranslation } from "react-i18next";
+import styles from '../styles/A2zSupport.module.css';
+import { useRouter } from 'next/router';
+import { useTranslation } from 'next-i18next';
 
 function A2zSupport({ setAlert }) {
 
   const { t } = useTranslation();
-  const navigate=useNavigate();
+  const navigate=useRouter();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -38,7 +38,7 @@ function A2zSupport({ setAlert }) {
   };
 
   return (
-    <div className='a2zSupport'>
+    <div className={styles.a2zSupport}>
       <div className='a2zSupport__bx'>
         <div  className='a2zSupport__form'>
           <h1 className='a2zSupport__title'>{t('premform_title')}</h1>

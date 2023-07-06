@@ -1,18 +1,18 @@
 import React, { useState } from 'react';
-import { Helmet } from 'react-helmet';
+import Head from 'next/head';
 import axios from 'axios';
 import { connect } from 'react-redux';
 import { setAlert } from '../actions/alert';
-import './Contact.css';
-import { useNavigate } from 'react-router-dom';
+import styles from '../styles/Contact.module.css';
+import { useRouter } from 'next/router';
 import WelcomePageFooter from '../components/WelcomePageFooter';
-import { useTranslation } from "react-i18next";
+import { useTranslation } from 'next-i18next';
 
 
 const Contact = ({ setAlert }) => {
 
     const { t } = useTranslation();
-    const navigate=useNavigate();
+    const navigate = useRouter();
 
     const [formData, setFormData] = useState({
         name: '',
@@ -45,15 +45,15 @@ const Contact = ({ setAlert }) => {
     };
 
     return (
-        <div className='contact'>
-            <div className='contact__bx'>
-                <Helmet>
+        <div className={styles.contact}>
+            <div className={styles.contact__bx}>
+                <Head>
                     <title>Diploman - Contact</title>
                     <meta
                         name='description'
                         content='Contact us page'
                     />
-                </Helmet>
+                </Head>
                 <div  className='contact__form'>
                 <h1 className='Contactus__title'>{t('contact_title')}</h1>
                 <hr className='contact__hr'/>

@@ -1,13 +1,13 @@
 import React from 'react';
-import './VisaRequirments.css';
-import { useTranslation } from "react-i18next";
+import styles from '../styles/VisaRequirments.module.css';
+import { useTranslation } from 'next-i18next';
 
 function VisaRequirments() {
 
     const { t } = useTranslation();
 
   return (
-    <div className='visaRequirments'>
+    <div className={styles.visaRequirments}>
         <h2 className='visaRequirments__title'>{t('requiredDoc_title')}</h2>
         <div className='visaRequirments__container'>
             <ul>
