@@ -36,6 +36,7 @@
 .login__link, .reset__password__link {
     text-decoration: none;
     font-weight: 600;
+    color: #1976D2;
 }
 
 .login__button__main {

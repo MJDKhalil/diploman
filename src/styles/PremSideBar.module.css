@@ -29,26 +29,28 @@
     font-size: 1rem;
     font-weight: 600;
     text-align: initial;
+    list-style-type: none;
 }
 .premSideBar__pr {
     margin-bottom: 10px;
     letter-spacing: 0.7px;
     font-size: 0.8rem;
     font-weight: 600;
-    width: 100%;
     padding: 10px;
     text-align: initial;
 }
 .premSideBar__ul li {
+    display: flex;
     text-align: inherit;
     font-size: 0.8rem;
 }
 .premSideBar__li {
     padding: 0px 30px 0px 30px;
+    margin: 0 0 0.2rem 0;
 }
 .premSideBar__icons {
     font-size: 15px !important;
-    margin-bottom: 4px;
+    margin: 0 0.3rem 0 0.3rem;
 }
 @media (min-width: 1200px) {
     .premSideBar {

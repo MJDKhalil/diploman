@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { Button } from '@mui/material';
 import { login } from '../actions/auth';
@@ -8,6 +8,7 @@ import { useTranslation } from 'next-i18next';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
+import useFormState from '../hooks/useFormState';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import i18n from '../../i18n';
 
@@ -16,13 +17,8 @@ function Login({ login, isAuthenticated }) {
   const { t } = useTranslation();
   const navigate = useRouter();
 
-  const [formData, setFormData] = useState({
-    email: '',
-    password: ''
-  });
-
+  const { formData, onChange } = useFormState({ email: '', password: '' });
   const { email, password } = formData;
-  const onChange = e => setFormData({ ...formData, [e.target.name]: e.target.value});
   const onSubmit = e => {
     e.preventDefault();
 
@@ -70,10 +66,10 @@ function Login({ login, isAuthenticated }) {
           <Button className={styles.login__button__main} type='submit'>{t('login_title')}</Button>
         </form>
         <p className={styles.link__to__Signup}>
-        {t('login_text1')} <Link legacyBehavior href='/signup'><a className={styles.login__link}>{t('login_register')}</a></Link>
+          {t('login_text1')} <Link href='/signup' className={styles.login__link}>{t('login_register')}</Link>
         </p>
         <p className={styles.link__to__resetPassword}>
-        {t('login_text2')} <Link legacyBehavior href='/reset-password'><a className={styles.reset__password__link}>{t('login_reset')}</a></Link>
+          {t('login_text2')} <Link href='/reset-password' className={styles.reset__password__link}>{t('login_reset')}</Link>
         </p>
       </div>
       <WelcomePageFooter/>
@@ -81,10 +77,9 @@ function Login({ login, isAuthenticated }) {
   )
 };
 
-export const getServerSideProps = async ({ locale }) => (
+export const getStaticProps = async ({ locale }) => (
   { props: {
-    ...(await serverSideTranslations(
-      locale,
+    ...(await serverSideTranslations(locale ?? 'en',
       ['common'],
       i18n,
     )),

@@ -17,9 +17,9 @@ function AdmissionProcess() {
       <h1 className={styles.admissionProcess__title}> {t('admissionProcess_header')} <WbSunnyIcon className={styles.ad__sunIcon}/> </h1>
       <span className={styles.admissionProcess__span}>{t('admissionProcess_ul')}</span>
       <ul>
-          <li className={styles['admissionProcess__1st__li']+' '+styles['admissionProcess__li']}><GroupWorkIcon className='admissionProcess__icons'/> {t('admissionProcess_li1')}</li>
-          <li className={styles.admissionProcess__li}><AddCircleOutlineIcon className='admissionProcess__icons'/> {t('admissionProcess_li2')}</li>
-          <li className={styles.admissionProcess__li}><AddCircleOutlineIcon className='admissionProcess__icons'/> {t('admissionProcess_li3')}</li>
+          <li className={styles['admissionProcess__1st__li']+' '+styles['admissionProcess__li']}><GroupWorkIcon className={styles.admissionProcess__icons}/> {t('admissionProcess_li1')}</li>
+          <li className={styles.admissionProcess__li}><AddCircleOutlineIcon className={styles.admissionProcess__icons}/> {t('admissionProcess_li2')}</li>
+          <li className={styles.admissionProcess__li}><AddCircleOutlineIcon className={styles.admissionProcess__icons}/> {t('admissionProcess_li3')}</li>
       </ul>
       <p className={styles.admissionProcess__note}>{t('admissionProcess_note1')}</p>
       <p className={styles.admissionProcess__note}>{t('admissionProcess_note2')}</p>

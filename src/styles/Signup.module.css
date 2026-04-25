@@ -45,13 +45,13 @@
 .signup__link {
     text-decoration: none;
     font-weight: 600;
+    color: #1976D2;
 }
 .signup__button__main {
     width: 100%;
     text-transform: none !important;
     font-size: 20px !important;
     font-weight: 600 !important;
-    font-family: 'Roboto', sans-serif !important;
 }
 .signup__password__validation {
     width: 270px;

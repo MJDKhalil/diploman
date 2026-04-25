@@ -7,11 +7,11 @@
 .visaRequirments {
     margin: 5px 10px 5px 5px;
     display: inline-block;
-    background: linear-gradient(to right, #233329,#ce5cdd);
-    display: inline-block;
+    background-color: #ffffff;
+	box-shadow: 0px 5px 8px -3px rgba(0, 0, 0, 0.75);
     justify-content: space-around;
-    width: 370px;
-    color: #F6F6F6;
+    width: 380px;
+    color: rgba(0, 0, 0, 0.75);
     padding: 0px 5px 0px 5px;
 }
 .visaRequirments__title {
@@ -26,20 +26,18 @@
     display: flex;
     justify-content: space-evenly;
 }
-.visaRequirments__container > ul {
+.visaResuirments__ul {
+    list-style-type: none;
     margin: 0;
     padding: 0;
 }
-.visaRequirments__ul__title {
-    margin-bottom: 20px;
-    text-align: initial;
-    padding: 0px 15px 0px 15px;
-}
-.visaRequirments__li {
+.visaResuirments__li {
     font-size: 11px;
     width: 130px;
     margin-bottom: 8px;
-    padding: 0px 15px 0px 15px;
+}
+.visaResuirments__li__subSection{
+    margin-top: 8px;
 }
 .visaRequirments__note {
     font-size: 0.6rem;
@@ -54,7 +52,7 @@
     .visaRequirments__li {
         padding: 0px 20px 0px 25px;
     }
-    .visaRequirments {
+    .visaRequirments__container {
         padding: 0px 30px 0px 30px;
     }
     .visaRequirments__ul__title {

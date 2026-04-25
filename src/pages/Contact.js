@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Head from 'next/head';
 import axios from 'axios';
 import { connect } from 'react-redux';
@@ -7,6 +7,10 @@ import styles from '../styles/Contact.module.css';
 import { useRouter } from 'next/router';
 import WelcomePageFooter from '../components/WelcomePageFooter';
 import { useTranslation } from 'next-i18next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import i18n from '../../i18n';
+import { DEMO_MODE, DEMO_ALERT_MSG } from '../utils/demo';
+import useFormState from '../hooks/useFormState';
 
 
 const Contact = ({ setAlert }) => {
@@ -14,19 +18,16 @@ const Contact = ({ setAlert }) => {
     const { t } = useTranslation();
     const navigate = useRouter();
 
-    const [formData, setFormData] = useState({
-        name: '',
-        email: '',
-        subject: '',
-        message: ''
-    });
-
+    const { formData, onChange } = useFormState({ name: '', email: '', subject: '', message: '' });
     const { name, email, subject, message } = formData;
-
-    const onChange = e => setFormData({ ...formData, [e.target.name]: e.target.value });
 
     const onSubmit = e => {
         e.preventDefault();
+
+        if (DEMO_MODE) {
+            setAlert(DEMO_ALERT_MSG, 'info');
+            return;
+        }
 
         const config = {
             headers: {
@@ -34,7 +35,7 @@ const Contact = ({ setAlert }) => {
             }
         };
 
-        axios.post(`${process.env.REACT_APP_API_URL}/api/contacts/`, { name, email, subject, message }, config)
+        axios.post(`${process.env.NEXT_PUBLIC_API_URL}/api/contacts/`, { name, email, subject, message }, config)
         .then(res => {
             navigate('/'); 
             setAlert('Message Sent Successfuly', 'success');
@@ -54,15 +55,15 @@ const Contact = ({ setAlert }) => {
                         content='Contact us page'
                     />
                 </Head>
-                <div  className='contact__form'>
-                <h1 className='Contactus__title'>{t('contact_title')}</h1>
-                <hr className='contact__hr'/>
+                <div  className={styles.contact__form}>
+                <h1 className={styles.contactus__title}>{t('contact_title')}</h1>
+                <hr className={styles.contact__hr}/>
                 <form onSubmit={e => onSubmit(e)}>
-                    <div className='input_grpp'>
-                        <div className='form__wrapp'>
-                            <label className='contact__form__label' htmlFor='name'>Name</label>
+                    <div className={styles.input_grpp}>
+                        <div className={styles.form__wrapp}>
+                            <label className={styles.contact__form__label} htmlFor='name'>Name</label>
                             <input 
-                                className='contact__form__input' 
+                                className={styles.contact__form__input} 
                                 name='name' 
                                 type='text' 
                                 placeholder={t('Form_name')}
@@ -71,10 +72,10 @@ const Contact = ({ setAlert }) => {
                                 required 
                             />
                         </div>
-                        <div className='form__wrapp'>
-                            <label className='contact__form__label' htmlFor='email'>Email</label>
+                        <div className={styles.form__wrapp}>
+                            <label className={styles.contact__form__label} htmlFor='email'>Email</label>
                             <input 
-                                className='contact__form__input' 
+                                className={styles.contact__form__input} 
                                 name='email' 
                                 type='email' 
                                 placeholder={t('Form_email')} 
@@ -84,10 +85,10 @@ const Contact = ({ setAlert }) => {
                             />
                         </div>
                     </div>
-                    <div className='form__wrapp'>
-                        <label className='contact__form__label' htmlFor='subject'>Subject</label>
+                    <div className={styles.form__wrapp}>
+                        <label className={styles.contact__form__label} htmlFor='subject'>Subject</label>
                         <input 
-                            className='contact__form__input subject__type' 
+                            className={styles['contact__form__input']+' '+styles['subject__type']} 
                             name='subject' 
                             type='text' 
                             placeholder={t('contact_subjct')}
@@ -96,10 +97,10 @@ const Contact = ({ setAlert }) => {
                             required 
                         />
                     </div>
-                    <div className='form__wrapp'>
-                        <label className='contact__form__label textarea__bx' htmlFor='message'>Message ;</label>
+                    <div className={styles.form__wrapp}>
+                        <label className={styles['contact__form__label']+' '+styles['textarea__bx']} htmlFor='message'>Message ;</label>
                         <textarea 
-                            className='contact__form__textarea'
+                            className={styles.contact__form__textarea}
                             name='message'
                             cols='30'
                             rows='10'
@@ -108,7 +109,7 @@ const Contact = ({ setAlert }) => {
                             value={message} 
                         />
                     </div>
-                    <button className='contact__form__button' htmltype='submit'>{t('Form_send')}</button>
+                    <button className={styles.contact__form__button} htmltype='submit'>{t('Form_send')}</button>
                 </form>
                 </div>
             </div>
@@ -117,5 +118,13 @@ const Contact = ({ setAlert }) => {
     );
 };
 
+export const getStaticProps = async ({ locale }) => (
+    { props: {
+      ...(await serverSideTranslations(locale ?? 'en',
+        ['common'],
+        i18n,
+      )),
+    } }
+  );
 
 export default connect(null, { setAlert })(Contact);

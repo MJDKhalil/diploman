@@ -67,9 +67,9 @@
 
     "assist_card": "Visa Assist",
     "assist_subtitle": "Services :",
-    "assist_li1": " Filling Visa Application-Form",
+    "assist_li1": " Filling Visa Application",
     "assist_li2": " Book Biometrics Appointments",
-    "assist_li3": " Review Required Documents",
+    "assist_li3": " Review requirements",
     "assist_li4": " Recommendations",
 
     "premium_card": "Premium Service",
@@ -80,14 +80,14 @@
     "premium_li4": " Visa Assist Services (included)",
 
     "guide_card": "Guide",
-    "guide_desc": "Studying abroad may seem complicated and that's why we are here to make the processes simple.",
+    "guide_desc": "Studying abroad may seem complicated, but we are here to simplify the process.",
 
     "about_title": "Diploman at your service",
     "about_desc": "Official partner with language and academic institutes. We help applicants to choose the best study path and guide them through the maze of questions to find solutions best suited to their profile. We provide admission offers without charges and travel-visa support for all types of applications.",
     "about_li1": "Recommendations and Proactive follow-up",
     "about_li2": "Premium : Priority service from A2Z",
     "about_li3": "Filling visa application forms",
-    "about_li4": "Provide admission offers",
+    "about_li4": "Providing admission offers",
     "about_li5": "Visa support",
 
     "schoolCard_title": "Language Centers",
@@ -160,7 +160,7 @@
     "footer_partners": "Schools",
 
     "footer_diploman": "Diploman",
-    "footer_paragraph": "Our goal is to make prosperity for all by bridging the gap between learners and language centers (Soon Academic institutes), and help not only get admission with no extra fees but win some money back.",
+    "footer_paragraph": "Our goal is to create prosperity for all by bridging the gap between learners and language centers (soon academic institutes). We not only assist in obtaining admission without extra fees but also offer opportunities to win some money back.",
 
     "admissionForm_request": "Request Admission Offer",
     "admissionForm_course": "24 weeks *",
@@ -172,7 +172,7 @@
 
     "requestAdmission_header": "Start your journey by requesting an Admission",
     "admissionProcess_header": "Prosperity for All ",
-    "admissionProcess_ul": "We value our relationship with students and partners. As we strive to deliver the best experience to our applicants, in collaboration with the academic and language schools, We will  help you to choose the best study path, including:",
+    "admissionProcess_ul": "We value our relationships with students and partners. In our commitment to providing the best experience for our applicants, we collaborate with academic and language schools. We will assist you in choosing the best study path, including:",
     "admissionProcess_li1": "Admission offers without charges",
     "admissionProcess_li2": "Study +5 Months and win a financial award",
     "admissionProcess_li3": "Proactive checks and tips to help you reach your target",
@@ -183,9 +183,9 @@
     "requestVA_title": "Request Visa-Assist",
 
     "vaProcess_title": "Diploman team are here to help",
-    "vaProcess_subtitle": "Visa-Assist service price varies according to the destination. Please contact us for more information.",
-    "vaProcess_note": "* There are discounts for groups and students who obtained admission through us upon request.",
-    "vaProcess_li1": "We offer personalized support to all types of applicants. Our customer success team will make sure that you meet all requirements accordingly and guide you through the administrative processes :",
+    "vaProcess_subtitle": "Visa-Assist service price varies according to the destination. Kindly contact us for more detailed information.",
+    "vaProcess_note": "* We offer discounts for groups and students who obtained admission through us upon request. Please feel free to inquire for more details.",
+    "vaProcess_li1": "We provide personalized support to all applicants. Our dedicated success team ensures that you meet all requirements and guides you through the administrative processes accordingly.",
     "vaProcess_li2": "Review required documents.",
     "vaProcess_li3": "Filling application-forms.",
     "vaProcess_li4": "Booking biometric appointment.",
@@ -193,7 +193,7 @@
     "va_title": "Request Visa-Assist service and our team will contact you to discuss the best way to serve you.",
 
     "prem_header": "Go Premium",
-    "prem_subtitle": "A dedicated agent will be assigned to address your needs and manage all admin tasks on your behalf, in addition to :",
+    "prem_subtitle": "A dedicated agent will be assigned to address your needs and manage all administrative tasks on your behalf. Additionally, we provide:",
     "prem_li1": "Provide admission offer",
     "prem_li2": "Filling application-forms",
     "prem_li3": "Booking biometric appointment",

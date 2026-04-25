@@ -1,71 +1,143 @@
-# Getting Started with Create React App
+# Diploman
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+An educational consulting platform for international students — helping with university admissions, visa applications, and study-abroad services. Built as a learning project and refactored as a portfolio piece.
 
-## Available Scripts
+**Live demo:** [GitHub Pages link] _(set after first deploy — see Deployment section)_
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## Tech stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+| Layer | Technology |
+|-------|-----------|
+| Frontend | Next.js 13 (Pages Router), React 18, Redux Toolkit |
+| Styling | CSS Modules, MUI v5, Bootstrap 5 |
+| i18n | next-i18next (en / fr / ar) |
+| Backend | Django 4.2 LTS, Django REST Framework 3.15, Djoser, SimpleJWT |
+| Auth | JWT (access + refresh tokens) |
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## Portfolio demo mode
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+When `NEXT_PUBLIC_API_URL` is not set, the app runs in **demo mode**:
+- A blue banner appears at the top indicating the backend is not connected.
+- All form submissions and authentication actions are disabled with an informational message.
+- The UI, navigation, and content remain fully browsable.
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Project structure
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```
+src/
+  actions/       # Redux async actions (auth, alerts)
+  components/    # Reusable UI components
+    forms/uk/    # UK visa application form sections (12 components)
+    forms/usa/   # US visa application form sections (14 components)
+  hocs/          # Higher-order components (Layout, withAuth)
+  hooks/         # Shared hooks (useFormState)
+  pages/         # Next.js pages (file-based routing)
+  reducers/      # Redux reducers
+  store.js       # Redux Toolkit store
+  styles/        # CSS Modules
+  utils/         # Demo mode constants
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+diploman/        # Django project settings
+```
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Getting started
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Frontend (Next.js)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+npm install
+npm run dev          # development server at http://localhost:3000
+npm run build        # production build + static export to out/
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Backend (Django)
 
-## Learn More
+```bash
+python -m venv venv && source venv/bin/activate
+pip install -r requirements.txt
+cp .env.example .env   # fill in your values
+python manage.py migrate
+python manage.py runserver
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Environment variables
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+**Frontend** — copy `.env.local.example` to `.env.local`:
 
-### Code Splitting
+| Variable | Description |
+|----------|-------------|
+| `NEXT_PUBLIC_API_URL` | Backend base URL (e.g. `http://localhost:8000`). Leave unset for demo mode. |
+| `NEXT_PUBLIC_BASE_PATH` | URL prefix for GitHub Pages project pages (e.g. `/diploman`). Leave empty for root or custom domain. |
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+**Backend** — copy `.env.example` to `.env`:
 
-### Analyzing the Bundle Size
+| Variable | Description |
+|----------|-------------|
+| `DJANGO_SECRET_KEY` | Django secret key |
+| `DB_PASSWORD` | PostgreSQL password |
+| `EMAIL_HOST_USER` | SMTP email address |
+| `EMAIL_HOST_PASSWORD` | SMTP password |
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+## Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### GitHub Pages (static export — demo mode)
 
-### Advanced Configuration
+The project is configured for static export by default (`output: 'export'` in `next.config.js`).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Push to `main` — GitHub Actions (`.github/workflows/deploy.yml`) builds and deploys automatically.
 
-### Deployment
+**Enable GitHub Pages once:**
+1. Go to **Settings → Pages → Source → GitHub Actions**
+2. Push to `main`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+> Note: i18n locale routing is disabled in static export mode. All text defaults to English.
+> For full multilingual support, deploy to Vercel instead.
 
-### `npm run build` fails to minify
+### Vercel (full SSR — recommended for full functionality)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# diploman
+1. In `next.config.js`: remove `output: 'export'`, `trailingSlash`, and `images.unoptimized`; uncomment the `i18n` block
+2. Import the repo on [vercel.com](https://vercel.com)
+3. Set `NEXT_PUBLIC_API_URL` to your backend URL
+
+---
+
+## Features
+
+- **Home page** — hero section, school cards carousel, service overview
+- **Forms** — UK and US visa application forms (26 section components)
+- **Visa Assist** — step-by-step visa assistance flow
+- **Admission** — university admission request form
+- **Contact** — contact form
+- **Auth** — login, signup, JWT refresh, password reset via email
+- **i18n** — English, French, Arabic with locale switcher in header
+
+---
+
+## What was refactored
+
+This project started as a Create React App project partially migrated to Next.js. The cleanup included:
+
+- Completed CRA → Next.js migration (removed react-router, fixed `Link legacyBehavior`, SSR guards)
+- Replaced `legacy_createStore` with Redux Toolkit `configureStore`
+- Decomposed two 4000+ line form files into 26 focused section components
+- Extracted shared `useFormState` hook (used across 11 forms/pages)
+- Moved all hardcoded Django secrets to environment variables
+- Updated all npm and pip dependencies to current stable versions
+- Configured static export with GitHub Actions CI/CD for GitHub Pages
+- Added demo mode banner and form-submission guards for portfolio deployment
+
+---
+
+## License
+
+MIT

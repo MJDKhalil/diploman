@@ -38,7 +38,7 @@ function ServiceCard() {
                       <li className={styles.serviceCard__li}><CheckIcon className={styles.serviceCard__li__Icon}/>{t('admission_li2')}</li>
                       <li className={styles.serviceCard__li}><CheckIcon className={styles.serviceCard__li__Icon}/>{t('admission_li3')}</li>
                       <li className={styles.serviceCard__li}><CheckIcon className={styles.serviceCard__li__Icon}/>{t('admission_li4')}</li>
-                      <li className={styles.serviceCard__btn__box}><Link legacyBehavior className={styles.serviceCard__link} href='/admission'><Button className={styles.serviceCard__learnMore} >{t('card_learnMore')}</Button></Link></li>
+                      <li className={styles.serviceCard__btn__box}><Link className={styles.serviceCard__link} href='/Admission'><Button className={styles.serviceCard__learnMore} >{t('card_learnMore')}</Button></Link></li>
                     </ul>
                   </div>
                 </CardContent>
@@ -55,7 +55,7 @@ function ServiceCard() {
                       <li className={styles.serviceCard__li}><CheckIcon className={styles.serviceCard__li__Icon}/>{t('assist_li2')}</li>
                       <li className={styles.serviceCard__li}><CheckIcon className={styles.serviceCard__li__Icon}/>{t('assist_li3')}</li>
                       <li className={styles.serviceCard__li}><CheckIcon className={styles.serviceCard__li__Icon}/>{t('assist_li4')}</li>
-                      <li className={styles.serviceCard__btn__box}><Link legacyBehavior className={styles.serviceCard__link} href='/visa-assist'><Button className={styles.serviceCard__learnMore}>{t('card_learnMore')}</Button></Link></li>
+                      <li className={styles.serviceCard__btn__box}><Link className={styles.serviceCard__link} href='/Visa-assist'><Button className={styles.serviceCard__learnMore}>{t('card_learnMore')}</Button></Link></li>
                     </ul>
                   </div>
                 </CardContent>
@@ -73,7 +73,7 @@ function ServiceCard() {
                       <li className={styles.serviceCard__li}><AddTaskIcon className={styles.serviceCard__li__Icon}/>{t('premium_li2')}</li>
                       <li className={styles.serviceCard__li}><CheckIcon className={styles.serviceCard__li__Icon}/>{t('premium_li3')}</li>
                       <li className={styles.serviceCard__li}><CheckIcon className={styles.serviceCard__li__Icon}/>{t('premium_li4')}</li>
-                      <li className={styles.serviceCard__btn__box}><Link legacyBehavior className={styles.serviceCard__link} href='/premuim-support'><Button className={styles.serviceCard__learnMore}>{t('card_learnMore')}</Button></Link></li>
+                      <li className={styles.serviceCard__btn__box}><Link className={styles.serviceCard__link} href='/Premium'><Button className={styles.serviceCard__learnMore}>{t('card_learnMore')}</Button></Link></li>
                     </ul>
                   </div>
                 </CardContent>
@@ -87,7 +87,7 @@ function ServiceCard() {
                   <div className={styles.serviceCard__desc}>
                     <ul className={styles.serviceCard__ul}>
                       <li className={styles.guide__li}>{t('guide_desc')}</li>
-                      <li className={styles.serviceCard__btn__box}><Link legacyBehavior className={styles.serviceCard__link} href='/guid'><Button className={styles.serviceCard__learnMore}>{t('card_learnMore')}</Button></Link></li>
+                      <li className={styles.serviceCard__btn__box}><Link className={styles.serviceCard__link} href='/Guid'><Button className={styles.serviceCard__learnMore}>{t('card_learnMore')}</Button></Link></li>
                     </ul>
                   </div>
                 </CardContent>
@@ -97,6 +97,6 @@ function ServiceCard() {
         </Collapse> 
     </div>
   )
-}
+};
 
 export default ServiceCard;

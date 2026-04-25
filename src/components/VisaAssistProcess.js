@@ -13,17 +13,17 @@ function VisaAssistProcess() {
 
   return (
     <div className={styles.visaAssistProcess}>
-      <h2 className='visaAssistProcess__title'>{t('vaProcess_title')}</h2>
-      <h2 className='visaAssistProcess__title2'>{t('vaProcess_li1')}</h2>
-      <ul className='visaAssistProcess__ul'>
-          <li><FactCheckIcon className='visaAssistProcess__icons'/> {t('vaProcess_li2')} </li>
-          <li><FormatAlignLeftIcon className='visaAssistProcess__icons'/> {t('vaProcess_li3')} </li>
-          <li><FingerprintIcon className='visaAssistProcess__icons'/> {t('vaProcess_li4')} </li>
-          <li><LightbulbIcon className='visaAssistProcess__icons'/> {t('vaProcess_li5')} </li>
+      <h2 className={styles.visaAssistProcess__title}>{t('vaProcess_title')}</h2>
+      <h2 className={styles.visaAssistProcess__title2}>{t('vaProcess_li1')}</h2>
+      <ul className={styles.visaAssistProcess__ul}>
+          <li className={styles.visaAssistProcess__li}><FactCheckIcon className={styles.visaAssistProcess__icons}/> {t('vaProcess_li2')} </li>
+          <li className={styles.visaAssistProcess__li}><FormatAlignLeftIcon className={styles.visaAssistProcess__icons}/> {t('vaProcess_li3')} </li>
+          <li className={styles.visaAssistProcess__li}><FingerprintIcon className={styles.visaAssistProcess__icons}/> {t('vaProcess_li4')} </li>
+          <li className={styles.visaAssistProcess__li}><LightbulbIcon className={styles.visaAssistProcess__icons}/> {t('vaProcess_li5')} </li>
       </ul>
-      <h2 className='visaAssistProcess__title2'>{t('vaProcess_subtitle')}</h2>
-      <h2 className="visaAssistProcess__title2">{t('va_title')}</h2>
-      <p className='visaAssistProcess__note'>{t('vaProcess_note')}</p>
+      <h2 className={styles.visaAssistProcess__title2}>{t('vaProcess_subtitle')}</h2>
+      <h2 className={styles.visaAssistProcess__title2}>{t('va_title')}</h2>
+      <p className={styles.visaAssistProcess__note}>{t('vaProcess_note')}</p>
       
     </div>
   )

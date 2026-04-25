@@ -37,14 +37,13 @@ function RequestAdmission() {
   )
 }
 
-export const getServerSideProps = async ({ locale }) => (
+export const getStaticProps = async ({ locale }) => (
   { props: {
-    ...(await serverSideTranslations(
-      locale,
+    ...(await serverSideTranslations(locale ?? 'en',
       ['common'],
       i18n,
     )),
   } }
 );
 
-export default RequestAdmission
+export default RequestAdmission;

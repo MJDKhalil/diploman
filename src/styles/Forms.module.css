@@ -16,7 +16,9 @@
 	width: 265px ;
 	box-shadow: 0px 5px 17px #a8a7a7 !important;
 	margin: 5px 10px 5px 10px;
-}
+	display: flex;
+	flex-direction: column;
+ }
 .formsCard:hover {
 	transform: scale(1.07);
 }
@@ -25,7 +27,7 @@
     background-color: white;
     display: flex;
     justify-content: center;
-	height: 20vh;
+	margin: 0 0 0 0;
 }
 .forms__img {
 	width: 100%;
@@ -36,12 +38,11 @@
 	text-align: center;
 	background: linear-gradient(58deg, #233329,#7b68ee);
 	letter-spacing: 0.7px;
-	margin: 0;
-}
-.forms__link {
-	text-decoration: none !important;
+	text-decoration: none;
 	color: #fdfeff;
+	margin: 0 0 0 0;
 }
+
 .forms__link:hover {
-	color: white;
+	color: #ffffff;
 }

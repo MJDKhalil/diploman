@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { connect } from 'react-redux';
@@ -6,6 +6,7 @@ import { Button } from '@mui/material';
 import { signup } from '../actions/auth';
 import styles from '../styles/Signup.module.css';
 import Head from 'next/head';
+import useFormState from '../hooks/useFormState';
 import { setAlert } from '../actions/alert';
 import PasswordStrengthMeter from '../components/PasswordStrengthMeter';
 import WelcomePageFooter from '../components/WelcomePageFooter';
@@ -20,15 +21,8 @@ function Signup({setAlert, signup, isAuthenticated }) {
   const [ strongpassword, setStrongpassword ] = useState('s');
 
   const [accountCreated, setAccountCreated] = useState(false);
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    password: '',
-    re_password: ''
-  });
-
+  const { formData, onChange } = useFormState({ name: '', email: '', password: '', re_password: '' });
   const { name, email, password, re_password } = formData;
-  const onChange = e => setFormData({ ...formData, [e.target.name]: e.target.value});
   const onSubmit = e => {
     e.preventDefault();
 
@@ -114,11 +108,11 @@ function Signup({setAlert, signup, isAuthenticated }) {
               required
             />
           </div>
-          <p className={styles.signup__terms}>{t('signin_terms')} <Link legacyBehavior href='/terms'><a className={styles.signup__termsBtn}>{t('signin_termsBtn')}</a></Link></p>
+          <p className={styles.signup__terms}>{t('signin_terms')} <Link href='/terms' className={styles.signup__termsBtn}>{t('signin_termsBtn')}</Link></p>
           <Button className={styles.signup__button__main} type='submit'>{t('login_register')}</Button>
         </form>
         <p className={styles.signup__authtext}>
-        {t('signin_text1')} <Link legacyBehavior href='/login'><a className={styles.signup__link}>{t('signin_toLogin')}</a></Link>
+          {t('signin_text1')} <Link href='/login' className={styles.signup__link}>{t('signin_toLogin')}</Link>
         </p>
         
       </div>
@@ -127,10 +121,9 @@ function Signup({setAlert, signup, isAuthenticated }) {
   )
 };
 
-export const getServerSideProps = async ({ locale }) => (
+export const getStaticProps = async ({ locale }) => (
   { props: {
-    ...(await serverSideTranslations(
-      locale,
+    ...(await serverSideTranslations(locale ?? 'en',
       ['common'],
       i18n,
     )),

@@ -17,25 +17,25 @@ function PremSideBar() {
 
   return (
     <div className={styles.premSideBar}>
-        <h1 className='premSideBar__title'>{t('prem_header')}</h1>
-        <h2 className='premSideBar__pr'> {t('prem_subtitle')} </h2>
-      <ul className='premSideBar__ul'>
-          <li className='premSideBar__li'><ApprovalIcon className='premSideBar__icons'/> {t('prem_li1')} </li>
-          <li className='premSideBar__li'><FormatAlignLeftIcon className='premSideBar__icons'/> {t('prem_li2')} </li>
-          <li className='premSideBar__li'><FingerprintIcon className='premSideBar__icons'/> {t('prem_li3')} </li>
-          <li className='premSideBar__li'><SupportAgentIcon className='premSideBar__icons'/> {t('prem_li4')} </li>
-          <li className='premSideBar__li'><LightbulbIcon className='premSideBar__icons'/> {t('prem_li5')} </li>
-          <li className='premSideBar__li'><AddTaskIcon className='premSideBar__icons'/> {t('prem_li6')} </li>
+        <h1 className={styles.premSideBar__title}>{t('prem_header')}</h1>
+        <h2 className={styles.premSideBar__pr}> {t('prem_subtitle')} </h2>
+      <ul className={styles.premSideBar__ul}>
+          <li className={styles.premSideBar__li}><ApprovalIcon className={styles.premSideBar__icons}/> {t('prem_li1')} </li>
+          <li className={styles.premSideBar__li}><FormatAlignLeftIcon className={styles.premSideBar__icons}/> {t('prem_li2')} </li>
+          <li className={styles.premSideBar__li}><FingerprintIcon className={styles.premSideBar__icons}/> {t('prem_li3')} </li>
+          <li className={styles.premSideBar__li}><SupportAgentIcon className={styles.premSideBar__icons}/> {t('prem_li4')} </li>
+          <li className={styles.premSideBar__li}><LightbulbIcon className={styles.premSideBar__icons}/> {t('prem_li5')} </li>
+          <li className={styles.premSideBar__li}><AddTaskIcon className={styles.premSideBar__icons}/> {t('prem_li6')} </li>
       </ul>
-      <h2 className='premSideBar__pr'>{t('prem_price')}</h2>
-      <p className='premSideBar__note'>{t('prem_note')}</p>
+      <h2 className={styles.premSideBar__pr}>{t('prem_price')}</h2>
+      <p className={styles.premSideBar__note}>{t('prem_note')}</p>
 
-      <div className='premuimSupport__sidebar__bx'>
+      <div className={styles.premuimSupport__sidebar__bx}>
             <h2>{t('premSupport_header')}</h2>
-            <div className='premsideBar__icons__bx'>
-                <TravelExploreIcon className='premuimSupport__icon'/> 
-                <FlightIcon className='premuimSupport__icon'/> 
-                <MenuBookIcon className='premuimSupport__icon'/>
+            <div className={styles.premsideBar__icons__bx}>
+                <TravelExploreIcon className={styles.premuimSupport__icon}/> 
+                <FlightIcon className={styles.premuimSupport__icon}/> 
+                <MenuBookIcon className={styles.premuimSupport__icon}/>
             </div>
           </div>
     </div>

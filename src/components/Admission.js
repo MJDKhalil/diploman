@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import useFormState from '../hooks/useFormState';
 import axios from 'axios';
 import { connect } from 'react-redux';
 import { setAlert } from '../actions/alert';
@@ -6,6 +7,7 @@ import styles from '../styles/Admission.module.css';
 import { useRouter } from 'next/router';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { useTranslation } from 'next-i18next';
+import { DEMO_MODE, DEMO_ALERT_MSG } from '../utils/demo';
 
 function Admission({ setAlert }) {
 
@@ -21,22 +23,18 @@ function Admission({ setAlert }) {
     document.getElementById("schoolRadio").innerHTML = SchoolValue;
     }
 
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    school: '',
-    other: '',
-    destination: '',
-    course_length: '',
-    start_date: (null),
-    message: ''
+  const { formData, onChange, setFormData } = useFormState({
+    name: '', email: '', phone: '', school: '', other: '',
+    destination: '', course_length: '', start_date: null, message: ''
   });
-
   const { name, email, phone, school, other, destination, course_length, start_date, message } = formData;
-  const onChange = e => setFormData({ ...formData, [e.target.name]: e.target.value });
   const onSubmit = async (e) => {
     e.preventDefault();
+
+    if (DEMO_MODE) {
+      setAlert(DEMO_ALERT_MSG, 'info');
+      return;
+    }
 
     let dataForm = new FormData();
       dataForm.append('name',name)
@@ -54,7 +52,7 @@ function Admission({ setAlert }) {
 
     await axios({
       method: 'post',
-      url: `${process.env.REACT_APP_API_URL}/api/service-request/admission/`,
+      url: `${process.env.NEXT_PUBLIC_API_URL}/api/service-request/admission/`,
       data: dataForm,
       headers: {
           'Content-Type': 'multipart/form-data' 

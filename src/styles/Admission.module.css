@@ -6,6 +6,7 @@
 } */
 .request__admission {
 	flex: 6;
+
 }
 .request__admission__bx {
 	display: flex;
@@ -56,10 +57,10 @@
 }
 
 .request__admission__form__textarea, .subject__type{
-	width: 100% !important;
+	width: 95%;
 	border-radius: 3px;
 	border: 1px solid #9597a6;
-	padding: 10px;
+	padding: 0.5rem;
 	outline: none;
 	margin-bottom: 10px;
 	margin-top: 10px;
@@ -96,13 +97,16 @@
 	box-shadow: 0px 5px 8px -8px rgba(0, 0, 0, 0.75);	border-radius: 8px;
 	margin-bottom: 8px;
 	position: relative;
-	padding: 9px 5px 9px 5px;
+	padding: 9px 15px 9px 15px;
 	cursor: pointer;
 	font-size: 0.8rem;
 	font-weight: 500;
 	color: #F6F6F6;
 	letter-spacing: 1px;
-
+	display: flex;
+	align-items: center;
+	width: 93%;
+	 
 	order: 0;
 }
 .request__admission__expand {
@@ -124,18 +128,22 @@
 .request__admission__option__container {
 	position: absolute;
 	background-color: #F6F6F6;
-	width: 170px;
+	width: 11.6rem;
 }
 .request__admission__option {
-	padding: 12px 24px;
+	padding: 12px 12px;
 	font-size: 0.8rem;
 	font-weight: 500;
 }
 .request__admission__box__label {
 	cursor: pointer;
 }
-.request__admission__box__label .request__admission__input__radio  {
-	display: none;
+/* .request__admission__box__label .request__admission__input__radio  {
+	display: none; 
+} */
+
+.request__admission__box__labe input[type="radio"] {
+  display: none; /* Hide the radio button */
 }
 .request__admission__input__radio:checked ~ span {
 	background: linear-gradient(58deg, #233329,#6ccae4);
@@ -143,9 +151,10 @@
 	font-weight: 600;
 	font-size: 0.8rem;
 	padding: 8px 5px 8px 5px;
-	border-radius: 3px;
+	border-radius: 4px;
 	cursor: pointer;
 	color: #F6F6F6;
+	width: max-content;
 }
 .request__admission__option:hover {
 	background: linear-gradient(58deg, #233329,#6ccae4);

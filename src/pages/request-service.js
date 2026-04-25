@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Head from 'next/head';
 import axios from 'axios';
 import { connect } from 'react-redux';
@@ -7,24 +7,25 @@ import styles from '../styles/RequestService.module.css';
 import { useRouter } from 'next/router';
 import WelcomePageFooter from '../components/WelcomePageFooter';
 import { useTranslation } from 'next-i18next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import i18n from '../../i18n';
+import { DEMO_MODE, DEMO_ALERT_MSG } from '../utils/demo';
+import useFormState from '../hooks/useFormState';
 
 function RequestService({ setAlert }) {
 
   const { t } = useTranslation();
   const navigate = useRouter();
 
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    request: '',
-    message: ''
-  });
-
+  const { formData, onChange } = useFormState({ name: '', email: '', phone: '', request: '', message: '' });
   const { name, email, phone, request, message } = formData;
-  const onChange = e => setFormData({ ...formData, [e.target.name]: e.target.value });
   const onSubmit = e => {
     e.preventDefault();
+
+    if (DEMO_MODE) {
+      setAlert(DEMO_ALERT_MSG, 'info');
+      return;
+    }
 
     const config = {
       headers: {
@@ -32,7 +33,7 @@ function RequestService({ setAlert }) {
       }
     };
 
-    axios.post(`${process.env.REACT_APP_API_URL}/api/service-request/`, { name, email, phone, request, message }, config)
+    axios.post(`${process.env.NEXT_PUBLIC_API_URL}/api/service-request/`, { name, email, phone, request, message }, config)
       .then(res => {
           navigate('/'); 
           setAlert('Request Sent Successfuly', 'success');
@@ -52,15 +53,15 @@ function RequestService({ setAlert }) {
                content='Request Service'
            />
         </Head>
-        <div  className='request__service__form'>
-            <h1 className='request__service__title'>{t('request_title')}</h1>
-            <hr className='request__service__hr'/>
+        <div  className={styles.request__service__form}>
+            <h1 className={styles.request__service__title}>{t('request_title')}</h1>
+            <hr className={styles.request__service__hr}/>
             <form onSubmit={e => onSubmit(e)}>
-              <div className='input_grpp'>
-                  <div className='form__wrapp'>
-                      <label className='request__service__form__label' htmlFor='name'>Name</label>
+              <div className={styles.input_grpp}>
+                  <div className={styles.form__wrapp}>
+                      <label className={styles.request__service__form__label} htmlFor='name'>Name</label>
                       <input 
-                          className='request__service__form__input' 
+                          className={styles.request__service__form__input} 
                           name='name' 
                           type='text' 
                           placeholder={t('Form_name')} 
@@ -69,10 +70,10 @@ function RequestService({ setAlert }) {
                           required 
                       />
                   </div>
-                  <div className='form__wrapp'>
-                      <label className='request__service__form__label' htmlFor='email'>Email</label>
+                  <div className={styles.form__wrapp}>
+                      <label className={styles.request__service__form__label} htmlFor='email'>Email</label>
                       <input 
-                          className='request__service__form__input' 
+                          className={styles.request__service__form__input} 
                           name='email' 
                           type='email' 
                           placeholder={t('Form_email')}
@@ -82,11 +83,11 @@ function RequestService({ setAlert }) {
                       />
                   </div>
               </div>
-              <div className='input_grpp'>
-                <div className='form__wrapp'>
-                    <label className='request__service__form__label' htmlFor='request'>Request</label>
+              <div className={styles.input_grpp}>
+                <div className={styles.form__wrapp}>
+                    <label className={styles.request__service__form__label} htmlFor='request'>Request</label>
                     <input 
-                        className='request__service__form__input' 
+                        className={styles.request__service__form__input} 
                         name='request' 
                         type='text' 
                         placeholder={t('request_text')}
@@ -95,10 +96,10 @@ function RequestService({ setAlert }) {
                         required 
                     />
                 </div>
-                <div className='form__wrapp'>
-                    <label className='request__service__form__label' htmlFor='phone'>Phone</label>
+                <div className={styles.form__wrapp}>
+                    <label className={styles.request__service__form__label} htmlFor='phone'>Phone</label>
                     <input 
-                        className='request__service__form__input' 
+                        className={styles.request__service__form__input} 
                         name='phone' 
                         type='text' 
                         placeholder={t('Form_phone')} 
@@ -107,10 +108,10 @@ function RequestService({ setAlert }) {
                     />
                 </div>
               </div>
-              <div className='form__wrapp'>
-                  <label className='request__service__form__label textarea__bx' htmlFor='message'>Message ;</label>
+              <div className={styles.form__wrapp}>
+                  <label className={styles['request__service__form__label']+' '+styles['textarea__bx']} htmlFor='message'>Message ;</label>
                   <textarea 
-                      className='request__service__form__textarea'
+                      className={styles.request__service__form__textarea}
                       name='message'
                       cols='30'
                       rows='10'
@@ -119,13 +120,22 @@ function RequestService({ setAlert }) {
                       value={message} 
                   />
               </div>
-              <button className='request__service__form__button' htmltype='submit'>{t('Form_send')}</button>
+              <button className={styles.request__service__form__button} htmltype='submit'>{t('Form_send')}</button>
             </form>
         </div>
-            </div>
-            <WelcomePageFooter/>
+      </div>
+      <WelcomePageFooter/>
     </div>
   );
 };
+
+export const getStaticProps = async ({ locale }) => (
+  { props: {
+    ...(await serverSideTranslations(locale ?? 'en',
+      ['common'],
+      i18n,
+    )),
+  } }
+);
 
 export default connect(null, { setAlert })(RequestService);

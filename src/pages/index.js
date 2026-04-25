@@ -25,7 +25,6 @@ function WelcomePage() {
           name='description'
           content='welcome page'
         />
-        <meta name='viewport' content='width=device-width, inital-scale=1' />
       </Head>
       <div className={styles.WelcomePage}>
         <div className={styles.background__image}>
@@ -43,10 +42,9 @@ function WelcomePage() {
   )
 }
 
-export const getServerSideProps = async ({ locale }) => (
+export const getStaticProps = async ({ locale }) => (
   { props: {
-    ...(await serverSideTranslations(
-      locale,
+    ...(await serverSideTranslations(locale ?? 'en',
       ['common'],
       i18n,
     )),
