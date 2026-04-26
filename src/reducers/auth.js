@@ -17,8 +17,8 @@ import {
 } from '../actions/types';
 
 const initialState = {
-    access: localStorage.getItem('access'),
-    refresh: localStorage.getItem('refresh'),
+    access: typeof window !== 'undefined' ? window.localStorage.getItem('access') : null,
+    refresh: typeof window !== 'undefined' ? window.localStorage.getItem('refresh') : null,
     isAuthenticated: null,
     user: null
 };
@@ -31,48 +31,52 @@ export default function (state = initialState, action) {
             return {
                 ...state,
                 isAuthenticated: true
-            }
+            };
         case LOGIN_SUCCESS:
-            localStorage.setItem('access', payload.access);
-            localStorage.setItem('refresh', payload.refresh);
+            if (typeof window !== 'undefined') {
+                localStorage.setItem('access', payload.access);
+                localStorage.setItem('refresh', payload.refresh);
+            }
             return {
                 ...state,
                 isAuthenticated: true,
                 access: payload.access,
                 refresh: payload.refresh
-            }
+            };
         case USER_LOADED_SUCCESS:
             return {
                 ...state,
                 user: payload
-            }
+            };
         case SIGNUP_SUCCESS:
             return {
                 ...state,
                 isAuthenticated: false
-            }
+            };
         case AUTHENTICATED_FAIL:
             return {
                 ...state,
                 isAuthenticated: false
-            }
+            };
         case USER_LOADED_FAIL:
             return {
                 ...state,
                 user: null
-            }
+            };
         case LOGIN_FAIL:
         case SIGNUP_FAIL:
         case LOGOUT:
-            localStorage.removeItem('access');
-            localStorage.removeItem('refresh');
+            if (typeof window !== 'undefined') {
+                localStorage.removeItem('access');
+                localStorage.removeItem('refresh');
+            }
             return {
                 ...state,
                 access: null,
                 refresh: null,
                 isAuthenticated: false,
                 user: null
-            }
+            };
         case PASSWORD_RESET_SUCCESS:
         case PASSWORD_RESET_FAIL:
         case ACTIVATION_SUCCESS:
@@ -81,9 +85,9 @@ export default function (state = initialState, action) {
         case PASSWORD_RESET_CONFIRM_FAIL:
             return {
                 ...state
-            }
+            };
 
         default:
-            return state
+            return state;
     }
-};
+}

@@ -1,20 +1,30 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
-import { Outlet, Navigate, useLocation } from 'react-router-dom';
+import { useRouter } from 'next/router';
 
-const PrivateOutlet = ({ isAuthenticated }) => {
-  
-  const location = useLocation();
-  if (isAuthenticated === null) {
-    return null;
-  }
-  return isAuthenticated
-    ? <Outlet />
-    : <Navigate to='/login' state={{ from: location }} replace />;
+// Auth guard HOC for Next.js pages (replaces react-router Outlet pattern)
+const withAuth = (WrappedComponent) => {
+  const AuthGuard = ({ isAuthenticated, ...props }) => {
+    const router = useRouter();
+
+    useEffect(() => {
+      if (isAuthenticated === false) {
+        router.replace('/login');
+      }
+    }, [isAuthenticated, router]);
+
+    if (isAuthenticated === null || isAuthenticated === false) {
+      return null;
+    }
+
+    return <WrappedComponent {...props} />;
+  };
+
+  const mapStateToProps = state => ({
+    isAuthenticated: state.auth.isAuthenticated
+  });
+
+  return connect(mapStateToProps)(AuthGuard);
 };
 
-const mapStateToProps = state => ({
-    isAuthenticated: state.auth.isAuthenticated
-});
-
-export default connect(mapStateToProps)(PrivateOutlet);
+export default withAuth;

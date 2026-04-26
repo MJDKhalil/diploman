@@ -1,15 +1,38 @@
-import { createStore, applyMiddleware, compose } from 'redux';
-import { composeWithDevTools } from 'redux-devtools-extension';
-import thunk from 'redux-thunk';
-import rootReducer from './reducers';
+import { useMemo } from 'react';
+import { configureStore } from '@reduxjs/toolkit';
+import reducers from './reducers';
 
-const initialState = {};
-const middleware = [thunk];
+let store;
 
-const store = createStore(
-    rootReducer,
-    initialState,
-    composeWithDevTools(applyMiddleware(...middleware))
-);
+function initStore(preloadedState) {
+  return configureStore({
+    reducer: reducers,
+    preloadedState,
+    middleware: (getDefaultMiddleware) =>
+      getDefaultMiddleware({
+        serializableCheck: false, // localStorage access in reducer is non-serializable
+      }),
+  });
+}
 
-export default store;
+export const initializeStore = (preloadedState) => {
+  let _store = store ?? initStore(preloadedState);
+
+  if (preloadedState && store) {
+    _store = initStore({
+      ...store.getState(),
+      ...preloadedState,
+    });
+    store = undefined;
+  }
+
+  if (typeof window === 'undefined') return _store;
+  if (!store) store = _store;
+
+  return _store;
+};
+
+export function useStore(initialState) {
+  const store = useMemo(() => initializeStore(initialState), [initialState]);
+  return store;
+}

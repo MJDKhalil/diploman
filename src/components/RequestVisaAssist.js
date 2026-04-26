@@ -1,29 +1,28 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import React from 'react';
+import { useRouter } from 'next/router';
 import axios from 'axios';
 import { connect } from 'react-redux';
 import { setAlert } from '../actions/alert';
-import './RequestVisaAssist.css';
-import { useTranslation } from "react-i18next";
+import styles from '../styles/RequestVisaAssist.module.css';
+import { useTranslation } from 'next-i18next';
+import { DEMO_MODE, DEMO_ALERT_MSG } from '../utils/demo';
+import useFormState from '../hooks/useFormState';
 
 function RequestVisaAssist({ setAlert }) {
 
   const { t } = useTranslation();
-  const navigate=useNavigate();
+  const navigate = useRouter();
 
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    destination: '',
-    message: ''
-  });
-
+  const { formData, onChange } = useFormState({ name: '', email: '', phone: '', destination: '', message: '' });
   const { name, email, phone, destination, message } = formData;
-  const onChange = e => setFormData({ ...formData, [e.target.name]: e.target.value });
 
       const onSubmit = e => {
         e.preventDefault();
+
+        if (DEMO_MODE) {
+          setAlert(DEMO_ALERT_MSG, 'info');
+          return;
+        }
 
         const config = {
             headers: {
@@ -31,7 +30,7 @@ function RequestVisaAssist({ setAlert }) {
             }
         };
 
-        axios.post(`${process.env.REACT_APP_API_URL}/api/service-request/request-visa-assist/`, { name, email, phone, destination, message }, config)
+        axios.post(`${process.env.NEXT_PUBLIC_API_URL}/api/service-request/request-visa-assist/`, { name, email, phone, destination, message }, config)
         .then(res => {
             navigate('/'); 
             setAlert(t('alert_recquest_sent'), 'success');
@@ -42,16 +41,16 @@ function RequestVisaAssist({ setAlert }) {
     };
 
   return (
-    <div className='requestVisaAssist'>
-      <div className='requestVisaAssist__bx'>
-        <div  className='requestVisaAssist__form'>
-         <h1 className='requestVisaAssist__title'>{t('requestVA_title')}</h1>
+    <div className={styles.requestVisaAssist}>
+      <div className={styles.requestVisaAssist__bx}>
+        <div  className={styles.requestVisaAssist__form}>
+         <h1 className={styles.requestVisaAssist__title}>{t('requestVA_title')}</h1>
          <form onSubmit={e => onSubmit(e)}>
-            <div className='requestVisaAssist__input_grpp'>
+            <div className={styles.requestVisaAssist__input_grpp}>
                 <div className=''>
-                    <label className='requestVisaAssist__label__to__hide' htmlFor='name'>{t('Form_name')}</label>
+                    <label className={styles.requestVisaAssist__label__to__hide} htmlFor='name'>{t('Form_name')}</label>
                     <input 
-                        className='requestVisaAssist__form__input' 
+                        className={styles.requestVisaAssist__form__input} 
                         name='name' 
                         type='text' 
                         placeholder={t('Form_name')}
@@ -61,9 +60,9 @@ function RequestVisaAssist({ setAlert }) {
                     />
                 </div>
                 <div className=''>
-                    <label className='requestVisaAssist__label__to__hide' htmlFor='email'>{t('Form_email')}</label>
+                    <label className={styles.requestVisaAssist__label__to__hide} htmlFor='email'>{t('Form_email')}</label>
                     <input 
-                        className='requestVisaAssist__form__input' 
+                        className={styles.requestVisaAssist__form__input} 
                         name='email' 
                         type='email' 
                         placeholder={t('Form_email')} 
@@ -73,11 +72,11 @@ function RequestVisaAssist({ setAlert }) {
                     />
                 </div>
             </div>
-            <div className='requestVisaAssist__input_grpp'>
+            <div className={styles.requestVisaAssist__input_grpp}>
               <div className=''>
-                  <label className='requestVisaAssist__label__to__hide' htmlFor='destination'>Destination</label>
+                  <label className={styles.requestVisaAssist__label__to__hide} htmlFor='destination'>Destination</label>
                   <input 
-                      className='requestVisaAssist__form__input' 
+                      className={styles.requestVisaAssist__form__input} 
                       name='destination' 
                       type='text' 
                       placeholder={t('Form_destinstion')} 
@@ -87,9 +86,9 @@ function RequestVisaAssist({ setAlert }) {
                   />
               </div>
               <div className=''>
-                  <label className='requestVisaAssist__label__to__hide' htmlFor='phone'>Phone</label>
+                  <label className={styles.requestVisaAssist__label__to__hide} htmlFor='phone'>Phone</label>
                   <input 
-                      className='requestVisaAssist__form__input' 
+                      className={styles.requestVisaAssist__form__input} 
                       name='phone' 
                       type='text' 
                       placeholder={t('Form_phone')} 
@@ -101,9 +100,9 @@ function RequestVisaAssist({ setAlert }) {
             </div>
             
             <div className=''>
-              <label className='requestVisaAssist__label__to__hide' htmlFor='message'>Message ;</label>
+              <label className={styles.requestVisaAssist__label__to__hide} htmlFor='message'>Message ;</label>
               <textarea 
-                  className='requestVisaAssist__form__textarea'
+                  className={styles.requestVisaAssist__form__textarea}
                   name='message'
                   cols='30'
                   rows='8'
@@ -112,7 +111,7 @@ function RequestVisaAssist({ setAlert }) {
                   value={message} 
               />
             </div>
-            <button className='requestVisaAssist__form__button' htmltype='submit'>{t('Form_send')}</button>
+            <button className={styles.requestVisaAssist__form__button} htmltype='submit'>{t('Form_send')}</button>
          </form>
         </div>
       </div>

@@ -1,0 +1,34 @@
+/* * {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	list-style: none;
+} */
+.visaAssist {
+	background-color: rgb(247, 244, 244);
+}
+.visaAssist__container {
+    display: flex;
+    justify-content: space-around;
+}
+.visaAssist__left {
+    margin-left: 5px;
+	display: inline-block;
+}
+
+/****Large Devices****/
+@media (min-width: 1200px) {
+    .visaAssistProcess__top__centerBox {
+        display: none;
+    }
+}
+/****Medium Devices****/
+@media (max-width: 1200px) {
+    .visaAssist__left, .visaAssist__right {
+        display: none !important;
+    }
+}
+.visaAssistProcess__top__centerBox {
+    justify-content: center;
+    text-align: center;
+}

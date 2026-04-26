@@ -1,3 +1,4 @@
+
 from datetime import timedelta
 import os
 from pathlib import Path
@@ -5,11 +6,18 @@ from pathlib import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
+# SECURITY WARNING: keep the secret key used in production secret!
+SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'django-insecure-change-me-in-production')
 
-ALLOWED_HOSTS = ['127.0.0.1', 'www.diploman.co', 'diploman.co']
+# SECURITY WARNING: don't run with debug turned on in production!
+DEBUG = True
+
+ALLOWED_HOSTS = []
+
 
 # Application definition
 
@@ -43,12 +51,12 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'diploman.urls'
+ROOT_URLCONF = 'prosperity.urls'
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'build')],
+        'DIRS': [os.path.join(BASE_DIR, 'build')], # add inside [] os.path.join(BASE_DIR, 'build') we'll get error when we run the server but it's temporery the build will come once we do our frontend
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -61,7 +69,30 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'diploman.wsgi.application'
+WSGI_APPLICATION = 'prosperity.wsgi.application'
+
+
+# Database
+# https://docs.djangoproject.com/en/4.0/ref/settings/#databases
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': os.environ.get('DB_NAME', 'prosperitydb'),
+        'USER': os.environ.get('DB_USER', 'postgres'),
+        'PASSWORD': os.environ.get('DB_PASSWORD', ''),
+        'HOST': os.environ.get('DB_HOST', 'localhost')
+    }
+}
+
+# email addition
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER', '')
+EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD', '')
+EMAIL_USE_TLS = True
+MAIL_FROM_ADDRESS = os.environ.get('EMAIL_HOST_USER', '')
 
 
 # Password validation
@@ -105,7 +136,6 @@ USE_TZ = True
 
 DATA_UPLOAD_MAX_NUMBER_FIELDS = None
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
@@ -131,7 +161,7 @@ REST_FRAMEWORK = {
     ],
 }
 
-# CORS_ORIGIN_ALLOW_ALL = True
+CORS_ORIGIN_ALLOW_ALL = True
 
 FILE_UPLOAD_PERMISSIONS=0o640
 
@@ -145,8 +175,7 @@ SIMPLE_JWT = {
     )
 }
 
-
-# Djoser web Token settings
+#Red Djoser web Token settings
 DJOSER = {
     'LOGIN_FIELD':'email',
     'USER_CREATE_PASSWORD_RETYPE': True,
@@ -173,8 +202,3 @@ DJOSER = {
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 AUTH_USER_MODEL = 'accounts.UserAccount'
-
-try:
-    from .local_settings import *
-except ImportError:
-    pass

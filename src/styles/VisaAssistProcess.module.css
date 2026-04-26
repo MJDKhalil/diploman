@@ -1,0 +1,78 @@
+.visaAssistProcess {
+    flex: 6;
+    background: #ffffff;
+    display: inline-block;
+    justify-content: space-around;
+    width: 350px;
+    color: rgba(0, 0, 0, 0.75);
+    margin-top: 10px;
+    padding: 10px 10px 30px 10px;
+    box-shadow: 0px 5px 8px -3px rgba(0, 0, 0, 0.75);
+}
+.visaAssistProcess__hr {
+    width: 60%;
+    margin: auto;
+    margin-bottom: 20px;
+}
+.visaAssistProcess__title {
+    margin: 2.1rem 0 2.1rem 0;
+    letter-spacing: 1px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-align: center;
+    width: 100%;
+}
+.visaAssistProcess__title2 {
+    letter-spacing: 1px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-align: initial;
+    width: 100%;
+    margin-top: 1.2rem;
+}
+.visaAssistProcess__note {
+    letter-spacing: 1px;
+    font-size: 0.6rem;
+    text-align: initial;
+    margin-top: 1.7rem;
+}
+.visaAssistProcess ul {
+    letter-spacing: 1px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: initial;
+    padding: 0;
+}
+.visaAssistProcess__pr {
+    margin: 30px 0px 20px 10px;
+    letter-spacing: 0.7px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-align: initial;
+}
+.visaAssistProcess__ul li {
+    display: flex;
+    text-align: inherit;
+    font-size: 0.8rem;
+}
+.visaAssistProcess__li{
+    padding: 0px 30px 0px 30px;
+    margin: 0.2rem 0 0.5rem 0;
+}
+.ad__sunIcon {
+    color: #F6F6F6;
+}
+.visaAssistProcess__icons {
+    font-size: 15px !important;
+    margin: 0 0.3rem 0 0.3rem;
+}
+@media (min-width: 1200px) {
+    .visaAssistProcess {
+        width: 420px;
+    }
+}
+.visaAssist__left__2ndbx > p {
+	padding: 10px;
+	letter-spacing: 0.5px;
+	font-size: 14px;
+}

@@ -1,17 +1,19 @@
 import React, { useState } from 'react';
+import useFormState from '../hooks/useFormState';
 import axios from 'axios';
 import { connect } from 'react-redux';
 import { setAlert } from '../actions/alert';
-import './Admission.css';
-import { useNavigate } from 'react-router-dom';
+import styles from '../styles/Admission.module.css';
+import { useRouter } from 'next/router';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import { useTranslation } from "react-i18next";
+import { useTranslation } from 'next-i18next';
+import { DEMO_MODE, DEMO_ALERT_MSG } from '../utils/demo';
 
 function Admission({ setAlert }) {
 
   const { t } = useTranslation();
 
-  const navigate=useNavigate();
+  const navigate = useRouter();
   const [showOtherSchool, setShowOtherSchool] = useState (false);
   const [showSchools, setShowSchools] = useState (false);
 
@@ -21,22 +23,18 @@ function Admission({ setAlert }) {
     document.getElementById("schoolRadio").innerHTML = SchoolValue;
     }
 
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    school: '',
-    other: '',
-    destination: '',
-    course_length: '',
-    start_date: (null),
-    message: ''
+  const { formData, onChange, setFormData } = useFormState({
+    name: '', email: '', phone: '', school: '', other: '',
+    destination: '', course_length: '', start_date: null, message: ''
   });
-
   const { name, email, phone, school, other, destination, course_length, start_date, message } = formData;
-  const onChange = e => setFormData({ ...formData, [e.target.name]: e.target.value });
   const onSubmit = async (e) => {
     e.preventDefault();
+
+    if (DEMO_MODE) {
+      setAlert(DEMO_ALERT_MSG, 'info');
+      return;
+    }
 
     let dataForm = new FormData();
       dataForm.append('name',name)
@@ -54,14 +52,14 @@ function Admission({ setAlert }) {
 
     await axios({
       method: 'post',
-      url: `${process.env.REACT_APP_API_URL}/api/service-request/admission/`,
+      url: `${process.env.NEXT_PUBLIC_API_URL}/api/service-request/admission/`,
       data: dataForm,
       headers: {
           'Content-Type': 'multipart/form-data' 
       }
     })
     .then(res => {
-          navigate('/'); 
+          navigate.replace('/'); 
           setAlert(t('alert_recquest_sent'), 'success');
     })
     .catch(err => {
@@ -70,16 +68,16 @@ function Admission({ setAlert }) {
   };
 
   return (
-    <div className='request__admission'>
-      <div className='request__admission__bx'>
-        <div  className='request__admission__form'>
-         <h1 className='request__admission__title'>{t('admissionForm_request')}</h1>
+    <div className={styles.request__admission}>
+      <div className={styles.request__admission__bx}>
+        <div  className={styles.request__admission__form}>
+         <h1 className={styles.request__admission__title}>{t('admissionForm_request')}</h1>
          <form onSubmit={e => onSubmit(e)}>
-            <div className='request__admission__input_grpp'>
-              <div className='form__wrapp'>
-                  <label className='request__admission__form__label admission__label__to__hide' htmlFor='name'>Name</label>
+            <div className={styles.request__admission__input_grpp}>
+              <div className={styles.form__wrapp}>
+                  <label className={styles['request__admission__form__label']+' '+styles['admission__label__to__hide']} htmlFor='name'>Name</label>
                   <input 
-                      className='request__admission__form__input' 
+                      className={styles.request__admission__form__input} 
                       name='name' 
                       type='text' 
                       placeholder={t('Form_name')}
@@ -88,10 +86,10 @@ function Admission({ setAlert }) {
                       required 
                   />
               </div>
-              <div className='form__wrapp'>
-                  <label className='request__admission__form__label admission__label__to__hide' htmlFor='email'>Email</label>
+              <div className={styles.form__wrapp}>
+                  <label className={styles['request__admission__form__label']+' '+styles['admission__label__to__hide']} htmlFor='email'>Email</label>
                   <input 
-                      className='request__admission__form__input' 
+                      className={styles.request__admission__form__input} 
                       name='email' 
                       type='email' 
                       placeholder={t('Form_email')} 
@@ -102,19 +100,19 @@ function Admission({ setAlert }) {
               </div>
             </div>
 
-            <div className='request__admission__input_grpp'>
+            <div className={styles.request__admission__input_grpp}>
               <div className=''>
-                <div className='request__admission__selectBx'>
-                  <div onClick={()=> setShowSchools(!showSchools)} className='request__admission__selected' id="schoolRadio">{t('admissionForm_select')}<ExpandMoreIcon className='request__admission__expand'/></div>
+                <div className={styles.request__admission__selectBx}>
+                  <div onClick={()=> setShowSchools(!showSchools)} className={styles.request__admission__selected} id="schoolRadio">{t('admissionForm_select')}<ExpandMoreIcon className={styles.request__admission__expand}/></div>
                     { showSchools?<>
-                      <div className='request__admission__option__container '>
-                      <div className='request__admission__option'>
-                            <label className='request__admission__box__label'>
+                      <div className={styles.request__admission__option__container}>
+                      <div className={styles.request__admission__option}>
+                            <label className={styles.request__admission__box__labe}>
                                 <input
                                   type='radio'
                                   name='school' 
                                   value='France Langue (FR)' 
-                                  className='request__admission__input__radio' 
+                                  className={styles.request__admission__input__radio} 
                                   onChange={e => onChange(e)}
                                   checked={school === 'France Langue (FR)'}
                                   onClick={()=> {
@@ -126,13 +124,13 @@ function Admission({ setAlert }) {
                                 <span>France Langue (FR)</span>
                             </label>
                           </div>
-                          <div className='request__admission__option'>
-                            <label className='request__admission__box__label'>
+                          <div className={styles.request__admission__option}>
+                            <label className={styles.request__admission__box__labe}>
                                 <input
                                   type='radio'
                                   name='school' 
                                   value='ACE (Malta)' 
-                                  className='request__admission__input__radio' 
+                                  className={styles.request__admission__input__radio} 
                                   onChange={e => onChange(e)}
                                   checked={school === 'ACE (Malta)'}
                                   onClick={()=> {
@@ -144,13 +142,13 @@ function Admission({ setAlert }) {
                                 <span>ACE (Malta)</span>
                             </label>
                           </div>
-                          <div className='request__admission__option'>
-                            <label className='request__admission__box__label'>
+                          <div className={styles.request__admission__option}>
+                            <label className={styles.request__admission__box__labe}>
                                 <input
                                   type='radio'
                                   name='school' 
                                   value='GSE (Malta)' 
-                                  className='request__admission__input__radio' 
+                                  className={styles.request__admission__input__radio} 
                                   onChange={e => onChange(e)}
                                   checked={school === 'GSE (Malta)'}
                                   onClick={()=> {
@@ -162,13 +160,13 @@ function Admission({ setAlert }) {
                                 <span>GSE (Malta)</span>
                             </label>
                           </div>
-                          <div className='request__admission__option'>
-                            <label className='request__admission__box__label'>
+                          <div className={styles.request__admission__option}>
+                            <label className={styles.request__admission__box__labe}>
                               <input 
                                 type='radio'
                                 name='school'
                                 value='EC (USA & all)'
-                                className='request__admission__input__radio'
+                                className={styles.request__admission__input__radio}
                                 onChange={e => onChange(e)}
                                 checked={school === 'EC (USA & all)'}
                                 onClick={()=> {
@@ -180,13 +178,13 @@ function Admission({ setAlert }) {
                               <span>EC (USA & all)</span>
                             </label>
                           </div>
-                          <div className='request__admission__option'>
-                            <label className='request__admission__box__label'>
+                          <div className={styles.request__admission__option}>
+                            <label className={styles.request__admission__box__labe}>
                               <input
                                   type='radio'
                                   name='school'
                                   value='WCG (UK)'
-                                  className='request__admission__input__radio'
+                                  className={styles.request__admission__input__radio}
                                   onChange={e => onChange(e)}
                                   checked={school === 'WCG (UK)'}
                                   onClick={()=> {
@@ -198,13 +196,13 @@ function Admission({ setAlert }) {
                               <span>WCG (UK)</span>
                             </label>
                           </div>
-                          <div className='request__admission__option'>
-                            <label className='request__admission__box__label'>
+                          <div className={styles.request__admission__option}>
+                            <label className={styles.request__admission__box__labe}>
                               <input
                                   type='radio'
                                   name='school'
                                   value='California Kl (MY)'
-                                  className='request__admission__input__radio'
+                                  className={styles.request__admission__input__radio}
                                   onChange={e => onChange(e)}
                                   checked={school === 'California Kl (MY)'}
                                   onClick={()=> {
@@ -216,13 +214,13 @@ function Admission({ setAlert }) {
                               <span>California Kl (MY)</span>
                             </label>
                           </div>
-                          <div className='request__admission__option'>
-                            <label className='request__admission__box__label'>
+                          <div className={styles.request__admission__option}>
+                            <label className={styles.request__admission__box__labe}>
                               <input
                                   type='radio'
                                   name='school'
                                   value='Elec (MY)'
-                                  className='request__admission__input__radio'
+                                  className={styles.request__admission__input__radio}
                                   onChange={e => onChange(e)}
                                   checked={school === 'Elec (Maylasia)'}
                                   onClick={()=> {
@@ -234,13 +232,13 @@ function Admission({ setAlert }) {
                               <span>Elec (Maylasia)</span>
                             </label>
                           </div>
-                          <div className='request__admission__option'>
-                            <label className='request__admission__box__label'>
+                          <div className={styles.request__admission__option}>
+                            <label className={styles.request__admission__box__labe}>
                               <input
                                   type='radio'
                                   name='school'
                                   value='Other'
-                                  className='request__admission__input__radio'
+                                  className={styles.request__admission__input__radio}
                                   onChange={e => onChange(e)}
                                   checked={school === 'Other'}
                                   onClick={()=> {
@@ -258,10 +256,10 @@ function Admission({ setAlert }) {
               </div>
 
               
-              <div className='form__wrapp'>
-                  <label className='request__admission__form__label admission__label__to__hide' htmlFor='phone'>Phone</label>
+              <div className={styles.form__wrapp}>
+                  <label className={styles['request__admission__form__label']+' '+styles['admission__label__to__hide']} htmlFor='phone'>Phone</label>
                   <input 
-                      className='request__admission__form__input' 
+                      className={styles.request__admission__form__input} 
                       name='phone' 
                       type='text' 
                       placeholder={t('Form_phone')}
@@ -271,11 +269,11 @@ function Admission({ setAlert }) {
                   />
               </div>
             </div>
-            <div className='request__admission__input_grpp'>
-              <div className='request__admission__form__wrapp'>
-                  <label className='request__admission__form__label' htmlFor='course_length'>{t('admissionForm_CourseLength')}</label>
+            <div className={styles.request__admission__input_grpp}>
+              <div className={styles.request__admission__form__wrapp}>
+                  <label className={styles.request__admission__form__label} htmlFor='course_length'>{t('admissionForm_CourseLength')}</label>
                   <input 
-                      className='request__admission__form__input' 
+                      className={styles.request__admission__form__input} 
                       name='course_length' 
                       type='text' 
                       placeholder={t('admissionForm_course')} 
@@ -283,10 +281,10 @@ function Admission({ setAlert }) {
                       value={course_length} 
                   />
               </div>
-              <div className='form__wrapp'>
-                  <label className='request__admission__form__label' htmlFor='start_date'>{t('admissionForm_startDate')}</label>
+              <div className={styles.form__wrapp}>
+                  <label className={styles.request__admission__form__label} htmlFor='start_date'>{t('admissionForm_startDate')}</label>
                   <input 
-                      className='request__admission__form__input' 
+                      className={styles.request__admission__form__input} 
                       name='start_date' 
                       type='date' 
                       onChange={e => onChange(e)} 
@@ -294,11 +292,11 @@ function Admission({ setAlert }) {
                   />
               </div>
             </div>
-            <div className='request__admission__input_grpp'>
-              <div className='form__wrapp'>
-                <label className='request__admission__form__label admission__label__to__hide' htmlFor='destination'>{t('admissionForm_destinstion')}</label>
+            <div className={styles.request__admission__input_grpp}>
+              <div className={styles.form__wrapp}>
+                <label className={styles['request__admission__form__label']+' '+styles['admission__label__to__hide']} htmlFor='destination'>{t('admissionForm_destinstion')}</label>
                 <input 
-                  className='request__admission__form__input' 
+                  className={styles.request__admission__form__input} 
                   name='destination' 
                   type='text' 
                   placeholder={t('Form_destinstion')}
@@ -308,10 +306,10 @@ function Admission({ setAlert }) {
                 />
               </div>
               { showOtherSchool? <>
-                <div className='form__wrapp'>
-                  <label className='request__admission__form__label admission__label__to__hide' htmlFor='destination'>Destination</label>
+                <div className={styles.form__wrapp}>
+                  <label className={styles['request__admission__form__label']+' '+styles['admission__label__to__hide']} htmlFor='destination'>Destination</label>
                   <input 
-                    className='request__admission__form__input' 
+                    className={styles.request__admission__form__input} 
                     name='other' 
                     type='text' 
                     placeholder={t('admissionForm_school')}
@@ -322,10 +320,10 @@ function Admission({ setAlert }) {
                 </div>
               </> :null}
             </div>
-            <div className='form__wrapp'>
-              <label className='admission__label__to__hide' htmlFor='message'>Message ;</label>
+            <div className={styles.form__wrapp}>
+              <label className={styles.admission__label__to__hide} htmlFor='message'>Message ;</label>
               <textarea 
-                  className='request__admission__form__textarea'
+                  className={styles.request__admission__form__textarea}
                   name='message'
                   cols='30'
                   rows='3'
@@ -334,7 +332,7 @@ function Admission({ setAlert }) {
                   value={message} 
               />
             </div>
-            <button className='request__admission__form__button' htmltype='submit'>{t('Form_send')}</button>
+            <button className={styles.request__admission__form__button} htmltype='submit'>{t('Form_send')}</button>
          </form>
         </div>
       </div>
