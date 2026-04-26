@@ -5,9 +5,9 @@ const nextConfig = {
   // Remove `output` and restore the `i18n` block below for Vercel (supports SSR + i18n routing).
   output: 'export',
   trailingSlash: true,
-  // Optional: set to '/repo-name' when deploying to GitHub Pages as a project page.
-  // Leave empty for a custom domain or GitHub user/org pages root.
-  basePath: process.env.NEXT_PUBLIC_BASE_PATH || '',
+  // GitHub Pages project page lives at /diploman — set basePath accordingly.
+  basePath: process.env.NEXT_PUBLIC_BASE_PATH || '/diploman',
+  assetPrefix: process.env.NEXT_PUBLIC_BASE_PATH || '/diploman',
   images: {
     // next/image optimization is not available in static export.
     unoptimized: true,

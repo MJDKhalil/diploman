@@ -27,15 +27,15 @@ jobs:
           cache: 'npm'
 
       - name: Install dependencies
-        run: npm ci
+        run: npm ci --legacy-peer-deps
 
       - name: Build (static export)
         run: npm run export
         env:
           # No API URL in demo mode — enables DEMO_MODE flag
           NEXT_PUBLIC_API_URL: ''
-          # Set to '/repo-name' if deploying as a GitHub project page
-          NEXT_PUBLIC_BASE_PATH: ''
+          # GitHub Pages project page path
+          NEXT_PUBLIC_BASE_PATH: '/diploman'
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
