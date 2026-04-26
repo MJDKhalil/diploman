@@ -49,7 +49,7 @@ function WelcomePageFooter() {
                         <a href='https://www.facebook.com/Diploman-110754074994396/' target='_blank' rel='noreferrer'><FacebookIcon className={styles.welcomePageFooter__incon}/></a>
                     </li>
                     <li className={styles.social__icons__li}>
-                        <a href='https://www.instagram.com/diploman.co/?igshid=MzRlODBiNWFlZA%3D%3D' target='_blank' rel='noreferrer'><InstagramIcon className={styles.welcomePageFooter__incon}/></a>
+                        <a href='https://www.instagram.com/diploman.co/' target='_blank' rel='noreferrer'><InstagramIcon className={styles.welcomePageFooter__incon}/></a>
                     </li>
                     <li className={styles.social__icons__li}>
                         <a href='https://twitter.com/DIPL0MAN' target='_blank' rel='noreferrer'><TwitterIcon className={styles.welcomePageFooter__incon}/></a>
