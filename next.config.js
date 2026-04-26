@@ -7,7 +7,6 @@ const nextConfig = {
   trailingSlash: true,
   // GitHub Pages project page lives at /diploman — set basePath accordingly.
   basePath: process.env.NEXT_PUBLIC_BASE_PATH || '/diploman',
-  assetPrefix: process.env.NEXT_PUBLIC_BASE_PATH || '/diploman',
   images: {
     // next/image optimization is not available in static export.
     unoptimized: true,
