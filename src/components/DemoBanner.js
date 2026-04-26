@@ -6,19 +6,15 @@ export default function DemoBanner() {
 
   return (
     <div style={{
-      position: 'fixed',
-      top: 0,
-      left: 0,
-      right: 0,
-      zIndex: 9999,
       background: '#1a73e8',
       color: '#fff',
       textAlign: 'center',
-      padding: '8px 16px',
-      fontSize: '14px',
+      padding: '6px 16px',
+      fontSize: '13px',
       fontFamily: 'inherit',
+      width: '100%',
     }}>
-      <strong>Portfolio Demo</strong> — This is a read-only demo. Backend is not connected; form submissions and authentication are disabled.
+      Demo: Backend features disabled — form submissions and authentication are inactive in this portfolio demo.
     </div>
   );
 }
